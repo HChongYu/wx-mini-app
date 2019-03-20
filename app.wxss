@@ -1,0 +1,78 @@
+/**app.wxss**/
+/* 缩进 */
+.jh-slh {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 字重 */
+.jh-fmw5{
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}
+
+.jh-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 24rpx;
+}
+
+.jh-listnp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.jh-list_item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.jh-list_bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333;
+}
+
+.jh-list_ft {
+  color: #808080;
+  padding-right: 4rpx;
+}
+
+.jh-list_ft_arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 12rpx;
+  width: 12rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  position: relative;
+  top: -1rpx;
+}
+
+.jh-isiphonex_m {
+  margin-bottom: 100rpx !important;
+}
+
+.jh-isiphonex_p {
+  padding-bottom: 100rpx !important;
+}
+
+/* 控状态及分页提示 */
+
+
+

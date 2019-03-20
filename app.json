@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/circle/circle",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "军豪拓展",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#979797",
+    "selectedColor": "#5A7F5B",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/img/home-d.png",
+        "selectedIconPath": "/img/home-s.png"
+      },
+      {
+        "pagePath": "pages/circle/circle",
+        "text": "圈子",
+        "iconPath": "/img/circle-d.png",
+        "selectedIconPath": "/img/circle-s.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/img/mine-d.png",
+        "selectedIconPath": "/img/mine-s.png"
+      }
+    ]
+  }
+}
