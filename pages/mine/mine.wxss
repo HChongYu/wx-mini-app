@@ -1,1 +1,39 @@
 /* pages/mine/mine.wxss */
+.header{
+  position: relative;
+  height: 266rpx;
+  padding: 24rpx;
+  width: 100%;
+  
+}
+.header-h1{
+  font-size: 60rpx;
+
+}
+.header-h2{
+  font-size: 36rpx;
+
+}
+.photo-posback{
+  position: absolute;
+  right: -24rpx;
+  top: 50rpx; 
+  height: 128rpx;
+  width: 178rpx;
+  background-color: #F1F4F2;
+  z-index: 1001;
+  
+}
+.photo{
+  position: absolute;
+  top: 0;
+  left: -64rpx;
+  width: 120rpx;
+  height: 120rpx;
+  min-width: 120rpx;
+  min-height: 120rpx;
+  border-radius: 50%; 
+  border: 4rpx solid #fff;
+  z-index: 1002;
+
+}

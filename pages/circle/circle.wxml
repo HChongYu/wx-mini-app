@@ -1,3 +1,39 @@
 <!--logs.wxml-->
-<view class="">
+<view class="jh-listnp select">
+  <view wx:for="{{select}}" wx:key="index" class="select-item {{item.index==atIndex? 'select-item_at':''}}" data-index="{{index}}" catchtap="select">
+    {{item.name}}
+  </view>
+</view>
+<view  wx:if='{{atIndex==0}}'>
+  <view class="win" wx:for="{{winList}}">
+    <image class="win-map" mode="scaleToFill" src="{{item.map}}">
+    </image>
+    <view class="win-bottom">
+      <view class="win-bar jh-slh">{{item.bar}}</view>
+      <view class="jh-listnp win-list">
+        <view class="jh-list_item jh-slh">
+          {{item.time}}
+        </view>
+        <view class="jh-listnp win-list_see">
+          <view class="">
+          </view>
+          <view class="">
+            {{item.seeNum}}
+          </view>
+        </view>
+        <view class="jh-listnp win-list_see">
+          <view>
+          </view>
+          <view>
+            {{item.collectNum}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class='jh-bottom_hint'>我是有底线的</view>
+</view>
+<view class='noopen' wx:else>
+  暂未开放／尽情期待～
 </view>

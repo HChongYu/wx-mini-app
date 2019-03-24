@@ -1,2 +1,76 @@
 <!--index.wxml-->
-<view class=""></view>
+<view class="header-time">
+  18/03/2019
+</view>
+<view class="header-title">
+  The Bravery
+</view>
+<view class="jh-listnp search-back">
+  <view class="jh-list_item search">快来一艘</view>
+  <view class="search-icon"></view>
+</view>
+<view class="jh-listnp selbar">
+  <view class="selbar-item">
+    <image class="selbar-item-icon" src="/img/dome4.png"></image>
+    <view>成人拓展</view>
+  </view>
+  <view class="selbar-item">
+    <image class="selbar-item-icon" src="/img/dome1.png"></image>
+    <view>企业团建</view>
+  </view>
+  <view class="selbar-item">
+    <image class="selbar-item-icon" src="/img/dome5.png"></image>
+    <view>研修旅行</view>
+  </view>
+  <view class="selbar-item">
+    <image class="selbar-item-icon" src="/img/dome3.png"></image>
+    <view>军事训练</view>
+  </view>
+  <view class="selbar-item">
+    <image class="selbar-item-icon" src="/img/dome2.png"></image>
+    <view>体验式培训</view>
+  </view>
+</view>
+<view class="hlist">
+  <view class="jh-listnp titlebar">
+    <view class="titlebar-fill"></view>
+    <view class="titlebar-main">即将开始</view>
+  </view>
+  <view class="win">
+    <image class='win-map' src='/img/win1.png'></image>
+    <view class="win-bottom">
+      <view class="jh-listnp win-list">
+        <view class="win-list_main jh-list_item">下陆中学7天研学之旅</view>
+        <view class="win-list_time">2019-3-11</view>
+      </view>
+      <view class="win-list_minor">下陆中学7天研学之旅下陆中学7天研学之旅</view>
+    </view>
+  </view>
+</view>
+<view class="hlist">
+  <view class="jh-listnp titlebar">
+    <view class="titlebar-fill"></view>
+    <view class="titlebar-main">往期活动</view>
+  </view>
+  <view class="win">
+    <image class='win-map' src='/img/win1.png'></image>
+    <view class="win-bottom">
+      <view class="jh-listnp win-list">
+        <view class="win-list_main jh-list_item">下陆中学7天研学之旅</view>
+        <view class="win-list_time">2019-3-11</view>
+      </view>
+      <view class="win-list_minor">下陆中学7天研学之旅下陆中学7天研学之旅</view>
+    </view>
+  </view>
+  <view class="win">
+    <image class='win-map' src='/img/win1.png'></image>
+    <view class="win-bottom">
+      <view class="jh-listnp win-list">
+        <view class="win-list_main jh-list_item">下陆中学7天研学之旅</view>
+        <view class="win-list_time">2019-3-11</view>
+      </view>
+      <view class="win-list_minor">下陆中学7天研学之旅下陆中学7天研学之旅</view>
+    </view>
+  </view>
+</view>
+<view class='jh-bottom_hint'>我是有底线的</view>

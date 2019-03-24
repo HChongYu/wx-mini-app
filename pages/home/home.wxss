@@ -1,1 +1,65 @@
 /**index.wxss**/
+@import "/wxss/win.wxss";
+page {
+  padding: 0 40rpx;
+}
+
+.header-time {
+  font-size: 28rpx;
+}
+
+.header-title {
+  font-size: 60rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+}
+
+.search-back {
+  background: #f1f4f2;
+  color: #b9b9b9;
+  font-size: 24rpx;
+  padding: 12rpx 24rpx;
+  border-radius: 40rpx;
+  margin-top: 40rpx;
+}
+
+.search-icon {
+  background: #fff;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+
+.selbar {
+  margin-top: 60rpx;
+  justify-content: space-between;
+}
+
+.selbar-item {
+  text-align: center;
+  font-size: 20rpx;
+}
+
+.selbar-item-icon {
+  margin-bottom: 10rpx;
+  height: 88rpx;
+  width: 88rpx;
+}
+
+.hlist {
+  margin-top: 60rpx;
+  width: 100%;
+}
+
+.titlebar-fill {
+  width: 6rpx;
+  height: 24rpx;
+  background: #5a7f5b;
+  margin-right: 20rpx;
+}
+
+.titlebar-main {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}

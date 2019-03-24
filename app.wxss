@@ -1,4 +1,14 @@
 /**app.wxss**/
+
+/* */
+
+view{
+  box-sizing: border-box;
+}
+page{
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
 /* 缩进 */
 .jh-slh {
   overflow: hidden;
@@ -18,7 +28,8 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  padding: 24rpx;
+  padding: 40rpx 24rpx;
+  border-bottom: 3rpx solid #f9f9f9;
 }
 
 .jh-listnp {
@@ -29,25 +40,27 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
-.jh-list_item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+.jh-list_icon {
+  width:34rpx;
+  height: 34rpx;
+  min-width:34rpx;
+  min-height: 34rpx;
+  margin-right: 20rpx; 
 }
-
 .jh-list_bd {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
   font-family: PingFangSC-Medium;
   font-weight: 500;
-  color: #333;
+  color: #000000;
+  font-size: 28rpx;
 }
 
 .jh-list_ft {
-  color: #808080;
+  color: #5A7F5B;
   padding-right: 4rpx;
+  font-size: 28rpx;
 }
 
 .jh-list_ft_arrow:after {
@@ -55,8 +68,8 @@
   display: inline-block;
   height: 12rpx;
   width: 12rpx;
-  border-width: 4rpx 4rpx 0 0;
-  border-color: #c8c8cd;
+  border-width: 3rpx 3rpx 0 0;
+  border-color: #979797;
   border-style: solid;
   -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
   transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
@@ -64,6 +77,18 @@
   top: -1rpx;
 }
 
+.jh-list_item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.jh-bottom_hint{
+  font-size: 24rpx;
+  color:  rgba(0, 0, 0, 0.18);
+  text-align: center;
+  margin-top: 40rpx;
+  padding-bottom: 50rpx;
+}
 .jh-isiphonex_m {
   margin-bottom: 100rpx !important;
 }
@@ -71,8 +96,6 @@
 .jh-isiphonex_p {
   padding-bottom: 100rpx !important;
 }
-
-/* 控状态及分页提示 */
 
 
 
