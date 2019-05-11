@@ -1,4 +1,4 @@
-<!--logs.wxml-->
+<!--actlist.wxml-->
 <jh-navbar navbar-data='{{navbarData}}' ></jh-navbar>
 <view  wx:if='{{atIndex==0}}'>
   <view class="win" wx:for="{{winList}}" wx:key='index'>

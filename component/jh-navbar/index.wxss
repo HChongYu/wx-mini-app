@@ -1,0 +1,24 @@
+/* component/jh-navbar/indedx.wxss */
+.navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.navbar-item {
+  margin-right: 28rpx;
+  font-size: 28rpx;
+}
+
+.navbar-item_at {
+  padding: 4rpx;
+  border-bottom: 4rpx solid #5a7f5b;
+  color: #5a7f5b;
+  font-size: 36rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}

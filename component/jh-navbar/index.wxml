@@ -1,0 +1,7 @@
+<!--component/jh-navbar/indedx.wxml-->
+<view class="jh-listnp navbar">
+  <view wx:for="{{navbarData}}" wx:key="index" class="navbar-item {{item.index==atIndex? 'navbar-item_at':''}}" data-index="{{index}}" catchtap="click">
+    {{item.name}}
+  </view>
+</view>
+

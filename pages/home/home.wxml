@@ -6,29 +6,13 @@
   The Bravery
 </view>
 <view class="jh-listnp search-back">
-  <view class="jh-list_item search">快来一艘</view>
+  <view class="jh-list_item search">快来一搜</view>
   <view class="search-icon"></view>
 </view>
 <view class="jh-listnp selbar">
-  <view class="selbar-item">
-    <image class="selbar-item-icon" src="/img/dome4.png"></image>
-    <view>成人拓展</view>
-  </view>
-  <view class="selbar-item">
-    <image class="selbar-item-icon" src="/img/dome1.png"></image>
-    <view>企业团建</view>
-  </view>
-  <view class="selbar-item">
-    <image class="selbar-item-icon" src="/img/dome5.png"></image>
-    <view>研修旅行</view>
-  </view>
-  <view class="selbar-item">
-    <image class="selbar-item-icon" src="/img/dome3.png"></image>
-    <view>军事训练</view>
-  </view>
-  <view class="selbar-item">
-    <image class="selbar-item-icon" src="/img/dome2.png"></image>
-    <view>体验式培训</view>
+  <view class="selbar-item" wx:for="{{iconBar}}" wx:key='index' bindtap="iconClik">
+    <image class="selbar-item-icon" src="{{item.icon}}"></image>
+    <view>{{item.name}}</view>
   </view>
 </view>
 <view class="hlist">

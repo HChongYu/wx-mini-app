@@ -10,6 +10,22 @@
     "navigationBarTitleText": "军豪拓展",
     "navigationBarTextStyle": "black"
   },
+  "subpackages": [
+    {
+      "root": "packageAct",
+      "name": "activity",
+      "pages": [
+        "actlist/actlist"
+      ]
+    },
+    {
+      "root": "packageTree",
+      "name": "tree",
+      "pages": [
+        
+      ]
+    }
+  ],
   "tabBar": {
     "backgroundColor": "#fff",
     "color": "#979797",
