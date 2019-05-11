@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<view> 文思雅</view>
 <view class="header-time">
   18/03/2019
 </view>
