@@ -4,9 +4,8 @@ const util = require('../../utils/util.js')
 Page({
   data: {
     navbarData:[
-      { name: '精选榜', index: 0 },
-      { name: '教官说', index: 1 },
-      { name: '我想问', index: 2 }
+      { name: '学习', index: 0 },
+      { name: '树洞', index: 1 },
     ],
     winList:[
       { 
@@ -47,7 +46,12 @@ Page({
     ],
     atIndex:0
   },
+  // bar毁掉
+  circleBarBack(e){
+    let backData = e.detail
+    this.setData({atIndex:e.detail.index})
+  },  
   onLoad: function () {
-
+    wx.hideShareMenu()
   }
 })

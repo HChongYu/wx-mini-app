@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// packageAct/actdetails/actdetails.js
 Page({
 
   /**

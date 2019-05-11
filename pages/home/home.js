@@ -24,11 +24,37 @@ Page({
         icon: "/img/dome2.png",
         name: "体验式培训"
       }
-    ]
+    ],
+    dome1: [{
+      id: 1,
+      name: "下陆中学7天研学之旅",
+      title: "下陆中学7天研学之旅下陆中学7天研学之旅",
+      date: "2019-3-11",
+      img: "/img/win1.png"
+    }],
+    dome2: [{
+      id: 1,
+      name: "下陆中学7天研学之旅",
+      title: "下陆中学7天研学之旅下陆中学7天研学之旅",
+      date: "2019-3-11",
+      img: "/img/win1.png"
+    }, {
+      id: 2,
+      name: "下陆中学7天研学之旅",
+      title: "下陆中学7天研学之旅下陆中学7天研学之旅",
+      date: "2019-3-11",
+      img: "/img/win1.png"
+    }]
   },
 
   onLoad: function() {
-
+    wx.hideShareMenu()
+  },
+  homeWinBack(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/packageAct/actdetails/actdetails'
+    })
   },
   iconClik(e) {
     console.log(e)

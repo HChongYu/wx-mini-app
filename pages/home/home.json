@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "jh-win": "/component/jh-win/index",
+    "jh-title": "/component/jh-title/index"
+  }
 }

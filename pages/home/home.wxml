@@ -17,45 +17,11 @@
   </view>
 </view>
 <view class="hlist">
-  <view class="jh-listnp titlebar">
-    <view class="titlebar-fill"></view>
-    <view class="titlebar-main">即将开始</view>
-  </view>
-  <view class="win">
-    <image class='win-map' src='/img/win1.png'></image>
-    <view class="win-bottom">
-      <view class="jh-listnp win-list">
-        <view class="win-list_main jh-list_item">下陆中学7天研学之旅</view>
-        <view class="win-list_time">2019-3-11</view>
-      </view>
-      <view class="win-list_minor">下陆中学7天研学之旅下陆中学7天研学之旅</view>
-    </view>
-  </view>
+  <jh-title title='即将开始'></jh-title >
+  <jh-win wx:for='{{dome1}}' wx:key="id" item='{{item}}' bind:callBack='homeWinBack'></jh-win>
 </view>
 <view class="hlist">
-  <view class="jh-listnp titlebar">
-    <view class="titlebar-fill"></view>
-    <view class="titlebar-main">往期活动</view>
-  </view>
-  <view class="win">
-    <image class='win-map' src='/img/win1.png'></image>
-    <view class="win-bottom">
-      <view class="jh-listnp win-list">
-        <view class="win-list_main jh-list_item">下陆中学7天研学之旅</view>
-        <view class="win-list_time">2019-3-11</view>
-      </view>
-      <view class="win-list_minor">下陆中学7天研学之旅下陆中学7天研学之旅</view>
-    </view>
-  </view>
-  <view class="win">
-    <image class='win-map' src='/img/win1.png'></image>
-    <view class="win-bottom">
-      <view class="jh-listnp win-list">
-        <view class="win-list_main jh-list_item">下陆中学7天研学之旅</view>
-        <view class="win-list_time">2019-3-11</view>
-      </view>
-      <view class="win-list_minor">下陆中学7天研学之旅下陆中学7天研学之旅</view>
-    </view>
-  </view>
+  <jh-title title='往期精彩'></jh-title >
+  <jh-win wx:for='{{dome2}}' wx:key="id" item='{{item}}'></jh-win>
 </view>
 <view class='jh-bottom_hint'>我是有底线的</view>

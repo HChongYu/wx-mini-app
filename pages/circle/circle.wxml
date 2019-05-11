@@ -1,7 +1,7 @@
 <!--logs.wxml-->
-<jh-navbar navbar-data='{{navbarData}}' ></jh-navbar>
+<jh-navbar style='margin-top:20rpx;'  navbar-data='{{navbarData}}' bind:callBack='circleBarBack'></jh-navbar>
 <view  wx:if='{{atIndex==0}}'>
-  <view class="win" wx:for="{{winList}}" wx:key='index'>
+  <view class="win" wx:for="{{winList}}" wx:key='index' >
     <image class="win-map" mode="scaleToFill" src="{{item.map}}">
     </image>
     <view class="win-bottom">

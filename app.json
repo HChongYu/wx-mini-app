@@ -15,15 +15,14 @@
       "root": "packageAct",
       "name": "activity",
       "pages": [
-        "actlist/actlist"
+        "actlist/actlist",
+        "actdetails/actdetails"
       ]
     },
     {
       "root": "packageTree",
       "name": "tree",
-      "pages": [
-        
-      ]
+      "pages": []
     }
   ],
   "tabBar": {

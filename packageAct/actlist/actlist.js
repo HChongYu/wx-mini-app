@@ -48,6 +48,6 @@ Page({
     atIndex:0
   },
   onLoad: function () {
-
+    wx.hideShareMenu()
   }
 })

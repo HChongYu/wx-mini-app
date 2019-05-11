@@ -1,0 +1,13 @@
+/* component/jh-title/index.wxss */
+.titlebar-fill {
+  width: 6rpx;
+  height: 24rpx;
+  background: #5a7f5b;
+  margin-right: 20rpx;
+}
+
+.titlebar-main {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}
