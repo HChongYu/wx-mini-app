@@ -1,0 +1,22 @@
+/* packageAct/search/search.wxss */
+.search-back {
+  background: #f1f4f2;
+  color: #b9b9b9;
+  font-size: 24rpx;
+  padding: 12rpx 24rpx;
+  border-radius: 40rpx;
+  margin-top: 40rpx;
+  
+}
+
+.search-icon {
+  background: #fff;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+.acttext{
+  padding: 24rpx 24rpx 24rpx 0;
+  font-size: 24rpx;
+  color: #9FB5A0;
+}

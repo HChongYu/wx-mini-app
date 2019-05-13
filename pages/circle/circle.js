@@ -44,13 +44,35 @@ Page({
         collectNum: 234
       },
     ],
-    atIndex:0
+    atIndex:1,
+    showNews: false
   },
-  // bar毁掉
+  // 发布
+  publishClick(){
+    wx.navigateTo({
+      url: '/packageTree/publish/publish'
+    })
+  }, 
+  // 新收到的消息
+  newsClick(){
+    this.setData({showNews:!this.data.showNews})
+  },
+  newItemClick(){
+    wx.navigateTo({
+      url: '/packageTree/treedetails/treedetails'
+    })
+  },
+  chatBack(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/packageTree/treedetails/treedetails'
+    })
+  },
+  // bar回吊,
   circleBarBack(e){
     let backData = e.detail
     this.setData({atIndex:e.detail.index})
-  },  
+  }, 
   onLoad: function () {
     wx.hideShareMenu()
   }

@@ -1,0 +1,11 @@
+<!--packageAct/search/search.wxml-->
+<view class="jh-listnp search-back" role="" aria-label="">
+  <input class='jh-list_item search' placeholder='快来搜一搜～' placeholder-style='color:rgba(185,185,185,1)'></input>
+  
+  <view class="search-icon" role="" aria-label="">
+  </view>
+</view>
+<jh-title title='热门搜索'></jh-title>
+<view>
+  <view  wx:for='abcadsa' wx:key='id' bindtap='acttextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>华容高级中学高三年级百日誓师活动</view>
+</view>

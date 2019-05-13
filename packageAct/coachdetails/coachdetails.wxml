@@ -1,0 +1,24 @@
+<!--packageAct/coachdetails/coachdetails.wxml-->
+<view class='jh-listnp'>
+  <view class='coach-photo'></view>
+  <view class='jh-list_item coach-left'>
+    <view class='coach-name jh-slh'>王冲</view>
+    <view class='coach-type'>
+      <view class='coach-types jh-slh'>军豪A级教官</view>
+      <view class='coach-types jh-slh'>军豪A级教官军豪A级教官</view>
+      <view class='coach-types '>军豪A级教官军豪</view>
+    </view>
+      <!--待解决-->
+    <view class='coach-motto'>“在整体过程中全体老师的参与，把校内系统培养与校外素养展现统一起来”</view>
+  </view>
+</view>
+<jh-title title='本期金牌教官'></jh-title>
+<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>在整体过程中全体老师的参与，把校内系统培养与校外素养展现统一起来，做到教研引导留空间，学习实践重个性，活动设计多热点</view>
+<jh-title title='本期金牌教官'></jh-title>
+<scroll-view class="actList" scroll-x="true">
+    <view wx:for='{{dome2}}'  wx:key="id" class="actList-item" style='{{index===0?"margin-left:40rpx":""}}'>
+        <jh-win  item='{{item}}' size='small' bind:callBack='coachWinBack'></jh-win>
+    </view>
+</scroll-view>
+<jh-title title='本期金牌教官'></jh-title>
+<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>在整体过程中全体老师的参与，把校内系统培养与校外素养展现统一起来，做到教研引导留空间，学习实践重个性，活动设计多热点</view>

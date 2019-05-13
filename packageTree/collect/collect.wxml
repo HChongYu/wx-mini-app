@@ -1,0 +1,27 @@
+<!--packageTree/collect/collect.wxml-->
+<view class="win" wx:for="{{winList}}" wx:key='index'>
+  <image class="win-map" mode="scaleToFill" src="{{item.map}}">
+  </image>
+  <view class="win-bottom">
+    <view class="win-bar jh-slh">{{item.bar}}</view>
+    <view class="jh-listnp win-list">
+      <view class="jh-list_item jh-slh">
+        {{item.time}}
+      </view>
+      <view class="jh-listnp win-list_see">
+        <view class="">
+        </view>
+        <view class="">
+          {{item.seeNum}}
+        </view>
+      </view>
+      <view class="jh-listnp win-list_see">
+        <view>
+        </view>
+        <view>
+          {{item.collectNum}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

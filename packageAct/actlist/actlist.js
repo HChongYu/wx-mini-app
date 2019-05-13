@@ -8,44 +8,25 @@ Page({
       { name: '教官说', index: 1 },
       { name: '我想问', index: 2 }
     ],
-    winList:[
-      { 
-        map:'/img/win1.png',
-        bar:"【干货】你应该掌握的溺水急救小常识",
-        time:'2019-3-13',
-        seeNum:3457,
-        collectNum:234
-      },
-      {
-        map: '/img/win2.png',
-        bar: "【干货】你应该掌握的溺水急救小常识",
-        time: '2019-3-13',
-        seeNum: 3457,
-        collectNum: 234
-      },
-      {
-        map: '/img/win3.png',
-        bar: "【干货】你应该掌握的溺水急救小常识",
-        time: '2019-3-13',
-        seeNum: 3457,
-        collectNum: 234
-      },
-      {
-        map: '/img/win4.png',
-        bar: "【干货】你应该掌握的溺水急救小常识",
-        time: '2019-3-13',
-        seeNum: 3457,
-        collectNum: 234
-      },
-      {
-        map: '/img/win5.png',
-        bar: "【干货】你应该掌握的溺水急救小常识",
-        time: '2019-3-13',
-        seeNum: 3457,
-        collectNum: 234
-      },
-    ],
+    dome2: [{
+      id: 1,
+      name: "下陆中学7天研学之旅",
+      title: "下陆中学7天研学之旅下陆中学7天研学之旅",
+      date: "2019-3-11",
+      img: "/img/win1.png"
+    }, {
+      id: 2,
+      name: "下陆中学7天研学之旅",
+      title: "下陆中学7天研学之旅下陆中学7天研学之旅",
+      date: "2019-3-11",
+      img: "/img/win1.png"
+    }],
     atIndex:0
+  },
+  actlistWinBack(){
+    wx.navigateTo({
+      url: '/packageAct/actdetails/actdetails'
+    })
   },
   onLoad: function () {
     wx.hideShareMenu()

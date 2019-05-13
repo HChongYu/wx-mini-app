@@ -1,0 +1,55 @@
+/* packageTree/Publish/publish.wxss */
+.content{
+  padding: 24rpx;
+  width: 670rpx;
+  height: 440rpx;
+  background-color:rgba(241,244,242,1);
+}
+.content-input{
+    color: #9FB5A0;
+    font-size: 28rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    text-align: center;
+}
+.content-input_placeholder{
+    color: #9FB5A0;
+    font-size: 28rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    text-align: center;
+}
+.publishbtn{
+    /*margin-top: 24rpx;*/
+    margin: 0 auto;
+    margin-top: 30rpx;
+    font-size: 24rpx;
+    line-height: 48rpx;
+    width: 136rpx;
+    border-radius: 25rpx;
+    text-align: center;
+    height: 50rpx;
+  color: #9FB5A0;
+  border: 2rpx solid #9FB5A0;
+
+}
+.content-textarea{
+    height:  300rpx;
+    width: 100%;
+    font-size: 26rpx;
+    color: #808080;
+    line-height: 32rpx;
+}
+
+.content-size{
+    float: right;
+    margin-top: 10rpx;
+    color: #D0D0D0;
+    font-size: 24rpx;
+}
+
+.acttext{
+  padding: 24rpx 24rpx 24rpx 0;
+  font-size: 24rpx;
+  color: #9FB5A0;
+}

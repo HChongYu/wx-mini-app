@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "jh-title": "/component/jh-title/index"
+  }
+}

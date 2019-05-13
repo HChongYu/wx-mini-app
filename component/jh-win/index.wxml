@@ -1,11 +1,11 @@
 <!--component/jh-win/index.wxml-->
-<view class="win" data-id='{{item.id}}' data-type='1' bindtap='winClick'>
-  <image class='win-map' src='{{item.img}}'></image>
+<view class="win_{{size}}" data-id='{{item.id}}' data-type='1' bindtap='winClick'>
+  <image class='win-map_{{size}}' src='{{item.img}}'></image>
   <view class="win-bottom">
     <view class="jh-listnp win-list">
-      <view class="win-list_main jh-list_item">{{item.name}}</view>
-      <view class="win-list_time">{{item.date}}</view>
+      <view class="win-list_main jh-list_item jh-slh">{{item.name}}</view>
+      <view class="win-list_time jh-slh" wx:if='{{size==="large"}}'>{{item.date}}</view>
     </view>
-    <view class="win-list_minor">{{item.title}}</view>
+    <view class="win-list_minor_{{size}}">{{item.title}}</view>
   </view>
 </view>

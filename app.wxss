@@ -6,7 +6,7 @@ view{
   box-sizing: border-box;
 }
 page{
-  padding: 0 24rpx;
+  padding: 0 40rpx;
   box-sizing: border-box;
 }
 /* 缩进 */

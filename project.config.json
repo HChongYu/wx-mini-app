@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -57,6 +57,48 @@
 					"id": -1,
 					"name": "拓展详情",
 					"pathName": "packageAct/actdetails/actdetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "教官信息",
+					"pathName": "packageAct/coachdetails/coachdetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "packageAct/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "话题发布",
+					"pathName": "packageTree/publish/publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "树洞详情",
+					"pathName": "packageTree/treedetails/treedetails",
 					"scene": null
 				}
 			]

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "话题发布",
+  "usingComponents": {
+    "jh-title": "/component/jh-title/index"
+  }
+}

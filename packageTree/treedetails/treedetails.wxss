@@ -1,0 +1,30 @@
+/* packageTree/treedetails/treedetails.wxss */
+.delheader{
+  position: relative;
+  left: -40rpx;
+  padding: 0 40rpx;
+  width: 750rpx;
+  background: #F1F4F2;
+}
+.reply{
+  position: relative;
+  padding: 24rpx 0;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #F9F9F9;
+}
+.reply-del{
+  position: absolute;
+  top: 24rpx;
+  right: 20rpx;
+  background: #9fb5a0;
+  height: 20rpx;
+  width: 20rpx;
+} 
+.reply-text{
+  width: 600rpx;
+}
+.reply-time{
+  margin-top: 12rpx; 
+  font-size: 20rpx;
+  color:#DBDBDB;
+}

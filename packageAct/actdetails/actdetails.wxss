@@ -1,1 +1,92 @@
 /* packageAct/actdetails/actdetails.wxss */
+Page{
+  padding: 0 40rpx 100rpx 40rpx;
+}
+swiper{
+  position: relative;
+  left: -40rpx;
+  width: 750rpx;
+  height: 480rpx;
+}
+.swiper-img{
+  
+}
+.swiper-img{
+  width: 100%;
+  height: 480rpx;
+}
+.coach_back{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+.coach{
+
+    width: 50%;
+    font-size:  24rpx;
+    margin-top: 32rpx;
+    padding-right: 10rpx;
+}
+.coach-photo{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    border: 1rpx solid #ababab;
+}
+.coach-data{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-flow: column;
+    height: 80rpx;
+    padding-left: 4rpx;
+}
+.coach-type{
+    height: 28rpx;
+    max-width: 200rpx;
+    font-size: 20rpx;
+    color: #5A7F5B;
+    background:rgba(90,127,91,.15);
+    padding: 0 10rpx;
+    border-radius: 14rpx
+
+}
+.coach-see{
+    height: 10rpx;
+    width: 12rpx;
+    border: 1rpx solid #ababab;
+}
+
+/*活动流程*/
+.flow{
+    padding: 24rpx 0;
+    border-bottom: 1rpx solid #F9F9F9;
+}
+.flow-list{
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    font-size: 24rpx;
+}
+.flow-time{
+    width: 180rpx;
+   max-width: 180rpx;
+    font-family:PingFangSC-Thin;
+    font-weight:100;
+}
+.flow-title{
+
+}
+.flow-img{
+    height: 480rpx;
+    width: 100%;
+    border-radius: 10rpx;
+    margin-top: 16rpx;
+}
+.flow-expand{
+    color: #808080;
+    font-family:PingFangSC-Thin;
+    font-weight:100;
+    font-size: 24rpx;
+}

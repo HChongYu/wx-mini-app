@@ -46,8 +46,3 @@ page {
   width: 88rpx;
 }
 
-.hlist {
-  margin-top: 60rpx;
-  width: 100%;
-}
-

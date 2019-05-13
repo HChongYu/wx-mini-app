@@ -10,6 +10,10 @@ Component({
     style:{
       type: String,
       value: "margin-top:20rpx;"
+    },
+    atIndex:{
+      type:Number,
+      value: 0
     }
   },
   options: {
@@ -19,7 +23,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    atIndex: 0
+
   },
 
   /**

@@ -13,6 +13,10 @@ Component({
         img:"",
         title:""
       },
+    },
+    size:{
+      type: String,
+      value: "large"
     }
   },
   /**

@@ -7,7 +7,11 @@ Component({
     title:{
       type: String,
       value: "title"
-    }
+    },
+      style:{
+          type: String,
+          value: "margin-top: 60rpx;"
+      }
   },
 
   options: {

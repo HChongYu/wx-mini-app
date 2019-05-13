@@ -1,0 +1,2 @@
+<!--packageTree/treelist/treelist.wxml-->
+<jh-chat wx:for='aaaa' bind:callBack='chatBack'></jh-chat>

@@ -1,2 +1,28 @@
 <!--packageAct/actdetails/actdetails.wxml-->
-<text>packageAct/actdetails/actdetails.wxml</text>
+
+<swiper indicator-dots='true' indicator-active-color='#5A7F5B' indicator-color='#FAFAFA' circular='true' autoplay='true'>
+  <swiper-item wx:for='{{dome1}}' wx:key='id'>
+    <image class='swiper-img' src='{{item.img}}'></image>
+  </swiper-item>
+</swiper>
+<view class='jh-fmw5' style='margin-top:40rpx;'>下路中学理想与责任旅行</view>
+<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>在整体过程中全体老师的参与，把校内系统培养与校外素养展现统一起来，做到教研引导留空间，学习实践重个性，活动设计多热点</view>
+<jh-title title='活动时间' ></jh-title>
+<view class="jh-fmw5" style="margin:32rpx 0 0 32rpx;font-size: 24rpx;">时间</view>
+<jh-title title='本期金牌教官' ></jh-title>
+<view class="coach_back">
+    <view class="jh-listnp coach" wx:for="abcdede" bindtap='coachItemClick'>
+        <view class="coach-photo"></view>
+        <view class="jh-list_item coach-data">
+            <view>王帅</view>
+            <view class="coach-type jh-slh">A金牌教官</view>
+        </view>
+        <view class="coach-see"></view>
+    </view>
+</view>
+<jh-title title='即将开始' ></jh-title>
+<view class='flow' wx:for='abcd'>
+    <view class='jh-listnp flow-list'><view class='flow-time'>12:00-12:30</view><view class='flow-title jh-list_item'>团队建设、团队破冰、组建团队 参观鄂王城历史文化展览馆（了解鄂王历史文化，对湖北历史文化的学习。） 参观金牛历史文化展览馆（了解黄石粮仓金牛镇历史文化发展和农耕文化</view></view>
+    <image class='flow-img' src="/img/win3.png"></image>
+    <view class='jh-listnp flow-expand'>拓展活动【毕业墙】</view>
+</view>

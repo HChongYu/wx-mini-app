@@ -50,6 +50,11 @@ Page({
   onLoad: function() {
     wx.hideShareMenu()
   },
+  searchClick() {
+    wx.navigateTo({
+      url: '/packageAct/search/search'
+    })
+  },
   homeWinBack(e){
     console.log(e)
     wx.navigateTo({

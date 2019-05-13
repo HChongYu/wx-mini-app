@@ -8,17 +8,13 @@
   <view class="header-h1">hi～</view>
   <view class="header-h2">易烊千玺的小老婆</view>
 </view>
-<view class="jh-list">
+
+<view class="jh-list" bindtap='treeClick'>
   <image class="jh-list_icon" src="/img/dome1.png"></image>
-  <view class="jh-list_bd">我的提问</view>
-  <view class="jh-list_ft jh-list_ft_arrow">暂未开放，尽情期待</view>
+  <view class="jh-list_bd">树洞管理</view>
+  <view class="jh-list_ft jh-list_ft_arrow">25条</view>
 </view>
-<view class="jh-list">
-  <image class="jh-list_icon" src="/img/dome1.png"></image>
-  <view class="jh-list_bd">我的消息</view>
-  <view class="jh-list_ft jh-list_ft_arrow">你还没有提问欧～</view>
-</view>
-<view class="jh-list">
+<view class="jh-list" bindtap='collectClick'>
   <image class="jh-list_icon" src="/img/dome1.png"></image>
   <view class="jh-list_bd">我的收藏</view>
   <view class="jh-list_ft_arrow"></view>

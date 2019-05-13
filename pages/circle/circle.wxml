@@ -1,7 +1,7 @@
 <!--logs.wxml-->
-<jh-navbar style='margin-top:20rpx;'  navbar-data='{{navbarData}}' bind:callBack='circleBarBack'></jh-navbar>
-<view  wx:if='{{atIndex==0}}'>
-  <view class="win" wx:for="{{winList}}" wx:key='index' >
+<jh-navbar style='margin-top:20rpx;' navbar-data='{{navbarData}}' at-index='{{atIndex}}' bind:callBack='circleBarBack'></jh-navbar>
+<view wx:if='{{atIndex==0}}'>
+  <view class="win" wx:for="{{winList}}" wx:key='index'>
     <image class="win-map" mode="scaleToFill" src="{{item.map}}">
     </image>
     <view class="win-bottom">
@@ -27,9 +27,39 @@
       </view>
     </view>
   </view>
-  
   <view class='jh-bottom_hint'>我是有底线的</view>
 </view>
-<view class='noopen' wx:else>
+<block wx:elif='{{atIndex==1}}'>
+  <view style='margin-top:30rpx;' bindtap='publishClick'>新建</view>
+  <view bindtap="newsClick" class="jh-list newslist">
+    <view class="jh-slh" style='font-size:24rpx;' >新收到的消息</view>
+    <view class='jh-list_item'>
+      <view class='newslist-num'>
+        32
+      </view>
+    </view>
+    <view class="jh-list_ft jh-list_ft_arrow" ></view>
+  </view>
+  <view style='margin-top:24rpx;'>
+    <jh-chat wx:for='aaaa' bind:callBack='chatBack'></jh-chat>
+  </view>
+</block>
+<!-- <view class='noopen' wx:else>
   暂未开放／尽情期待～
+</view> -->
+<view class='news_back' bindtap='newsClick' catchtouchmove='eeee' wx:if='{{showNews}}'>
+  <view class='news' catchtap='eeee'>
+    <view class='news-empty' catchtap='newsClick'>清空</view>
+    <view class='news-header' >
+    </view>
+    <view class="">
+        <view wx:for="aba" class='news-item' style="{{index!==0?'border-top: 1rpx solid #565656;':''}}" catchtap='newItemClick'>
+            <view>我也是啊，我觉得高三真的好累好累好累好累啊，每天都是一刻都不能停下来。</view>
+            <view class='news-list jh-listnp'>
+                <view class=".news-list-from jh-list_item jh-slh">都说成年人的世界没有容易高三真的二字…</view>
+                <view>10分钟前</view>
+            </view>
+        </view>
+    </view>
+  </view>
 </view>

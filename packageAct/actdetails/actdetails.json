@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "拓展详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "jh-title": "/component/jh-title/index"
+  }
 }

@@ -1,0 +1,11 @@
+<!--packageTree/Publish/publish.wxml-->
+<view class='content'>
+  <input class='content-input' placeholder='#这里输入或选择你的话题#' placeholder-class='content-input_placeholder'></input>
+  <textarea class="136rpx;"></textarea>
+  <view class='content-size'>0/150</view>
+</view>
+<view class='publishbtn' bindtap='publishClick'>发布</view>
+<jh-title title='热门搜索'></jh-title>
+<view>
+  <view  wx:for='abcadsa' wx:key='id' bindtap='acttextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>华容高级中学高三年级百日誓师活动</view>
+</view>

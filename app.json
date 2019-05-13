@@ -16,13 +16,21 @@
       "name": "activity",
       "pages": [
         "actlist/actlist",
-        "actdetails/actdetails"
+        "actdetails/actdetails",
+        "coachdetails/coachdetails",
+        "search/search"
       ]
     },
     {
       "root": "packageTree",
       "name": "tree",
-      "pages": []
+      "pages": [
+        "collect/collect",
+        "article/article",
+        "publish/publish",
+        "treedetails/treedetails",
+        "treelist/treelist"
+      ]
     }
   ],
   "tabBar": {

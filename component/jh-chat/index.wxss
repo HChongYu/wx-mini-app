@@ -1,0 +1,44 @@
+/* component/jh-chat/jh-chat.wxss */
+
+.jh-chat {
+  position: relative;
+  padding-top: 24rpx;
+  border-bottom: 2rpx solid #f9f9f9;
+  font-size: 24rpx;
+}
+
+.jh-chat-delete {
+  position: absolute;
+  right: 0px;
+  top: 24rpx;
+  height: 30rpx;
+  width: 30rpx;
+  background-color: #9fb5a0;
+}
+
+.jh-chat-title {
+  color: #9fb5a0;
+}
+
+.jh-chat-content {
+  margin-top: 8rpx;
+  width: 650rpx;
+  height: 68rpx;
+}
+
+.jh-chat-time {
+  color: #d0d0d0;
+}
+
+.jh-chat-btn-icon {
+  width: 10rpx;
+  height: 10rpx;
+  margin-right: 10rpx;
+  background-color: #9fb5a0;
+}
+
+.jh-chat-btn {
+  padding: 24rpx 0 24rpx 24rpx;
+  font-size: 20rpx;
+  color: #d0d0d0;
+}

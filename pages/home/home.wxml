@@ -1,12 +1,11 @@
 <!--index.wxml-->
-<view> 文思雅</view>
 <view class="header-time">
   18/03/2019
 </view>
 <view class="header-title">
   The Bravery
 </view>
-<view class="jh-listnp search-back">
+<view class="jh-listnp search-back" bindtap='searchClick'>
   <view class="jh-list_item search">快来一搜</view>
   <view class="search-icon"></view>
 </view>
@@ -16,12 +15,12 @@
     <view>{{item.name}}</view>
   </view>
 </view>
-<view class="hlist">
-  <jh-title title='即将开始'></jh-title >
+<view>
+  <jh-title title='即将开始'></jh-title>
   <jh-win wx:for='{{dome1}}' wx:key="id" item='{{item}}' bind:callBack='homeWinBack'></jh-win>
 </view>
-<view class="hlist">
-  <jh-title title='往期精彩'></jh-title >
-  <jh-win wx:for='{{dome2}}' wx:key="id" item='{{item}}'></jh-win>
+<view>
+  <jh-title title='往期精彩'></jh-title>
+  <jh-win wx:for='{{dome2}}' wx:key="id" item='{{item}}' bind:callBack='homeWinBack'></jh-win>
 </view>
 <view class='jh-bottom_hint'>我是有底线的</view>

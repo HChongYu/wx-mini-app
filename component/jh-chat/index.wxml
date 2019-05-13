@@ -1,0 +1,22 @@
+<!--component/jh-chat/jh-chat.wxml-->
+
+<view class='jh-chat' bindtap='chatClick'>
+  <view class='jh-chat-delete' wx:if='{{type=="son"}}'></view>
+  <view class='jh-chat-title'>#陌生人，你听我说#</view>
+  <view class='jh-chat-content'>看过凌晨3点的北京，也看过清晨6点的日出。虽然不知道高中会比初三辛苦成千上万倍，但现在的我有点熬不住了…</view>
+  <view class='jh-chat-list jh-listnp'>
+    <view class='jh-chat-time jh-list_item'>2019-3-11</view>
+    <view class='jh-chat-btn jh-listnp'>
+      <view class='jh-chat-btn-icon'></view>
+      <view>举报</view>
+    </view>
+    <view class='jh-chat-btn jh-listnp'>
+      <view class='jh-chat-btn-icon'></view>
+      <view>说一句</view>
+    </view>
+    <view class='jh-chat-btn jh-listnp'>
+      <view class='jh-chat-btn-icon'></view>
+      <view>12</view>
+    </view>
+  </view>
+</view>

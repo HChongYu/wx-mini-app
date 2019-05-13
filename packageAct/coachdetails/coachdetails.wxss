@@ -1,0 +1,70 @@
+/* packageAct/coachdetails/coachdetails.wxss */
+page{
+  padding-bottom: 100rpx; 
+}
+.coach-photo {
+  width: 306rpx;
+  min-width: 306rpx;
+  height: 366rpx;
+  border-radius: 16rpx;
+  border: 1rpx solid #979797;
+  margin-right: 40rpx;
+}
+
+.coach-left {
+  display: flex;
+  flex-flow: column;
+  height: 366rpx;
+}
+
+.coach-name {
+  font-size: 32rpx;
+  margin-top: 16rpx;
+}
+
+.coach-type {
+  display: flex;
+}
+
+.coach-type {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.coach-types {
+  height: 28rpx;
+  max-width: 342rpx;
+  font-size: 20rpx;
+  color: #5a7f5b;
+  background: rgba(90, 127, 91, 0.15);
+  margin-top: 24rpx;
+  margin-right: 24rpx;
+  padding: 0 10rpx;
+  border-radius: 14rpx;
+}
+
+.coach-motto {
+  margin-top: 40rpx;
+  width: 334rpx;
+  height: 110rpx;
+  max-width: 334rpx;
+  max-height: 110rpx;
+  font-size: 24rpx;
+}
+
+.actList{
+  position: relative;
+    left: -40rpx;
+
+  width: 750rpx;
+  height: 510rpx;
+  white-space: nowrap;
+}
+
+.actList-item {
+  display: inline-block;
+  width: 440rpx;
+    margin-right: 40rpx;
+    margin-left: 2rpx;
+}

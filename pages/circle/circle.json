@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "圈子",
   "usingComponents": {
-    "jh-navbar":"/component/jh-navbar/index"
+    "jh-navbar":"/component/jh-navbar/index",
+    "jh-chat": "/component/jh-chat/index"
   }
 }
