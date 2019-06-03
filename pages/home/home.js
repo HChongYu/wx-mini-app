@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     iconBar: [{
@@ -25,6 +24,10 @@ Page({
         name: "体验式培训"
       }
     ],
+    navbarData: [
+      { name: '往期精彩', index: 0 },
+      { name: '即将开始', index: 1 },
+    ],
     dome1: [{
       id: 1,
       name: "下陆中学7天研学之旅",
@@ -44,7 +47,8 @@ Page({
       title: "下陆中学7天研学之旅下陆中学7天研学之旅",
       date: "2019-3-11",
       img: "/img/win1.png"
-    }]
+    }],
+    atIndex:0
   },
 
   onLoad: function() {
@@ -55,16 +59,19 @@ Page({
       url: '/packageAct/search/search'
     })
   },
+  iconClik(e) {
+    wx.navigateTo({
+      url: '/packageAct/actlist/actlist'
+    })
+  },
+  homeBarBack(e){
+    this.setData({ atIndex: e.detail.index})
+  },
   homeWinBack(e){
-    console.log(e)
+  
     wx.navigateTo({
       url: '/packageAct/actdetails/actdetails'
     })
   },
-  iconClik(e) {
-    console.log(e)
-    wx.navigateTo({
-      url: '/packageAct/actlist/actlist'
-    })
-  }
+
 })

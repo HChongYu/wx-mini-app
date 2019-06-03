@@ -4,7 +4,7 @@ page {
   padding: 0 40rpx;
 }
 
-.header-time {
+/* .header-time {
   font-size: 28rpx;
 }
 
@@ -12,7 +12,7 @@ page {
   font-size: 60rpx;
   font-family: PingFangSC-Semibold;
   font-weight: 600;
-}
+} */
 
 .search-back {
   background: #f1f4f2;
@@ -46,3 +46,10 @@ page {
   width: 88rpx;
 }
 
+.article-bar{
+  margin-top: 60rpx; 
+  height:112rpx;
+  background: blue;
+  border-radius: 56rpx;
+ 
+}

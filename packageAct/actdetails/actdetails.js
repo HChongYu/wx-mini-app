@@ -14,7 +14,11 @@ Page({
     }, {
       img: "/img/win2.png",
       id: '1'
-    }, ]
+    }, ],
+    navbarData: [
+      { name: 'day1', index: 0 },
+      { name: 'day2', index: 1 },
+    ],
   },
   coachItemClick(){
     wx.navigateTo({

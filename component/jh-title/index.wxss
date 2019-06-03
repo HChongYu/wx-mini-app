@@ -1,8 +1,8 @@
 /* component/jh-title/index.wxss */
 .titlebar-fill {
-  width: 6rpx;
-  height: 24rpx;
-  background: #5a7f5b;
+  width: 12rpx;
+  height: 12rpx;
+  background: #4FC981;
   margin-right: 20rpx;
 }
 

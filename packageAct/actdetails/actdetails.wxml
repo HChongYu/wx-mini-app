@@ -11,18 +11,23 @@
 <view class="jh-fmw5" style="margin:32rpx 0 0 32rpx;font-size: 24rpx;">时间</view>
 <jh-title title='本期金牌教官' ></jh-title>
 <view class="coach_back">
-    <view class="jh-listnp coach" wx:for="abcdede" bindtap='coachItemClick'>
+    <view class="coach" wx:for="abcdede" bindtap='coachItemClick'>
         <view class="coach-photo"></view>
-        <view class="jh-list_item coach-data">
-            <view>王帅</view>
-            <view class="coach-type jh-slh">A金牌教官</view>
-        </view>
-        <view class="coach-see"></view>
+        <view style='margin-top:20rpx;'>王帅</view>
+        <view class="coach-type jh-slh">A金牌教官</view>
     </view>
+    <view class='coach-more'>查看更多</view>
 </view>
-<jh-title title='即将开始' ></jh-title>
+<jh-title title='活动流程'></jh-title>
+<jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
 <view class='flow' wx:for='abcd'>
     <view class='jh-listnp flow-list'><view class='flow-time'>12:00-12:30</view><view class='flow-title jh-list_item'>团队建设、团队破冰、组建团队 参观鄂王城历史文化展览馆（了解鄂王历史文化，对湖北历史文化的学习。） 参观金牛历史文化展览馆（了解黄石粮仓金牛镇历史文化发展和农耕文化</view></view>
     <image class='flow-img' src="/img/win3.png"></image>
     <view class='jh-listnp flow-expand'>拓展活动【毕业墙】</view>
+</view>
+<jh-title title='精彩瞬间'></jh-title>
+<view class='wonderful_back'>
+  <image class='wonderful' src='/img/win1.png' wx:for='abckdede'></image>
+</view>
+<view style='height:200rpx;'>
 </view>

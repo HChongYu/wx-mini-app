@@ -58,5 +58,6 @@
         "selectedIconPath": "/img/mine-s.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

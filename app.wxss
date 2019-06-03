@@ -4,6 +4,8 @@
 
 view{
   box-sizing: border-box;
+
+  word-break:break-all; overflow:auto;
 }
 page{
   padding: 0 40rpx;

@@ -22,11 +22,14 @@ swiper{
     width: 100%;
 }
 .coach{
-
-    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 40rpx;
+    width: 25%;
     font-size:  24rpx;
-    margin-top: 32rpx;
-    padding-right: 10rpx;
+    text-align: center;
+
 }
 .coach-photo{
     width: 80rpx;
@@ -34,30 +37,25 @@ swiper{
     border-radius: 50%;
     border: 1rpx solid #ababab;
 }
-.coach-data{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-flow: column;
-    height: 80rpx;
-    padding-left: 4rpx;
-}
 .coach-type{
+    margin-top: 20rpx;
+    padding: 0 10rpx;
     height: 28rpx;
     max-width: 200rpx;
     font-size: 20rpx;
     color: #5A7F5B;
     background:rgba(90,127,91,.15);
-    padding: 0 10rpx;
     border-radius: 14rpx
-
 }
-.coach-see{
-    height: 10rpx;
-    width: 12rpx;
-    border: 1rpx solid #ababab;
+.coach-more{
+  width: 100%;
+  height: 114rpx;
+  line-height: 114rpx;
+  color: #B8B8B8;
+  font-size:24rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #f9f9f9;
 }
-
 /*活动流程*/
 .flow{
     padding: 24rpx 0;
@@ -89,4 +87,18 @@ swiper{
     font-family:PingFangSC-Thin;
     font-weight:100;
     font-size: 24rpx;
+}
+.wonderful_back{
+  position: relative;
+  left: 0; 
+  width: 710rpx;
+
+}
+.wonderful{
+  display: block;
+  float: left;
+  margin: 30rpx  30rpx 0 0;
+  height: 234rpx;
+  width: 320rpx;
+  border-radius: 12rpx;
 }

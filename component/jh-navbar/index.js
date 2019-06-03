@@ -7,7 +7,7 @@ Component({
     navbarData: {
       type: Array
     },
-    style:{
+    inStyle:{
       type: String,
       value: "margin-top:20rpx;"
     },
