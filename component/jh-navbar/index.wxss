@@ -16,8 +16,8 @@
 
 .navbar-item_at {
   padding: 4rpx;
-  border-bottom: 4rpx solid #5a7f5b;
-  color: #5a7f5b;
+  border-bottom: 4rpx solid #2DA25F;
+  color: #2DA25F;
   font-size: 36rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;

@@ -1,10 +1,55 @@
 /* packageTree/treedetails/treedetails.wxss */
+page{
+  padding: 0 24rpx 0;
+}
+
 .delheader{
-  position: relative;
-  left: -40rpx;
-  padding: 0 40rpx;
-  width: 750rpx;
-  background: #F1F4F2;
+  padding: 32rpx;
+  margin-top: 3vh;
+  min-height: 95vh;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 0rpx 12rpx 0rpx rgba(0,0,0,0.19);
+  border-radius: 20rpx 20rpx 0 0;
+}
+.delheader-header{
+  -webkit-align-item: flex-start;
+  align-items: flex-start;
+}
+.delheader-header-day{
+  font-size: 60rpx;
+  color: #282828;
+  margin-top: -10rpx; 
+}
+.delheader-header-rests{
+  font-size: 24rpx;
+  color: #8D8D8D;
+
+}
+.handle_back{
+  position: fixed;
+  left: 24rpx;
+  bottom: 0;
+  padding-bottom: 24rpx; 
+  width: 702rpx;
+  border-left: 1rpx solid #F9F9F9;
+  border-right: 1rpx solid #F9F9F9;
+  background: #fff;
+}
+.handle{
+  padding: 24rpx 0;
+  height: 120rpx;
+  justify-content: center;
+}
+.handle-icon{
+  height: 68rpx;
+  width: 68rpx;
+  border: 3rpx solid #F9F9F9; 
+}
+.handle-name{
+  margin-left: 10rpx; 
+  color: #8D8D8D;
+  font-size: 24rpx;
+   
 }
 .reply{
   position: relative;
@@ -16,12 +61,12 @@
   position: absolute;
   top: 24rpx;
   right: 20rpx;
-  background: #9fb5a0;
+  background: #2DA25F;
   height: 20rpx;
   width: 20rpx;
 } 
 .reply-text{
-  width: 600rpx;
+  width: 580rpx;
 }
 .reply-time{
   margin-top: 12rpx; 

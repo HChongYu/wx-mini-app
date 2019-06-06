@@ -16,7 +16,7 @@ page {
 
 .search-back {
   background: #f1f4f2;
-  color: #b9b9b9;
+  color: #9F9F9F;
   font-size: 24rpx;
   padding: 12rpx 24rpx;
   border-radius: 40rpx;

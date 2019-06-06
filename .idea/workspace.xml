@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2994dacf-0485-466d-a24c-b2a620a72fb6" name="Default Changelist" comment="" />
+    <list default="true" id="2994dacf-0485-466d-a24c-b2a620a72fb6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/component/jh-chat/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/component/jh-chat/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/jh-chat/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/component/jh-chat/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/jh-navbar/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/component/jh-navbar/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageAct/search/search.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/search/search.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageAct/search/search.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/search/search.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageTree/treedetails/treedetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/treedetails/treedetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/circle/circle.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/circle/circle.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/circle/circle.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/circle/circle.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/mine.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/mine.wxss" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,12 +28,12 @@
     <session id="-786771766">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -67,12 +80,7 @@
             <entry file="file://$PROJECT_DIR$/pages/circle/circle.wxml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="434">
-                  <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-                  <folding>
-                    <element signature="n#style#0;n#view#0;n#block#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#view#2;n#block#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#view#0;n#view#2;n#view#0;n#view#1;n#!!top" expanded="true" />
-                  </folding>
+                  <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -80,7 +88,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/circle/circle.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
+                <state relative-caret-position="1081">
                   <caret line="47" column="12" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="12" />
                 </state>
               </provider>
@@ -89,12 +97,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/circle/circle.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="381">
-                  <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+                <state relative-caret-position="444">
+                  <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -150,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,6 +212,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,6 +249,7 @@
       <workItem from="1557657747137" duration="4583000" />
       <workItem from="1557713411729" duration="2000" />
       <workItem from="1557758869616" duration="4337000" />
+      <workItem from="1559656797562" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="修改啊">
       <created>1557535335571</created>
@@ -267,12 +276,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17940000" />
+    <option name="totallyTimeSpent" value="17943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25427872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25733498" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -461,29 +470,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/circle/circle.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/circle/circle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="1081">
           <caret line="47" column="12" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/circle/circle.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/circle/circle.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#2;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#2;n#view#0;n#view#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="444">
+          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
         </state>
       </provider>
     </entry>

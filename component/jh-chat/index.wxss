@@ -13,32 +13,42 @@
   top: 24rpx;
   height: 30rpx;
   width: 30rpx;
-  background-color: #9fb5a0;
+  background-color: #2DA25F;
 }
 
 .jh-chat-title {
-  color: #9fb5a0;
+  color: #2DA25F;
+}
+
+.jh-chat-picture{
+  display: block;
+  float: left;
+  margin-right: 1.3%;
+  width: 32%;
+  height: 220rpx;
+  border-radius: 6rpx; 
 }
 
 .jh-chat-content {
   margin-top: 8rpx;
   width: 650rpx;
   height: 68rpx;
+  font-size: #282828; 
 }
 
 .jh-chat-time {
-  color: #d0d0d0;
+  color: #bdbdbd;
 }
 
 .jh-chat-btn-icon {
   width: 10rpx;
   height: 10rpx;
   margin-right: 10rpx;
-  background-color: #9fb5a0;
+  background-color: #2DA25F;
 }
 
 .jh-chat-btn {
   padding: 24rpx 0 24rpx 24rpx;
   font-size: 20rpx;
-  color: #d0d0d0;
+  color: #282828;
 }

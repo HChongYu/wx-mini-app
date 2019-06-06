@@ -1,20 +1,43 @@
 <!--packageTree/treedetails/treedetails.wxml-->
 <view class='delheader'>
+  <view class='jh-listnp delheader-header'>
+    <view class='delheader-header-day'>22</view>
+    <view class='jh-list_item delheader-header-rests' style='margin-left:24rpx;'>
+      2019年05月，星期三
+      <text decode='{{true}}'>\n</text>
+      阴雨转多云，5～15*
+    </view>
+    <view class='delheader-header-rests'>12 喜欢</view>
+  </view>
   <jh-chat type='father' bind:callBack='chatBack'></jh-chat>
-</view>
-<jh-title title='消息列表'></jh-title>
-<view class='reply'>
+  <jh-title title='评论'></jh-title>
+  <view class='reply'>
     <view class='reply-del'></view>
     <view class='reply-text '>要加油哦，我也是高三，我们一起考大学！</view>
     <view class='reply-time'>刚刚</view>
-</view>
-<view class='reply'>
+  </view>
+  <view class='reply'>
     <view class='reply-del'></view>
     <view class='reply-text '>我也是啊，我觉得高三真的好累好累好累好累啊，每天都是一刻都不能停下来。</view>
     <view class='reply-time'>刚刚</view>
-</view>
-<view class='reply'>
+  </view>
+  <view class='reply'>
     <view class='reply-del'></view>
     <view class='reply-text '>要加油哦，我也是高三，我们一起考大学！</view>
     <view class='reply-time'>刚刚</view>
+  </view>
+</view>
+<view class='jh-listnp handle_back'>
+  <view class='jh-listnp jh-list_item handle'>
+    <view class='handle-icon'></view>
+    <view class='handle-name'>喜欢</view>
+  </view>
+  <view class='jh-listnp jh-list_item handle'>
+    <view class='handle-icon'></view>
+    <view class='handle-name'>品论</view>
+  </view>
+  <view class='jh-listnp jh-list_item handle'>
+    <view class='handle-icon'></view>
+    <view class='handle-name'>举报</view>
+  </view>
 </view>

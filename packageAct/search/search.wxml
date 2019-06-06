@@ -1,6 +1,6 @@
 <!--packageAct/search/search.wxml-->
 <view class="jh-listnp search-back" role="" aria-label="">
-  <input class='jh-list_item search' placeholder='快来搜一搜～' placeholder-style='color:rgba(185,185,185,1)'></input>
+  <input class='jh-list_item search' placeholder='快来搜一搜～' placeholder-style='color:#9F9F9F;'></input>
   
   <view class="search-icon" role="" aria-label="">
   </view>
