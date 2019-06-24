@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "jh-title": "/component/jh-title/index",
+    "jh-chat": "/component/jh-chat/index"
+  }
+  
+}

@@ -1,0 +1,14 @@
+<!--packageTree/topic/topic.wxml-->
+<!-- <wxs src="/dome/topic.wxs" module="topic" /> -->
+<view  wx:for='{{dome1}}' class='topic-item jh-slh jh-fwm5 topic-item-{{topic.topic(index)}}' style='{{index==0?"":"margin-top:24rpx;"}}' wx:key='id'>
+  # {{item.name}}
+</view>
+<wxs module="topic" >
+var topic = function (index) {
+  var index =index%3;
+  return index;
+}
+module.exports = {
+  topic: topic
+};
+</wxs>

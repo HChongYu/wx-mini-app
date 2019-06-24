@@ -1,0 +1,11 @@
+/* component/jh-fold/jh-fold.wxss */
+
+.jh-fold-more{
+  width: 100%;
+  height: 114rpx;
+  line-height: 112rpx;
+  color: #B8B8B8;
+  font-size:24rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #f9f9f9;
+}

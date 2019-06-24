@@ -1,47 +1,11 @@
 /**app.wxss**/
-
+@import "/wxss/overall.wxss";
 /* */
-
-view{
-  box-sizing: border-box;
-
-  word-break:break-all; overflow:auto;
-}
 page{
   padding: 0 40rpx;
   box-sizing: border-box;
 }
-/* 缩进 */
-.jh-slh {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-/* 字重 */
-.jh-fmw5{
-  font-family: PingFangSC-Medium;
-  font-weight: 500;
-}
 
-.jh-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  padding: 40rpx 24rpx;
-  border-bottom: 3rpx solid #f9f9f9;
-}
-
-.jh-listnp {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
 .jh-list_icon {
   width:34rpx;
   height: 34rpx;
@@ -64,7 +28,10 @@ page{
   padding-right: 4rpx;
   font-size: 28rpx;
 }
+.jh-list_ft_arrow{
+  min-width: 20rpx;
 
+}
 .jh-list_ft_arrow:after {
   content: " ";
   display: inline-block;
@@ -79,11 +46,6 @@ page{
   top: -1rpx;
 }
 
-.jh-list_item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
 .jh-bottom_hint{
   font-size: 24rpx;
   color:  rgba(0, 0, 0, 0.18);

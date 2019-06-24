@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    winList: [
+    collectList: [
       {
         map: '/img/win1.png',
         bar: "【干货】你应该掌握的溺水急救小常识",

@@ -7,18 +7,7 @@ Page({
   data: {
 
   },
-  // 树洞按钮
-  treeClick(){
-    wx.navigateTo({
-      url: '/packageTree/treelist/treelist'
-    })
-  },
-  // 收藏按钮
-  collectClick() {
-    wx.navigateTo({
-      url: '/packageTree/collect/collect'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -38,6 +27,25 @@ Page({
    */
   onShow: function () {
 
+  },
+  // 跳转函数
+  // 树洞按钮
+  treeClick() {
+    wx.navigateTo({
+      url: '/packageTree/treelist/treelist'
+    })
+  },
+  // 收藏按钮
+  collectClick() {
+    wx.navigateTo({
+      url: '/packageTree/collect/collect'
+    })
+  },
+  // 消息跳转
+  messageClick() {
+    wx.navigateTo({
+      url: '/packageTree/message/message'
+    })
   },
 
   /**

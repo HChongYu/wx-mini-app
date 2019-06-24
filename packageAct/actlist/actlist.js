@@ -23,12 +23,14 @@ Page({
     }],
     atIndex:0
   },
-  actlistWinBack(){
+
+  onLoad: function () {
+    wx.hideShareMenu()
+  },
+  // 跳转函数
+  actlistWinBack() {
     wx.navigateTo({
       url: '/packageAct/actdetails/actdetails'
     })
   },
-  onLoad: function () {
-    wx.hideShareMenu()
-  }
 })

@@ -19,25 +19,17 @@ Page({
           img: "/img/win1.png"
       }]
   },
-  coachWinBack(){
-    // 待解决
-    // 重复跳转嵌套 会出现bug
-    wx.navigateTo({
-      url: '/packageAct/actdetails/actdetails'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     wx.hideShareMenu()
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
@@ -45,6 +37,14 @@ Page({
    */
   onShow: function () {
 
+  },
+  // 跳转函数
+  coachWinBack() {
+    // 待解决
+    // 重复跳转嵌套 会出现bug
+    wx.navigateTo({
+      url: '/packageAct/actdetails/actdetails'
+    })
   },
 
   /**

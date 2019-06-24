@@ -1,5 +1,5 @@
 /* component/jh-chat/jh-chat.wxss */
-
+@import "/wxss/overall.wxss";
 .jh-chat {
   position: relative;
   padding-top: 24rpx;

@@ -7,33 +7,37 @@ Page({
   data: {
 
   },
-  publishClick(){
 
-    wx.navigateBack({
-      delta: 1,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     wx.hideShareMenu()
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
   },
-
+  // 跳转函数
+  publishClick() {
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
+  topic(){
+    console.log("abab")
+    wx.navigateTo({
+      url: '/packageTree/topic/topic'
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

@@ -18,9 +18,13 @@
 <view class='article-bar'></view>
 <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
 <view wx:if='{{atIndex==0}}'>
-  <jh-win wx:for='{{dome1}}' wx:key="id" item='{{item}}' bind:callBack='homeWinBack'></jh-win>
+  <view wx:for='{{dome1}}' wx:key="id" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
+    <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
+  </view>
 </view>
 <view wx:elif='{{atIndex==1}}'>
-  <jh-win wx:for='{{dome2}}' wx:key="id" item='{{item}}' bind:callBack='homeWinBack'></jh-win>
+  <view wx:for='{{dome2}}' wx:key="id" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
+    <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
+  </view>
 </view>
 <view class='jh-bottom_hint'>我是有底线的</view>

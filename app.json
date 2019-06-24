@@ -29,7 +29,9 @@
         "article/article",
         "publish/publish",
         "treedetails/treedetails",
-        "treelist/treelist"
+        "treelist/treelist",
+        "message/message",
+        "topic/topic"
       ]
     }
   ],

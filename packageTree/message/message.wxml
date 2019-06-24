@@ -1,0 +1,6 @@
+<!--packageTree/message/message.wxml-->
+<block wx:for='aaaa'>
+  <jh-title title='刚刚有人评论了你的消息'></jh-title>
+  <view class='message-hint jh-fwm5'>要加油哦，我也是高三，我们一起考大学！</view>
+  <jh-chat  bind:callBack='chatBack'></jh-chat>
+</block>  

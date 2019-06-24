@@ -1,59 +1,61 @@
 /* component/jh-win/index.wxss */
-.win_large{
-  margin-top: 40rpx;
+@import "/wxss/overall.wxss";
+
+.win_large {
+}
+
+.win_small {
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.win_large .win-map {
   width: 100%;
-  overflow: hidden;
-  border-bottom: 2rpx solid #f9f9f9;
+  height: 472rpx;
+  border-radius: 16rpx;
 }
-.win_small{
-  margin-top: 40rpx;
-  border-radius: 40rpx;
-  width: 436rpx;
-  box-shadow: 0 1rpx 1rpx 1rpx #d0d0d0;
-  overflow: hidden;
+
+.win_small .win-map {
+  width: 172rpx;
+  height: 124rpx;
+  border-radius: 10rpx;
 }
-.win-map_large{
-  display: block;
-  width: 100%;
-  height: 400rpx;
-  border: 16rpx;
-}
-.win-map_small{
-  display: block;
-  width: 100%;
-  height: 320rpx
-}
-.win-bottom {
+
+.win_large .win-content {
+  padding-top: 10rpx;
   height: 144rpx;
   width: 100%;
 }
-
-.win-list {
-  margin-top: 10rpx;
+.win_small .win-content {
+  padding-left: 10rpx;
 }
-
-.win-list_main {
-  font-size: 32rpx;
-  font-family: PingFangSC-Medium;
-  font-weight: 500;
+/* win_large .win-content-title 暂时没有*/
+.win_small .win-content-title {
+  max-width: 440rpx;
+  /*todo*/
 }
-
-.win-list_time {
+.win_large .win-content-date {
   font-size: 24rpx;
-  color: #d0d0d0;
+  color: #D0D0D0;
+}
+.win_small .win-content-date {
+  margin-top: 14rpx; 
+  font-size: 24rpx;
+  color: #D0D0D0;
 }
 
-.win-list_minor_large{
+
+.win_large .win-content-subtitle {
   margin-top: 10rpx;
-  font-size: 28rpx;
-  color:rgba(0,0,0,.46);
 }
 
-.win-list_minor_small{
-  font-size: 28rpx;
-  color:rgba(0,0,0,.46);
-  max-width: 366rpx;  
+.win_small .win-content-subtitle {
+  margin-top: 4rpx;
+  max-width: 440rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+

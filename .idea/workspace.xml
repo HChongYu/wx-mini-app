@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2994dacf-0485-466d-a24c-b2a620a72fb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/component/jh-chat/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/component/jh-chat/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/jh-chat/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/component/jh-chat/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/jh-navbar/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/component/jh-navbar/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packageAct/search/search.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/search/search.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packageAct/search/search.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/search/search.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageAct/actdetails/actdetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/actdetails/actdetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageAct/actdetails/actdetails.json" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/actdetails/actdetails.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageAct/actdetails/actdetails.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/actdetails/actdetails.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageAct/actdetails/actdetails.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/packageAct/actdetails/actdetails.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageTree/publish/publish.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/publish/publish.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageTree/publish/publish.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/publish/publish.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packageTree/treedetails/treedetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/treedetails/treedetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packageTree/treedetails/treedetails.json" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/treedetails/treedetails.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/packageTree/treedetails/treedetails.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/circle/circle.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/circle/circle.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/circle/circle.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/circle/circle.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mine/mine.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/mine.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,12 +27,13 @@
     <session id="-786771766">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -101,7 +101,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/circle/circle.wxss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="444">
+                <state relative-caret-position="465">
                   <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
                 </state>
               </provider>
@@ -148,6 +148,11 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1920" />
@@ -220,6 +225,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -250,6 +256,7 @@
       <workItem from="1557713411729" duration="2000" />
       <workItem from="1557758869616" duration="4337000" />
       <workItem from="1559656797562" duration="3000" />
+      <workItem from="1561020088552" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="修改啊">
       <created>1557535335571</created>
@@ -276,12 +283,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17943000" />
+    <option name="totallyTimeSpent" value="17945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25733498" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26012793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,7 +299,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32883817" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3279678" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32987553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -486,7 +493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/circle/circle.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
+        <state relative-caret-position="465">
           <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
         </state>
       </provider>

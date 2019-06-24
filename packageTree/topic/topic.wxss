@@ -1,0 +1,21 @@
+/* packageTree/topic/topic.wxss */
+
+.topic-item{
+  /* height:80rpx;
+  line-height: 80rpx; */
+  padding: 18rpx 30rpx; 
+  border-radius:10rpx;
+  font-size: 28rpx;
+}
+.topic-item-0{
+  color: #2DA25F;
+  background: #F2FAF6;
+}
+.topic-item-1{
+  color: #677AB0;
+  background: #F4F6FF;
+}
+.topic-item-2{
+  color: #FFB22D;
+  background: #FFF9ED;
+}

@@ -2,6 +2,7 @@
   "navigationBarTitleText": "树洞详情",
   "usingComponents": {
     "jh-chat": "/component/jh-chat/index",
-    "jh-title": "/component/jh-title/index"
+    "jh-title": "/component/jh-title/index",
+    "jh-vote": "/component/jh-vote/index"
   }
 }

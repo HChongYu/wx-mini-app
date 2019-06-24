@@ -5,13 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    navbarData: [
+      { name: '我的', index: 0 },
+      { name: '我互动过的', index: 1 },
+    ],
+  },
 
-  },
-  chatBack(e){
-    wx.navigateTo({
-      url: '/packageTree/treedetails/treedetails'
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -32,7 +31,12 @@ Page({
   onShow: function () {
 
   },
-
+  // 跳转函数
+  chatBack(e) {
+    wx.navigateTo({
+      url: '/packageTree/treedetails/treedetails'
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

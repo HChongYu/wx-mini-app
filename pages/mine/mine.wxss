@@ -1,13 +1,14 @@
 /* pages/mine/mine.wxss */
 .header{
   position: relative;
+  left: -40rpx;
   height: 266rpx;
-  padding: 24rpx;
-  width: 100%;
-  
+  padding-right: 24rpx;
+  width: 750rpx;  
 }
-.header-h1{
-  font-size: 60rpx;
+.header-username{
+  font-size: 36rpx;
+  margin-left: 80rpx; 
 
 }
 .header-h2{
@@ -15,25 +16,23 @@
 
 }
 .photo-posback{
-  position: absolute;
-  right: -24rpx;
-  top: 50rpx; 
-  height: 128rpx;
+  position: relative;
+
+  height: 160rpx;
   width: 178rpx;
-  background-color: #F1F4F2;
+  background-color: #F2FAF6;
   z-index: 1001;
   overflow: visible;
 }
 .photo{
   position: absolute;
   top: 0;
-  left: -64rpx;
-  width: 120rpx;
-  height: 120rpx;
-  min-width: 120rpx;
-  min-height: 120rpx;
+  right: -64rpx;
+  width: 152rpx;
+  height: 152rpx;
+  min-width: 152rpx;
+  min-height: 152rpx;
   border-radius: 50%; 
   border: 4rpx solid #fff;
   z-index: 1002;
-  
 }

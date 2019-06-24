@@ -1,12 +1,15 @@
 <!--pages/mine/mine.wxml-->
 
-<view class="header">
+<view class="header jh-listnp">
   <view class="photo-posback">
     <!-- <open-data  type="useravatarurl" class='photo'></open-data> -->
-    <image class="photo" src="/img/dome1.png"></image>
+    <image class="photo" src="/img/coach1.jpeg"></image>
   </view>
-  <view class="header-h1">hi～</view>
-  <view class="header-h2">易烊千玺的小老婆</view>
+  <view class="header-username jh-list_item jh-slh">易烊千玺的小老婆</view>
+  <view class='jh-listnp' bindtap='messageClick'>
+    <image style='height: 42rpx;width: 42rpx;min-height: 42rpx;min-width: 42rpx;' src="/img/dome1.png"></image>
+    <view style='color:#474747;font-size: 24rpx;padding-left:8rpx;'>消息</view>
+  </view>
 </view>
 
 <view class="jh-list" bindtap='treeClick'>

@@ -54,17 +54,9 @@ page{
 }
 
 .actList{
-  position: relative;
-    left: -40rpx;
-
-  width: 750rpx;
-  height: 510rpx;
-  white-space: nowrap;
+  padding: 28rpx；
 }
 
 .actList-item {
-  display: inline-block;
-  width: 440rpx;
-    margin-right: 40rpx;
-    margin-left: 2rpx;
+  padding:  40rpx 28rpx 0 28rpx;
 }

@@ -1,4 +1,5 @@
 /* component/jh-navbar/indedx.wxss */
+@import "/wxss/overall.wxss";
 .navbar {
   display: -webkit-box;
   display: -webkit-flex;

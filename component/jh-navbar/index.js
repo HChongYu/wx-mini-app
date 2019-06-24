@@ -16,9 +16,7 @@ Component({
       value: 0
     }
   },
-  options: {
-    addGlobalClass: true,
-  },
+
   /**
    * 组件的初始数据
    */

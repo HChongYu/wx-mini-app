@@ -7,11 +7,7 @@ Page({
   data: {
 
   },
-  acttextClick(){
-    wx.navigateTo({
-      url: '/packageAct/actdetails/actdetails'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -31,7 +27,12 @@ Page({
   onShow: function () {
 
   },
-
+  // 跳转函数
+  acttextClick() {
+    wx.navigateTo({
+      url: '/packageAct/actdetails/actdetails'
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

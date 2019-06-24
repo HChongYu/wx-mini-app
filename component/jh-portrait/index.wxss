@@ -1,0 +1,46 @@
+/* component/jh-head/index.wxss */
+@import "/wxss/overall.wxss";
+.jh-portrait {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  color: #282828;
+  width: 100%;
+  /* 外部 *//*margin-top: 40rpx;
+    width: 25%; */
+}
+
+.jh-portrait_small .jh-portrait-photo {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.jh-portrait_large .jh-portrait-photo {
+  width: 448rpx;
+  height: 448rpx;
+}
+
+.jh-portrait_small .jh-portrait-name {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+}
+
+.jh-portrait_large .jh-portrait-name {
+  margin-top: 50rpx;
+  font-size: 48rpx;
+}
+
+.jh-portrait_small .jh-portrait-label {
+  margin-top: 8rpx;
+  max-width: 160rpx;
+
+  font-size: 20rpx;
+  /* background:rgba(90,127,91,.15); *//* border-radius: 14rpx */
+}
+.jh-portrait_large .jh-portrait-label {
+  margin-top: 16rpx;
+  max-width: 160rpx;
+  font-size: 28rpx;
+  /* background:rgba(90,127,91,.15); *//* border-radius: 14rpx */
+}

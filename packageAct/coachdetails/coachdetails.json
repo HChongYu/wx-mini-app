@@ -2,6 +2,8 @@
   "navigationBarTitleText": "教官信息",
   "usingComponents": {
     "jh-title": "/component/jh-title/index",
-    "jh-win": "/component/jh-win/index"
+    "jh-win": "/component/jh-win/index",
+    "jh-portrait": "/component/jh-portrait/index",
+    "jh-fold": "/component/jh-fold/index"
   }
 }

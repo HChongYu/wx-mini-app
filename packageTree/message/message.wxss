@@ -1,0 +1,7 @@
+/* packageTree/message/message.wxss */
+.message-hint{
+  padding-left: 30rpx; 
+  font-size:32rpx;
+  color:#808080;
+  line-height:44px;
+}

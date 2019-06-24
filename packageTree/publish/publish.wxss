@@ -1,55 +1,109 @@
 /* packageTree/Publish/publish.wxss */
-.content{
-  padding: 24rpx;
-  width: 670rpx;
+
+page {
+  padding: 0 24rpx 0;
+}
+
+.decorate {
+  padding: 32rpx;
+  margin-top: 3vh;
+  min-height: 97vh;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 0rpx 12rpx 0rpx rgba(0, 0, 0, 0.19);
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.content {
   height: 440rpx;
-  background-color:rgba(241,244,242,1);
-}
-.content-input{
-    color: #9FB5A0;
-    font-size: 28rpx;
-    height: 36rpx;
-    line-height: 36rpx;
-    text-align: center;
-}
-.content-input_placeholder{
-    color: #9FB5A0;
-    font-size: 28rpx;
-    height: 36rpx;
-    line-height: 36rpx;
-    text-align: center;
-}
-.publishbtn{
-    /*margin-top: 24rpx;*/
-    margin: 0 auto;
-    margin-top: 30rpx;
-    font-size: 24rpx;
-    line-height: 48rpx;
-    width: 136rpx;
-    border-radius: 25rpx;
-    text-align: center;
-    height: 50rpx;
-  color: #9FB5A0;
-  border: 2rpx solid #9FB5A0;
-
-}
-.content-textarea{
-    height:  300rpx;
-    width: 100%;
-    font-size: 26rpx;
-    color: #808080;
-    line-height: 32rpx;
+  margin-bottom: 20rpx; 
 }
 
-.content-size{
-    float: right;
-    margin-top: 10rpx;
-    color: #D0D0D0;
-    font-size: 24rpx;
+.content-input {
+  margin-top: 24rpx;
+  color: #8d8d8d;
+  font-size: 28rpx;
+  height: 36rpx;
+  line-height: 36rpx;
 }
 
-.acttext{
+.content-input_placeholder {
+  color: #8d8d8d;
+  font-size: 28rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+}
+
+.content-textarea {
+  height: 160rpx;
+  width: 100%;
+  font-size: 26rpx;
+  color: #808080;
+  line-height: 32rpx;
+}
+
+.content-size {
+  float: right;
+  margin-top: 10rpx;
+  color: #d0d0d0;
+  font-size: 24rpx;
+}
+
+/* .acttext {
   padding: 24rpx 24rpx 24rpx 0;
   font-size: 24rpx;
-  color: #9FB5A0;
+  color: #9fb5a0;
+} */
+.publish-list{
+  color: #333333;
+  padding: 24rpx 0;
+  border-bottom: 2rpx solid #F9F9F9; 
+  font-size: 28rpx;
 }
+.upload-img{
+  display: block;
+  position: relative;
+  width:204rpx;
+  height:204rpx;
+  border-radius:8rpx;
+}
+.upload-img-del{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  width:34rpx;
+  height:34rpx;
+}
+.upload-handle{
+  position: relative;
+  width:204rpx;
+  height:204rpx;
+  background: #F2FAF6;
+  border-radius:8rpx;
+  border:2rpx dashed rgba(212,228,219,1);
+  margin-left: 10rpx; 
+}
+.upload-handle-add{
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 42rpx;
+  height: 42rpx;
+}
+.hanle-submit{
+  position: fixed;
+  left: 26rpx;
+  bottom: 0;
+  width: 698rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 36rpx;
+  text-align: center;
+  color: #2DA25F;
+  border-top: 2rpx solid #F9F9F9;
+
+}
+/* packageTree/treedetails/treedetails.wxss */
+
+

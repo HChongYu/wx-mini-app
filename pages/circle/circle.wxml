@@ -1,10 +1,10 @@
 <!--logs.wxml-->
-<!-- <jh-navbar style='margin-top:20rpx;' navbar-data='{{navbarData}}' at-index='{{atIndex}}' bind:callBack='circleBarBack'></jh-navbar> -->
+
 <view class='jh-listnp'>
   <view class='jh-list_item jh-fmw5'>小世界</view>
   <image class='add' src='/img/add.png' bindtap='publishClick'></image>
 </view>
-<view bindtap="newsClick" class="jh-list newslist">
+<!-- <view bindtap="newsClick" class="jh-list newslist">
   <view class="jh-slh" style='font-size:24rpx;'>新收到的消息</view>
   <view class='jh-list_item'>
     <view class='newslist-num'>
@@ -12,7 +12,7 @@
     </view>
   </view>
   <view class="jh-list_ft jh-list_ft_arrow"></view>
-</view>
+</view> -->
 <view style='margin-top:24rpx;'>
   <jh-chat wx:for='aaaa' bind:callBack='chatBack'></jh-chat>
 </view>

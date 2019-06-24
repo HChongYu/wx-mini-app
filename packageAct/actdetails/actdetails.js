@@ -20,11 +20,7 @@ Page({
       { name: 'day2', index: 1 },
     ],
   },
-  coachItemClick(){
-    wx.navigateTo({
-      url: '/packageAct/coachdetails/coachdetails'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -45,7 +41,17 @@ Page({
   onShow: function() {
 
   },
-
+  // 交互函数
+  foldBack(e){
+    console.log(e)
+    this.setData({ openStatus: e.detail})
+  },
+  //跳转函数 
+  coachItemClick() {
+    wx.navigateTo({
+      url: '/packageAct/coachdetails/coachdetails'
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

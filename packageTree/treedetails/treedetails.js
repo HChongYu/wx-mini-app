@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    true:true
+    // 固定写死 BL值
+    true: true,
+    voteShow: false
   },
 
   /**
@@ -28,7 +30,10 @@ Page({
   onShow: function () {
 
   },
-
+  // 交互操作,
+  handleInform(){
+    this.setData({voteShow:true})
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

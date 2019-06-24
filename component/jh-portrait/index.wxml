@@ -1,0 +1,6 @@
+<!--component/jh-head/index.wxml-->
+<view class='jh-portrait jh-portrait_{{size}}' catchtap='portraitClick'>
+  <image style='display: block;border-radius: 50%;border: 1rpx solid #ababab;' class='jh-portrait-photo'></image>
+  <view class='jh-portrait-name'>王帅</view>
+  <view style='color: #2da25f;' class='jh-portrait-label jh-slh'>A金牌教官</view>
+</view>

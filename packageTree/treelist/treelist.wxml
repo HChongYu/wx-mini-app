@@ -1,2 +1,3 @@
 <!--packageTree/treelist/treelist.wxml-->
+ <jh-navbar style='margin-top:20rpx;' navbar-data='{{navbarData}}' at-index='{{atIndex}}' bind:callBack='circleBarBack'></jh-navbar>
 <jh-chat wx:for='aaaa' bind:callBack='chatBack'></jh-chat>
