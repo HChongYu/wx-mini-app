@@ -5,7 +5,7 @@
 </view>
 <wxs module="topic" >
 var topic = function (index) {
-  var index =index%3;
+  var index =(Math.floor(Math.random()*10)*index)%3;
   return index;
 }
 module.exports = {

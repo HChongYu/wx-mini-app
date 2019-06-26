@@ -11,9 +11,9 @@
   position: absolute;
   right: 0px;
   top: 24rpx;
-  height: 30rpx;
-  width: 30rpx;
-  background-color: #2DA25F;
+  margin: 10rpx;
+  height: 20rpx;
+  width: 20rpx;
 }
 
 .jh-chat-title {
@@ -37,14 +37,13 @@
 }
 
 .jh-chat-time {
-  color: #bdbdbd;
+  color: #B8B8B8;
 }
 
 .jh-chat-btn-icon {
-  width: 10rpx;
-  height: 10rpx;
+  width: 32rpx;
+  height: 28rpx;
   margin-right: 10rpx;
-  background-color: #2DA25F;
 }
 
 .jh-chat-btn {

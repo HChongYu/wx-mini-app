@@ -41,9 +41,8 @@ page{
   justify-content: center;
 }
 .handle-icon{
-  height: 68rpx;
-  width: 68rpx;
-  border: 3rpx solid #F9F9F9; 
+  height: 52rpx;
+  width: 52rpx;
 }
 .handle-name{
   margin-left: 10rpx; 
@@ -59,9 +58,9 @@ page{
 }
 .reply-del{
   position: absolute;
-  top: 24rpx;
-  right: 20rpx;
-  background: #2DA25F;
+  bottom: 24rpx;
+  right: 10rpx;
+  margin: 10rpx;
   height: 20rpx;
   width: 20rpx;
 } 

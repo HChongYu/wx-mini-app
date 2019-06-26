@@ -12,32 +12,32 @@
   <jh-chat type='father' bind:callBack='chatBack'></jh-chat>
   <jh-title title='评论'></jh-title>
   <view class='reply'>
-    <view class='reply-del'></view>
+    <image class='reply-del' src='/img/close.png'></image>
     <view class='reply-text '>要加油哦，我也是高三，我们一起考大学！</view>
     <view class='reply-time'>刚刚</view>
   </view>
   <view class='reply'>
-    <view class='reply-del'></view>
+    <image class='reply-del' src='/img/close.png'></image>
     <view class='reply-text '>我也是啊，我觉得高三真的好累好累好累好累啊，每天都是一刻都不能停下来。</view>
     <view class='reply-time'>刚刚</view>
   </view>
   <view class='reply'>
-    <view class='reply-del'></view>
+    <!-- <view class='reply-del'></view> -->
     <view class='reply-text '>要加油哦，我也是高三，我们一起考大学！</view>
     <view class='reply-time'>刚刚</view>
   </view>
 </view>
 <view class='jh-listnp handle_back'>
   <view class='jh-listnp jh-list_item handle'>
-    <view class='handle-icon'></view>
+    <image class='handle-icon' src='/img/tree-praise-d.png'></image>
     <view class='handle-name'>喜欢</view>
   </view>
   <view class='jh-listnp jh-list_item handle'>
-    <view class='handle-icon'></view>
+    <image class='handle-icon' src='/img/hanle-cooment.png'></image>
     <view class='handle-name'>品论</view>
   </view>
   <view class='jh-listnp jh-list_item handle' catchtap='handleInform'>
-    <view class='handle-icon'></view>
+    <image class='handle-icon' src='/img/hanle-report.png'></image>
     <view class='handle-name'>举报</view>
   </view>
 </view>

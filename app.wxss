@@ -9,8 +9,8 @@ page{
 .jh-list_icon {
   width:34rpx;
   height: 34rpx;
-  min-width:34rpx;
-  min-height: 34rpx;
+  min-width:32rpx;
+
   margin-right: 20rpx; 
 }
 .jh-list_bd {
@@ -24,7 +24,7 @@ page{
 }
 
 .jh-list_ft {
-  color: #5A7F5B;
+  color: #2DA25F;
   padding-right: 4rpx;
   font-size: 28rpx;
 }

@@ -14,8 +14,8 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  padding: 24rpx;
-  margin-bottom: 100rpx;
+  padding: 24rpx 24rpx 100rpx;
+  /* margin-bottom: 100rpx; */
 }
 
 .jh-vote-hint {
