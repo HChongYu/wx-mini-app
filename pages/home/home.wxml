@@ -15,7 +15,7 @@
     <view>{{item.name}}</view>
   </view>
 </view>
-<view class='article-bar'></view>
+<image class='article-bar' src='/img/banner.png'></image>
 <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
 <view wx:if='{{atIndex==0}}'>
   <view wx:for='{{dome1}}' wx:key="id" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>

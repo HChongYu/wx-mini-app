@@ -47,9 +47,10 @@ page {
 }
 
 .article-bar{
-  margin-top: 60rpx; 
+  display: block;
+  margin-top: 60rpx;
+  width: 100%; 
   height:112rpx;
-  background: blue;
   border-radius: 56rpx;
  
 }
