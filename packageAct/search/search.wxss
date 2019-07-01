@@ -1,7 +1,7 @@
 /* packageAct/search/search.wxss */
 .search-back {
   background: #f1f4f2;
-  color: #b9b9b9;
+  color: #9F9F9F;
   font-size: 24rpx;
   padding: 12rpx 24rpx;
   border-radius: 40rpx;
@@ -9,11 +9,16 @@
 }
 
 .search-icon {
-  background: #fff;
-  height: 60rpx;
-  width: 60rpx;
+  /* background: #fff; */
+  margin: 12rpx 24rpx 12rpx 0;
+  height: 32rpx;
+  width: 32rpx;
   border-radius: 50%;
 }
+.search{
+  color: #9F9F9F;
+}
+
 .acttext{
   padding: 24rpx 24rpx 24rpx 0;
   font-size: 24rpx;

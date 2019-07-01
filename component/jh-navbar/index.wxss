@@ -11,7 +11,9 @@
 }
 
 .navbar-item {
-  margin-right: 28rpx;
+  display: inline-block;
+  margin-left: 14rpx;
+  margin-right: 14rpx;
   font-size: 28rpx;
 }
 

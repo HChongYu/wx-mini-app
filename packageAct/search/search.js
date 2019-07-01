@@ -1,11 +1,12 @@
 // packageAct/search/search.js
+const WXAPI = getApp().globalData.WXAPI;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    atText:""
   },
 
   /**
@@ -13,58 +14,38 @@ Page({
    */
   onLoad: function (options) {
     wx.hideShareMenu()
+    this.getSearch();
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
-  // 跳转函数
-  acttextClick() {
-    wx.navigateTo({
-      url: '/packageAct/actdetails/actdetails'
+  // 初始化函数
+  getSearch(title=''){
+    WXAPI.indexSearchActivitiesByTitle(title).then(res => {
+      console.log(res)
+      //todo
+      if (res.code == 0) {
+        this.setData({searchData: res.data.searchList})
+      } else {
+
+      }
     })
   },
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  // 交互函数
+  inputSearch(e){
+    console.log(e)
+    if (e.detail.value){
+      this.setData({atText:e.detail.value})
+      this.getSearch(e.detail.value);
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  // 跳转函数
+  // 去活动
+  actTextClick(e) {
+    wx.navigateTo({
+      url: `/packageAct/actdetails/actdetails?activityId=${e.currentTarget.dataset.id}`
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

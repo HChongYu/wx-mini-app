@@ -18,15 +18,15 @@
         "actlist/actlist",
         "actdetails/actdetails",
         "coachdetails/coachdetails",
-        "search/search"
+        "search/search",
+        "collect/collect",
+        "article/article"
       ]
     },
     {
       "root": "packageTree",
       "name": "tree",
       "pages": [
-        "collect/collect",
-        "article/article",
         "publish/publish",
         "treedetails/treedetails",
         "treelist/treelist",
@@ -38,7 +38,7 @@
   "tabBar": {
     "backgroundColor": "#fff",
     "color": "#979797",
-    "selectedColor": "#5A7F5B",
+    "selectedColor": "#2DA25F",
     "position": "bottom",
     "list": [
       {
@@ -49,7 +49,7 @@
       },
       {
         "pagePath": "pages/circle/circle",
-        "text": "圈子",
+        "text": "树洞",
         "iconPath": "/img/circle-d.png",
         "selectedIconPath": "/img/circle-s.png"
       },

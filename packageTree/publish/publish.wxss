@@ -14,13 +14,13 @@ page {
 }
 
 .content {
-  height: 440rpx;
+
   margin-bottom: 20rpx; 
 }
 
 .content-input {
   margin-top: 24rpx;
-  color: #8d8d8d;
+  color: #333333;
   font-size: 28rpx;
   height: 36rpx;
   line-height: 36rpx;
@@ -37,7 +37,7 @@ page {
   height: 160rpx;
   width: 100%;
   font-size: 26rpx;
-  color: #808080;
+  color: #333333;
   line-height: 32rpx;
 }
 

@@ -1,5 +1,10 @@
 /* component/jh-title/index.wxss */
 @import "/wxss/overall.wxss";
+
+/* .titlebar-default{
+  
+} */
+
 .titlebar-fill {
   width: 12rpx;
   height: 12rpx;

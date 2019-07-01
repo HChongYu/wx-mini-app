@@ -6,24 +6,30 @@
   The Bravery
 </view> -->
 <view class="jh-listnp search-back" bindtap='searchClick'>
-  <view class="jh-list_item search">快来一搜</view>
-  <view class="search-icon"></view>
+  <image class="search-icon" src='/img/search.png'></image>
+  <view class="jh-list_item search">下陆中学7天研学旅行</view>
 </view>
 <view class="jh-listnp selbar">
-  <view class="selbar-item" wx:for="{{iconBar}}" wx:key='index' bindtap="iconClik">
+  <view class="selbar-item" wx:for="{{iconBar}}" wx:key='type' data-type='{{item.type}}' bindtap="iconClik">
     <image class="selbar-item-icon" src="{{item.icon}}"></image>
     <view>{{item.name}}</view>
   </view>
 </view>
-<image class='article-bar' src='/img/banner.png'></image>
+<swiper style='height:112rpx; margin-top: 60rpx;'>
+  <block wx:for="{{homeDetail.articles}}" wx:key='articleId'>
+    <swiper-item >
+      <image class='article-bar' src='{{item.coverUrl}}' data-id='{{item.articleId}}' bindtap='articleBarClick'></image>
+    </swiper-item>
+  </block>
+</swiper>
 <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
-<view wx:if='{{atIndex==0}}'>
-  <view wx:for='{{dome1}}' wx:key="id" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
+<view wx:if='{{winAtType==0}}'>
+  <view wx:for='{{homeDetail.comingActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
     <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
   </view>
 </view>
-<view wx:elif='{{atIndex==1}}'>
-  <view wx:for='{{dome2}}' wx:key="id" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
+<view wx:elif='{{winAtType==1}}'>
+  <view wx:for='{{homeDetail.pastActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
     <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
   </view>
 </view>

@@ -4,16 +4,6 @@ page {
   padding: 0 40rpx;
 }
 
-/* .header-time {
-  font-size: 28rpx;
-}
-
-.header-title {
-  font-size: 60rpx;
-  font-family: PingFangSC-Semibold;
-  font-weight: 600;
-} */
-
 .search-back {
   background: #f1f4f2;
   color: #9F9F9F;
@@ -24,13 +14,15 @@ page {
 }
 
 .search-icon {
-  background: #fff;
-  height: 60rpx;
-  width: 60rpx;
+  /* background: #fff; */
+  margin: 12rpx 24rpx 12rpx 0;
+  height: 32rpx;
+  width: 32rpx;
   border-radius: 50%;
 }
 
 .selbar {
+
   margin-top: 60rpx;
   justify-content: space-between;
 }
@@ -48,7 +40,7 @@ page {
 
 .article-bar{
   display: block;
-  margin-top: 60rpx;
+
   width: 100%; 
   height:112rpx;
   border-radius: 56rpx;

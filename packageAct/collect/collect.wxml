@@ -1,0 +1,9 @@
+<!--packageTree/collect/collect.wxml-->
+<view class="collect jh-listnp" wx:for="{{collectList}}" wx:key='articleId' style='{{index==0?"":"margin-top:40rpx;"}}' data-id='{{item.articleId}}' bindtap='collectClick'>
+  <image class="collect-map" mode="scaleToFill" src="{{item.coverUrl}}">
+  </image>
+  <view class="collect-content">
+    <view class="collect-content-title ">{{item.title}}</view>
+    <view class='collect-content-date'>{{item.createTime}}</view>
+  </view>
+</view>

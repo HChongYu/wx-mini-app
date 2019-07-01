@@ -10,14 +10,14 @@
     <view class='decorate-header-rests'>12 喜欢</view>
   </view>
   <jh-chat type='father' bind:callBack='chatBack'></jh-chat>
-  <jh-title title='评论'></jh-title>
+  <jh-title title='评论 {{3}}'></jh-title>
   <view class='reply'>
-    <image class='reply-del' src='/img/close.png'></image>
+    <!-- <image class='reply-del' src='/img/close.png'></image> -->
     <view class='reply-text '>要加油哦，我也是高三，我们一起考大学！</view>
     <view class='reply-time'>刚刚</view>
   </view>
   <view class='reply'>
-    <image class='reply-del' src='/img/close.png'></image>
+    <!-- <image class='reply-del' src='/img/close.png'></image> -->
     <view class='reply-text '>我也是啊，我觉得高三真的好累好累好累好累啊，每天都是一刻都不能停下来。</view>
     <view class='reply-time'>刚刚</view>
   </view>
@@ -34,7 +34,7 @@
   </view>
   <view class='jh-listnp jh-list_item handle'>
     <image class='handle-icon' src='/img/hanle-cooment.png'></image>
-    <view class='handle-name'>品论</view>
+    <view class='handle-name'>评论</view>
   </view>
   <view class='jh-listnp jh-list_item handle' catchtap='handleInform'>
     <image class='handle-icon' src='/img/hanle-report.png'></image>

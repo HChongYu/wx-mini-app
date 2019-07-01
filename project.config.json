@@ -57,24 +57,17 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "拓展详情",
 					"pathName": "packageAct/actdetails/actdetails",
-					"query": "",
+					"query": "activityId=1286909124168122368",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "教官信息",
 					"pathName": "packageAct/coachdetails/coachdetails",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "搜索",
-					"pathName": "pages/search/search",
-					"query": "",
+					"query": "teacherId=1286828174889451520",
 					"scene": null
 				},
 				{
@@ -107,15 +100,16 @@
 				},
 				{
 					"id": -1,
-					"name": "收藏",
-					"pathName": "packageTree/collect/collect",
+					"name": "消息",
+					"pathName": "packageTree/message/message",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "消息",
-					"pathName": "packageTree/message/message",
+					"id": 10,
+					"name": "文章",
+					"pathName": "packageAct/article/article",
+					"query": "articleId=1285945409983741952",
 					"scene": null
 				}
 			]

@@ -1,11 +1,10 @@
 <!--actlist.wxml-->
-<jh-navbar navbar-data='{{navbarData}}' ></jh-navbar>
-<view  wx:if='{{atIndex==0}}'>
-  <view wx:for='{{dome2}}' wx:key="id" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
+<view class='navbar_back'>
+  <jh-navbar navbar-data='{{navbarData}}' is-scroll='{{true}}' at-index='{{atIndex}}' bind:callBack='actListNavBack'></jh-navbar>
+</view>
+<view style='margin-top:100rpx;'>
+  <view wx:for='{{actlistData}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
     <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
   </view>
   <view class='jh-bottom_hint'>我是有底线的</view>
-</view>
-<view class='noopen' wx:else>
-  暂未开放／尽情期待～
 </view>

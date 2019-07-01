@@ -1,9 +1,0 @@
-<!--packageTree/collect/collect.wxml-->
-<view class="collect jh-listnp" wx:for="{{collectList}}" wx:key='index' style='{{index==0?"":"margin-top:40rpx;"}}'>
-  <image class="collect-map" mode="scaleToFill" src="{{item.map}}">
-  </image>
-  <view class="collect-content">
-    <view class="collect-content-title ">{{item.bar}}</view>
-    <view class='collect-content-date'>2019.3.21</view>
-  </view>
-</view>

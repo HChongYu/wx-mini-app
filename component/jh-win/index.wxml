@@ -1,12 +1,12 @@
 <!--component/jh-win/index.wxml-->
-<view class='win_{{size}}' data-id='{{winData.id}}' data-type='1' bindtap='winClick'>
-  <image class='win-map' style='display: block;' src='{{winData.img}}'></image>
+<view class='win_{{size}}' data-id='{{winData.activityId}}' data-type='1' bindtap='winClick'>
+  <image class='win-map' style='display: block;' src='{{winData.coverUrl}}'></image>
   <view class='win-content'>
     <view class='jh-listnp'>
-      <view style='color: #282828;font-size: 32rpx;font-family: PingFangSC-Medium;font-weight: 500;' class='win-content-title jh-list_item jh-slh'>{{winData.name}}</view>
-      <view class='win-content-date jh-slh' wx:if='{{size==="large"}}'>{{winData.date}}</view>
+      <view style='color: #282828;font-size: 32rpx;font-family: PingFangSC-Medium;font-weight: 500;' class='win-content-title jh-list_item jh-slh'>{{winData.activityTitle? winData.activityTitle:winData.title}}</view>
+      <view class='win-content-date jh-slh' wx:if='{{size==="large"}}'>{{winData.startTime}}</view>
     </view>
-    <view class="win-content-subtitle" style='font-size: 28rpx;color: #B8B8B8;'>{{winData.title}}</view>
-    <view class='win-content-date jh-slh' wx:if='{{size==="small"}}' style="">{{winData.date}}</view>
+    <view class="win-content-subtitle" style='font-size: 28rpx;color: #B8B8B8;'>{{winData.introduction}}</view>
+    <view class='win-content-date jh-slh' wx:if='{{size==="small"}}' >{{winData.startTime}}</view>
   </view>
 </view>

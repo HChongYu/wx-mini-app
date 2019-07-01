@@ -1,4 +1,5 @@
 // packageAct/coachdetails/coachdetails.js
+const WXAPI = getApp().globalData.WXAPI;
 Page({
 
   /**
@@ -25,28 +26,40 @@ Page({
    */
   onLoad: function (options) {
     wx.hideShareMenu()
+    if (options.teacherId) {
+      this.getCoachDetails(options.teacherId)
+    }
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
   },
-  // 跳转函数
-  coachWinBack() {
-    // 待解决
-    // 重复跳转嵌套 会出现bug
-    wx.navigateTo({
-      url: '/packageAct/actdetails/actdetails'
+  getCoachDetails(teacherId){
+    WXAPI.activityTeacherDetail(teacherId).then(res => {
+      console.log(res)
+      //todo
+      if (res.code == 0) {
+        let portraitData=new Object();
+        portraitData={
+          headPicUrl:res.data.headPicUrl,
+          name: res.data.name,
+          labelList: res.data.labelList
+        }
+        this.setData({ coachDetails: res.data,portraitData: portraitData})
+      } else {
+
+      }
     })
   },
-
+  // 跳转函数
+  coachWinBack(e) {
+    console.log(e)
+    wx.redirectTo({
+      url: `/packageAct/actdetails/actdetails?activityId=${e.detail.id}`
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

@@ -4,14 +4,18 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    title:{
+    title: {
       type: String,
       value: "title"
     },
-      style:{
-          type: String,
-          value: "margin-top: 60rpx;"
-      }
+    style: {
+      type: String,
+      value: "margin-top: 60rpx;"
+    },
+    type:{
+      type: String,
+      value: "default"
+    }
   },
 
   /**

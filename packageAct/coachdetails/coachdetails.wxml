@@ -1,28 +1,18 @@
 <!--packageAct/coachdetails/coachdetails.wxml-->
 <view style='padding: 20rpx 0;border-bottom: 2rpx solid #F9F9F9;'>
-  <!-- <view class='coach-photo'></view>
-  <view class='jh-list_item coach-left'>
-    <view class='coach-name jh-slh'>王冲</view>
-    <view class='coach-type'>
-      <view class='coach-types jh-slh'>军豪A级教官</view>
-      <view class='coach-types jh-slh'>军豪A级教官军豪A级教官</view>
-      <view class='coach-types '>军豪A级教官军豪</view>
-    </view>
-    <view class='coach-motto'>“在整体过程中全体老师的参与，把校内系统培养与校外素养展现统一起来”</view>
-  </view> -->
 
-  <jh-portrait size='large'></jh-portrait>
+  <jh-portrait size='large' portrait-data='{{portraitData}}'></jh-portrait>
 </view>
 <jh-title title='履历'></jh-title>
-<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>在整体过程中全体老师的参与，把校内系统培养与校外素养展现统一起来，做到教研引导留空间，学习实践重个性，活动设计多热点</view>
+<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.shortWord}}</view>
 <jh-title title='参加活动'></jh-title>
 <jh-fold bind:callBack='foldBack' open-status='{{openStatus}}'>
   <view class="actList">
     <!-- todo -->
-    <view wx:for='{{dome2}}' wx:key="id" class="actList-item" style=''>
+    <view wx:for='{{coachDetails.activities}}' wx:key="activityId" class="actList-item" >
       <jh-win winData='{{item}}' size='small' bind:callBack='coachWinBack'></jh-win>
     </view>
   </view>
 </jh-fold>
 <jh-title title='教官评语'></jh-title>
-<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>在整体过程中全体老师的参与，把校内系统培养与校外素养展现统一起来，做到教研引导留空间，学习实践重个性，活动设计多热点</view>
+<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.remark}}</view>

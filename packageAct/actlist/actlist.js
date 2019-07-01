@@ -1,36 +1,60 @@
-//logs.js
-const util = require('../../utils/util.js')
-
+//actlist.js
+const WXAPI = getApp().globalData.WXAPI;
 Page({
   data: {
+    true: true,
     navbarData:[
-      { name: '精选榜', index: 0 },
-      { name: '教官说', index: 1 },
-      { name: '我想问', index: 2 }
+      { name: '夏令营', type: 1 },
+      { name: '研学旅行', type: 2 },
+      { name: '成人拓展', type: 3 },
+      { name: '企业团建', type: 4 },
+      { name: '亲子旅行', type: 5 },
+      { name: '体验式培训', type: 6 },
+      { name: '青少年社会实践活动', type: 7 },
+      { name: '军事魔训', type: 8 }
     ],
-    dome2: [{
-      id: 1,
-      name: "下陆中学7天研学之旅",
-      title: "下陆中学7天研学之旅下陆中学7天研学之旅",
-      date: "2019-3-11",
-      img: "/img/win1.png"
-    }, {
-      id: 2,
-      name: "下陆中学7天研学之旅",
-      title: "下陆中学7天研学之旅下陆中学7天研学之旅",
-      date: "2019-3-11",
-      img: "/img/win1.png"
-    }],
     atIndex:0
   },
 
-  onLoad: function () {
+  onLoad: function (options) {
     wx.hideShareMenu()
+    if (options.type){
+      let that=this;
+      this.getActlist(options.type);
+      let navbarData = this.data.navbarData
+      navbarData.forEach(function (item, index) {
+        console.log(item, index)
+        if (item.type == options.type) {
+          console.log(item, index)
+          that.setData({ atIndex: index })
+          // back
+        }
+      })
+      
+    }
+  },
+  getActlist(type){
+    WXAPI.indexSearchActivitiesByType(type).then(res=>{
+      console.log(res)
+      //todo
+      if(res.code==0){
+        if(res.data.length>0){
+          this.setData({actlistData:res.data})
+        }
+      }else{
+
+      }
+    })
+  },
+  // 交互函数
+  actListNavBack(e){
+    console.log(e)
+    this.getActlist(e.detail.type);
   },
   // 跳转函数
-  actlistWinBack() {
+  actlistWinBack(e) {
     wx.navigateTo({
-      url: '/packageAct/actdetails/actdetails'
+      url: `/packageAct/actdetails/actdetails?activityId=${e.detail.id}`
     })
   },
 })

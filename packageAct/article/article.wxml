@@ -1,0 +1,24 @@
+<import src="/wxParse/wxParse.wxml" />
+<view style=''>
+  <view class='jh-fwm5' style='margin-top: 22rpx;font-size:32rpx;'>{{articleData.title}}</view>
+  <view class='jh-listnp' style='margin-top: 22rpx;font-size:24rpx;'>
+    <view class='jh-list_item' style='color:#D0D0D0;'>2019-3-13</view>
+    <view class='jh-listnp' style='color:#999999;'>
+      <view style='width:28rpx;height:20rpx;background:rgba(250,181,52,1);'></view>
+      <view style='margin-left:20rpx; min-width:50rpx;pading-right: 10rpx;'>{{articleData.viewNum}}</view>
+      <view style='width:16rpx;height:20rpx;background:#56ABE4;'></view>
+      <view style='margin-left:20rpx;'>{{articleData.storeNum}}</view>
+    </view>
+  </view>
+  <view style='margin-top: 22rpx;min-height:400rpx;'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+<view style='margin:40rpx 0 200rpx;'>
+  <view class='collect-btn_already' wx:if='{{articleData.hasStore}}' bindtap='cancelCollectClick'>
+    已收藏
+  </view>
+  <view class='collect-btn_not' wx:else bindtap='collectClick'>
+    收藏本篇文章
+  </view>
+</view>

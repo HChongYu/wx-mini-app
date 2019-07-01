@@ -3,3 +3,12 @@
 page {
   padding: 0 40rpx;
 }
+.navbar_back{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  padding: 0 20rpx;
+  background: #fff;
+  z-index: 2001;
+}

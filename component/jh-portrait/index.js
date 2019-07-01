@@ -25,7 +25,9 @@ Component({
    */
   methods: {
     portraitClick(e){
-      this.triggerEvent('callBack', {})
+      if (this.data.size =='small'){
+        this.triggerEvent('callBack', this.data.portraitData.teacherId)
+      }
     }
   }
 })

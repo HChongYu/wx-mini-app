@@ -7,12 +7,6 @@ Component({
  
     winData: {
       type: Object,
-      value: {
-        name:"",
-        scr:"",
-        img:"",
-        title:""
-      },
     },
     size:{
       type: String,

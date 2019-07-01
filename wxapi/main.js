@@ -1,16 +1,21 @@
 // 小程序开发api接口工具包，https://github.com/gooking/wxapi
 const CONFIG = require('./config.js')
-const API_BASE_URL = 'https://api.it120.cc'
-const request = (url, needSubDomain, method, data) => {
-  let _url = API_BASE_URL + (needSubDomain ? '/' + CONFIG.subDomain : '') + url
+const API_BASE_URL = 'http://47.105.135.127:8090/'
+const request = (url, method, data = {}) => {
+  let _url = API_BASE_URL + url
   return new Promise((resolve, reject) => {
+    let token = wx.getStorageSync('token')
+    let header = {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+    if (token) {
+      header.token = token
+    }
     wx.request({
       url: _url,
       method: method,
+      header: header,
       data: data,
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
       success(request) {
         resolve(request.data)
       },
@@ -27,19 +32,19 @@ const request = (url, needSubDomain, method, data) => {
 /**
  * 小程序的promise没有finally方法，自己扩展下
  */
-Promise.prototype.finally = function (callback) {
+Promise.prototype.finally = function(callback) {
   var Promise = this.constructor;
   return this.then(
-    function (value) {
+    function(value) {
       Promise.resolve(callback()).then(
-        function () {
+        function() {
           return value;
         }
       );
     },
-    function (reason) {
+    function(reason) {
       Promise.resolve(callback()).then(
-        function () {
+        function() {
           throw reason;
         }
       );
@@ -49,26 +54,99 @@ Promise.prototype.finally = function (callback) {
 
 module.exports = {
   request,
-  queryMobileLocation: (data) => {
-    return request('/common/mobile-segment/location', false, 'get', data)
+  // 登陆
+  jhLogin: () => {
+    return request('/u/login', 'POST')
   },
-  queryConfig: (data) => {
-    return request('/config/get-value', true, 'get', data)
+  //首页
+  indexIndexDetail: () => {
+    return request('index/indexDetail', 'POST')
   },
-  scoreRules: (data) => {
-    return request('/score/send/rule', true, 'post', data)
-  },
-  scoreSign: (token) => {
-    return request('/score/sign', true, 'post', {
-      token
+  //分类活动列表
+  indexSearchActivitiesByType: (type) => {
+    return request('index/searchActivitiesByType', 'POST', {
+      "type": type
     })
   },
-  scoreSignLogs: (data) => {
-    return request('/score/sign/logs', true, 'post', data)
-  },
-  scoreTodaySignedInfo: (token) => {
-    return request('/score/today-signed', true, 'get', {
-      token
+  //搜索活动
+  indexSearchActivitiesByTitle: (title) => {
+    return request('index/searchActivitiesByTitle', 'POST', {
+      "title": title
     })
   },
+  //活动详情
+  activityDetail: (activityId) => {
+    return request('activity/detail', 'POST', {
+      "activityId": activityId
+    })
+  },
+  //教官详情
+  activityTeacherDetail: (teacherId) => {
+    return request('activity/TeacherDetail', 'POST', {
+      "teacherId": teacherId
+    })
+  },
+  // 文章详情
+  articleDetail: (articleId) => {
+    return request('article/detail', 'POST', {
+      "articleId": articleId
+    })
+  },
+  // 收藏文章
+  articleStore: (articleId) => {
+    return request('article/store', 'POST', {
+      "articleId": articleId
+    })
+  },
+  //取消收藏文章
+  articleCancelStore: (articleId) => {
+    return request('article/cancelStore', 'POST', {
+      "articleId": articleId
+    })
+  },
+  // 我的文章
+  mineArticles: () => {
+    return request('mine/articles', 'POST')
+  },
+  // 树洞发布
+  shudongAddSubject: (dto) => {
+    return request('shudong/addSubject', 'POST',{'dto':dto})
+  },
+  // 树洞评论
+  shudongAddReply: (dto) => {
+    return request('shudong/addReply', 'POST',{'dto':dto})
+  },
+  // 删除某条品论
+  shudongDeleteReply: (subjectId) => {
+    return request('shudong/deleteReply', 'POST',{'subjectId':subjectId})
+  },
+  // 取消点赞
+  shudongCancleLikeOne: (subjectId) => {
+    return request('shudong/cancleLikeOne', 'POST',{'subjectId':subjectId})
+  },
+  // 删除某条树洞
+  shudongDeleteSubject: (subjectId) => {
+    return request('shudong/deleteSubject', 'POST',{'subjectId':subjectId})
+  },
+  // 点赞某个树洞
+  shudongLikeOne: (subjectId) => {
+    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+  },
+  // 我互动过的
+  shudongMyReplie: () => {
+    return request('shudong/myReplies', 'POST',{'subjectId':subjectId})
+  },
+  // 点赞某个树洞
+  shudongLikeOne: (subjectId) => {
+    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+  },
+  // 点赞某个树洞
+  shudongLikeOne: (subjectId) => {
+    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+  },
+  // 点赞某个树洞
+  shudongLikeOne: (subjectId) => {
+    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+  },
+
 }

@@ -3,3 +3,7 @@
   <view class="titlebar-fill"></view>
   <view class="titlebar-main">{{title}}</view>
 </view>
+<!-- <view class="jh-listnp titlebar-{{}}">
+  <view class="titlebar-main">{{title}}</view>
+  <view class="titlebar-fill"></view>
+</view> -->
