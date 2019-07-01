@@ -32,19 +32,19 @@ const request = (url, method, data = {}) => {
 /**
  * 小程序的promise没有finally方法，自己扩展下
  */
-Promise.prototype.finally = function(callback) {
+Promise.prototype.finally = function (callback) {
   var Promise = this.constructor;
   return this.then(
-    function(value) {
+    function (value) {
       Promise.resolve(callback()).then(
-        function() {
+        function () {
           return value;
         }
       );
     },
-    function(reason) {
+    function (reason) {
       Promise.resolve(callback()).then(
-        function() {
+        function () {
           throw reason;
         }
       );
@@ -110,43 +110,51 @@ module.exports = {
   },
   // 树洞发布
   shudongAddSubject: (dto) => {
-    return request('shudong/addSubject', 'POST',{'dto':dto})
+    return request('shudong/addSubject', 'POST', { 'dto': dto })
   },
   // 树洞评论
   shudongAddReply: (dto) => {
-    return request('shudong/addReply', 'POST',{'dto':dto})
+    return request('shudong/addReply', 'POST', { 'dto': dto })
   },
   // 删除某条品论
   shudongDeleteReply: (subjectId) => {
-    return request('shudong/deleteReply', 'POST',{'subjectId':subjectId})
+    return request('shudong/deleteReply', 'POST', { 'subjectId': subjectId })
   },
   // 取消点赞
   shudongCancleLikeOne: (subjectId) => {
-    return request('shudong/cancleLikeOne', 'POST',{'subjectId':subjectId})
+    return request('shudong/cancleLikeOne', 'POST', { 'subjectId': subjectId })
   },
   // 删除某条树洞
   shudongDeleteSubject: (subjectId) => {
-    return request('shudong/deleteSubject', 'POST',{'subjectId':subjectId})
+    return request('shudong/deleteSubject', 'POST', { 'subjectId': subjectId })
   },
   // 点赞某个树洞
   shudongLikeOne: (subjectId) => {
-    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+    return request('shudong/likeOne', 'POST', { 'subjectId': subjectId })
   },
   // 我互动过的
   shudongMyReplie: () => {
-    return request('shudong/myReplies', 'POST',{'subjectId':subjectId})
+    return request('shudong/myReplies', 'POST')
   },
-  // 点赞某个树洞
-  shudongLikeOne: (subjectId) => {
-    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+  // 我的树洞
+  shudongMySubjects: () => {
+    return request('shudong/mySubjects', 'POST')
   },
-  // 点赞某个树洞
-  shudongLikeOne: (subjectId) => {
-    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+  // 举报某个评论
+  shudongReportReply: (subjectId, reason) => {
+    return request('shudong/reportReply', 'POST', { 'subjectId': subjectId, 'reason': reason })
   },
-  // 点赞某个树洞
-  shudongLikeOne: (subjectId) => {
-    return request('shudong/likeOne', 'POST',{'subjectId':subjectId})
+  // 举报某个树洞
+  shudongReportSubjec: (subjectId, reason) => {
+    return request('shudong/reportSubjec', 'POST', { 'subjectId': subjectId, 'reason': reason })
+  },
+  // 小世界
+  shudongSmallWord: (query) => {
+    return request('shudong/SmallWord', 'POST', query)
+  },
+  // 树洞详情
+  shudongSubjectDetail: (subjectId) => {
+    return request('shudong/subjectDetail', 'POST', { 'subjectId': subjectId })
   },
 
 }
