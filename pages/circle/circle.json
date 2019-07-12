@@ -2,6 +2,8 @@
   "navigationBarTitleText": "树洞",
   "usingComponents": {
     "jh-navbar":"/component/jh-navbar/index",
-    "jh-chat": "/component/jh-chat/index"
+    "jh-chat": "/component/jh-chat/index",
+    "jh-glide": "/component/jh-glide/index",
+    "jh-empty": "/component/jh-empty/index"
   }
 }

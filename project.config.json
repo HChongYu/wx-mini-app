@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -92,10 +92,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "树洞详情",
 					"pathName": "packageTree/treedetails/treedetails",
-					"query": "",
+					"query": "subjectId=1290469188768374784",
 					"scene": null
 				},
 				{
@@ -110,6 +110,40 @@
 					"name": "文章",
 					"pathName": "packageAct/article/article",
 					"query": "articleId=1285945409983741952",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "上传图片",
+					"pathName": "packageTree/dome/dome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "树洞管理",
+					"pathName": "packageTree/treelist/treelist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "demo",
+					"pathName": "packageTree/dome/dome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息",
+					"pathName": "packageTree/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "树洞管理",
+					"pathName": "packageTree/treelist/treelist",
 					"scene": null
 				}
 			]

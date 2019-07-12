@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import "/wxss/win.wxss";
+
 page {
   padding: 0 40rpx;
 }

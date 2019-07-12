@@ -1,3 +1,15 @@
 <!--packageTree/treelist/treelist.wxml-->
- <jh-navbar style='margin-top:20rpx;' navbar-data='{{navbarData}}' at-index='{{atIndex}}' bind:callBack='circleBarBack'></jh-navbar>
-<jh-chat wx:for='aaaa' bind:callBack='chatBack'></jh-chat>
+<jh-navbar style='margin-top:20rpx;' navbar-data='{{navbarData}}' at-index='{{atIndex}}' bind:callBack='treelistBarBack'></jh-navbar>
+<view class='' wx:if='{{atIndex==0}}'>
+  <view wx:for='{{myTreeList}}' wx:key='subjectId' style='border-bottom: 2rpx solid #f9f9f9;' data-id='{{item.subjectId}}' bind:tap="goTreeDetails">
+    <jh-chat chat-data='{{item}}' showDelete='{{true}}' bind:deleteBack='deleteBack'></jh-chat>
+  </view>
+ <jh-empty loading='{{loading}}' hasData='{{!loading&&!myTreeList.length}}' bottom='{{!loading&&myTreeList.length}}'></jh-empty>
+</view>
+<view class='' wx:else>
+  <view wx:for='{{myInteractList}}' wx:key='subjectId' style='border-bottom: 2rpx solid #f9f9f9;' data-id='{{item.subjectId}}' bind:tap="goTreeDetails">
+    <jh-chat chat-data='{{item}}'></jh-chat>
+  </view>
+  <jh-empty loading='{{loading}}' hasData='{{!loading&&!myInteractList.length}}' bottom='{{!loading&&myInteractList.length}}'></jh-empty>
+  <!-- <jh-empty wx:for='{{myTreeList}}' bind:callBack='chatBack'></jh-chat> -->
+</view>

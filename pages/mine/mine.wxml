@@ -3,24 +3,24 @@
 <view class="header jh-listnp">
   <view class="photo-posback">
     <!-- <open-data  type="useravatarurl" class='photo'></open-data> -->
-    <image class="photo" src="/img/coach1.jpeg"></image>
+    <image class="photo" src="{{userInfo.avatarUrl}}"></image>
   </view>
-  <view class="header-username jh-list_item jh-slh">易烊千玺的小老婆</view>
+  <view class="header-username jh-list_item jh-slh">{{userInfo.nickName}}</view>
   <view class='jh-listnp' bindtap='messageClick'>
-    <image style='height: 42rpx;width: 42rpx;min-height: 42rpx;min-width: 42rpx;' src="/img/mine-message.png"></image>
+    <image style='position: relative;height: 42rpx;width: 42rpx;min-height: 42rpx;min-width: 42rpx;' src="/img/mine-message.png"><view class="hasMessage" wx:if='{{hasMessage}}' ></view></image>
     <view style='color:#474747;font-size: 24rpx;padding-left:8rpx;'>消息</view>
   </view>
 </view>
 <view class="jh-list" bindtap='treeClick'>
   <image class="jh-list_icon" style='height:30rpx;' src="/img/mine-manage.png"></image>
   <view class="jh-list_bd">树洞管理</view>
-  <view class="jh-list_ft jh-list_ft_arrow">25条</view>
+  <view class="jh-list_ft jh-list_ft_arrow"></view>
 </view>
-<view class="jh-list" bindtap='collectClick'>
+<!-- <view class="jh-list" bindtap='collectClick'>
   <image class="jh-list_icon" src='width:32rpx;height:28rpx'src="/img/mine-history.png"></image>
   <view class="jh-list_bd">浏览历史</view>
   <view class="jh-list_ft_arrow"></view>
-</view>
+</view> -->
 <view class="jh-list" bindtap='collectClick'>
   <image class="jh-list_icon" src='width:32rpx;height:30rpx'src="/img/mine-collect.png"></image>
   <view class="jh-list_bd">收藏文章</view>

@@ -4,10 +4,18 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    chatData:{
+      type: Object,
+    }, 
+    showDelete:{
+      type: Boolean,
+      value: false
+    },
     type:{
       type: String,
-      value: "son"
+      value: "list"
     }
+   
   },
   /**
    * 组件的初始数据
@@ -22,6 +30,9 @@ Component({
   methods: {
     chatClick(e){
       this.triggerEvent('callBack', e.currentTarget.dataset)
+    },
+    deleteClick(e){
+      this.triggerEvent('deleteBack', e.currentTarget.dataset)
     }
   }
 })

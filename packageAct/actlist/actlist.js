@@ -1,5 +1,6 @@
 //actlist.js
 const WXAPI = getApp().globalData.WXAPI;
+const UTIL = getApp().globalData.UTIL;
 Page({
   data: {
     true: true,
@@ -18,6 +19,7 @@ Page({
 
   onLoad: function (options) {
     wx.hideShareMenu()
+    console.log(options.type);
     if (options.type){
       let that=this;
       this.getActlist(options.type);
@@ -25,24 +27,24 @@ Page({
       navbarData.forEach(function (item, index) {
         console.log(item, index)
         if (item.type == options.type) {
-          console.log(item, index)
           that.setData({ atIndex: index })
-          // back
         }
       })
       
     }
   },
   getActlist(type){
+    this.setData({loading:true})
     WXAPI.indexSearchActivitiesByType(type).then(res=>{
-      console.log(res)
       //todo
       if(res.code==0){
         if(res.data.length>0){
-          this.setData({actlistData:res.data})
+          this.setData({actlistData:res.data,loading:false})
+        }else{
+          this.setData({actlistData:res.data,loading:false})
         }
       }else{
-
+        res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
       }
     })
   },

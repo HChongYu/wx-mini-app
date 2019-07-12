@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "dome",
+  "usingComponents": {
+    "jh-upload": "/component/jh-upload/index"
+  }
+}

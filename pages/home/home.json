@@ -2,6 +2,8 @@
   "usingComponents": {
     "jh-win": "/component/jh-win/index",
     "jh-title": "/component/jh-title/index",
-    "jh-navbar": "/component/jh-navbar/index"
+    "jh-navbar": "/component/jh-navbar/index",
+    "jh-empty": "/component/jh-empty/index"
+   
   }
 }

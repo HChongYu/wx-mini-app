@@ -1,7 +1,88 @@
 /* packageTree/message/message.wxss */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height: 100rpx;
+  z-index: 2001;
+}
+.capsule{
+  position: absolute;
+  left: 40rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 168rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  font-size: 20rpx;
+  color: #2A2A2A;
+  border: 2rpx solid #8FD6AD;
+  background: #fff;
+  z-index: 2001;
+  text-align: center;
+}
+.capsule-left{
+  position: absolute;
+  left: 0;
+  width: 88rpx;
+  height:44rpx;
+  line-height: 42rpx;
+  border-radius:22rpx;
+}
+.capsule-right{
+  position: absolute;
+  left: 76rpx;
+  width: 88rpx;
+  height:44rpx;
+  line-height: 42rpx;
+  border-radius:22rpx;
+}
+.capsule-pitch{
+  color: #fff;
+  background: #8FD6AD;
+  z-index: 2002;
+}
+.clear{
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#B8B8B8;
+  font-size: 24rpx;
+  text-decoration: underline;
+}
 .message-hint{
+  margin-top: 16rpx; 
+ 
   padding-left: 30rpx; 
-  font-size:32rpx;
+  font-size: 32rpx;
   color:#808080;
-  line-height:44px;
+}
+.message-top{
+  padding-top: 100rpx; 
+}
+.message-chat{
+  position: relative;
+  left: 10rpx;
+  margin-top: 24rpx;
+  margin-bottom: 12rpx; 
+  padding: 24rpx;
+  width:650rpx;
+  min-height:178rpx;
+  background:rgba(255,255,255,1);
+  overflow: hidden;
+  box-shadow: 0 0 12rpx 0 rgba(0,0,0,0.11);
+  border-radius:20rpx;
+}
+.message-chat-content{
+  color: #282828;
+  font-size:28rpx;
+  min-height: 80rpx;
+  line-height:40rpx;
+}
+.message-chat-createAt{
+  color: #B8B8B8;
+  font-size: 24rpx;
 }

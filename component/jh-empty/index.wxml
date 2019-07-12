@@ -1,0 +1,12 @@
+<!--component/jh-empty/index.wxml-->
+<view >
+    <view  class="jh-empty" wx:if='{{loading}}'>
+        <image class="jh-empty-img" src="/img/page-loading.png"/>
+        <view class="jh-empty-hint">加载中。。。</view>
+    </view>
+    <view  class="jh-empty" wx:elif='{{hasData}}'>
+        <image class="jh-empty-img" src="/img/page-empty.png"/>
+        <view class="jh-empty-hint">暂无数据</view>
+    </view>
+    <view class='jh-empty-bottom' wx:if="{{bottom}}">我是有底线的</view>
+</view>

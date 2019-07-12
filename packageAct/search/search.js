@@ -1,5 +1,6 @@
 // packageAct/search/search.js
 const WXAPI = getApp().globalData.WXAPI;
+const UTIL = getApp().globalData.UTIL;
 Page({
 
   /**
@@ -24,18 +25,20 @@ Page({
   // 初始化函数
   getSearch(title=''){
     WXAPI.indexSearchActivitiesByTitle(title).then(res => {
-      console.log(res)
       //todo
       if (res.code == 0) {
-        this.setData({searchData: res.data.searchList})
+        if (title){
+          this.setData({ searchData: res.data.searchList })
+        }else{
+          this.setData({ hotList: res.data.hotList })
+        }
       } else {
-
+        res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
       }
     })
   },
   // 交互函数
   inputSearch(e){
-    console.log(e)
     if (e.detail.value){
       this.setData({atText:e.detail.value})
       this.getSearch(e.detail.value);

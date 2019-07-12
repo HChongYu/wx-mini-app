@@ -3,8 +3,8 @@
   <jh-navbar navbar-data='{{navbarData}}' is-scroll='{{true}}' at-index='{{atIndex}}' bind:callBack='actListNavBack'></jh-navbar>
 </view>
 <view style='margin-top:100rpx;'>
-  <view wx:for='{{actlistData}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
-    <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
+  <view wx:for='{{actlistData}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}' >
+    <jh-win win-data='{{item}}' bind:callBack='actlistWinBack'></jh-win>
   </view>
-  <view class='jh-bottom_hint'>我是有底线的</view>
+ <jh-empty  loading='{{loading}}' hasData='{{!loading&&!actlistData.length}}' bottom='{{!loading&&actlistData.length}}'></jh-empty>
 </view>

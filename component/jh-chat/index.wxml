@@ -1,21 +1,22 @@
-<!--component/jh-chat/jh-chat.wxml-->
-
-<view class='jh-chat' bindtap='chatClick'>
-  <image class='jh-chat-delete' wx:if='{{type=="son"}}' src='/img/close.png'></image>
-  <view class='jh-chat-title'>#陌生人，你听我说#</view>
-  <view class='jh-chat-content'>看过凌晨3点的北京，也看过清晨6点的日出。虽然不知道高中会比初三辛苦成千上万倍，但现在的我有点熬不住了…</view>
+<!-- component/jh-chat/jh-chat.wxml -->
+<wxs src="../../wxs/filters.wxs" module="filters"/>
+<view class='jh-chat'>
+  <image class='jh-chat-delete' src='/img/close.png' wx:if='{{showDelete}}' data-topic='{{filters.topicType(chatData.themeType)}}' data-id='{{chatData.subjectId}}' da catch:tap='deleteClick'></image>
+  <!-- 颜色 themeColor，subjectId -->
+  <view class='jh-chat-title topic-item-{{chatData.themeType}}'>#{{filters.topicType(chatData.themeType)}}#</view>
+  <view class='jh-chat-content'>{{chatData.content}}</view>
   <view style='margin-top:24rpx;'>
-    <image class='jh-chat-picture' src='/img/hswdome.jpeg' wx:for='ab'></image>
+    <image class='jh-chat-picture' wx:for='{{chatData.pictureList}}' wx:key='index' src='{{item}}'></image>
   </view>
-  <view class='jh-chat-list jh-listnp'>
-    <view class='jh-chat-time jh-list_item'>2019-3-11</view>
+  <view class='jh-chat-list jh-listnp' wx:if='{{type=="list"}}'>
+    <view class='jh-chat-time jh-list_item'>{{chatData.createAt}}</view>
     <view class='jh-chat-btn jh-listnp'>
       <image class='jh-chat-btn-icon' src='/img/tree-praise-s.png'></image>
-      <view>12</view>
+      <view>{{chatData.likeNum}}</view>
     </view>
     <view class='jh-chat-btn jh-listnp'>
       <image class='jh-chat-btn-icon' src='/img/tree-comment-s.png'></image>
-      <view>12</view>
+      <view>{{chatData.replyNum}}</view>
     </view>
   </view>
 </view>

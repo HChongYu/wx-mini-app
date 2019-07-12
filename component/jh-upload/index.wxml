@@ -1,2 +1,19 @@
-<!--component/jh-upload/index.wxml-->
-<text>component/jh-upload/index.wxml</text>
+<view style='margin-top:24rpx;'>
+    <view wx:for='{{uploadImgList}}' class="upload-img" wx:key='index'>
+        <view class='upload-handle' wx:if='{{item.succeed===false}}'>
+            <image class='upload-img-del' src='/img/deldome.png'  data-index='{{index}}' catch:tap='itemDelete'></image>
+            <image class='upload-handle-add' src='/img/upload-angin.png' data-path='{{item.filePath}}' data-index='{{index}}' catchtap='falseAngin'></image>
+        </view>
+        <blcok wx:else>
+            <image class='upload-img-show' src='{{item.path}}' wx:if='{{item.progress==100}}'>
+                <image class='upload-img-del' src='/img/deldome.png' data-index='{{index}}' catch:tap='itemDelete'></image>
+            </image>
+            <view class='progress_back' wx:else>
+                <progress percent='{{item.progress? item.progress:0}}' color='#2DA25F'/>
+            </view>
+        </blcok>
+    </view>
+    <view class='upload-handle' catchtap='uploadClick' wx:if='{{uploadImgList.length<9}}'>
+        <image class='upload-handle-add' src='/img/add.png'></image>
+    </view>
+</view>

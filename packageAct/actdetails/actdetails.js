@@ -1,5 +1,6 @@
 // packageAct/actdetails/actdetails.js
 const WXAPI = getApp().globalData.WXAPI;
+const UTIL = getApp().globalData.UTIL;
 Page({
   /**
    * 页面的初始数据
@@ -37,6 +38,7 @@ Page({
         }
         this.setData({ actDetailData:res.data,navbarData: navbarData})
       } else {
+        res.text? UTIL.commonToast(res.text): UTIL.commonToast("数据错误");
       } 
     })
   },

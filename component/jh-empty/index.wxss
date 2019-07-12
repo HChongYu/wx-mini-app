@@ -1,0 +1,27 @@
+/* component/jh-empty/index.wxss */
+.jh-empty{
+    text-align: center;
+    font-size: 36rpx;
+    margin-top: 100rpx;
+}
+.jh-empty-img{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 256rpx;
+    height: 256rpx;
+    /* bottom: ; */
+}
+.jh-empty-hint{
+    color:  rgba(0, 0, 0, 0.6);
+    padding: 10rpx 0;
+    font-size: 24rpx;
+}
+.jh-empty-bottom{
+    color:  rgba(0, 0, 0, 0.6);
+    padding: 40rpx  0;
+    font-size: 24rpx;
+    text-align: center;
+}

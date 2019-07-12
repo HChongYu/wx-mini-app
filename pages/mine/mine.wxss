@@ -12,11 +12,13 @@
 
 }
 .header-h2{
+
   font-size: 36rpx;
 
 }
 .photo-posback{
   position: relative;
+
 
   height: 160rpx;
   width: 178rpx;
@@ -35,4 +37,14 @@
   border-radius: 50%; 
   border: 4rpx solid #fff;
   z-index: 1002;
+}
+.hasMessage{
+  position: absolute;
+  right: 2rpx;
+  top:2rpx;
+  background: red;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  z-index: 200;
 }

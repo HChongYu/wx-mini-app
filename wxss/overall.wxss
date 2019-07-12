@@ -1,6 +1,7 @@
-view{
+view {
   box-sizing: border-box;
-  word-break:break-all; overflow:auto;
+  word-break:break-all; 
+  overflow:auto;
 }
 /* 缩进 */
 .jh-slh {

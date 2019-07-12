@@ -1,6 +1,42 @@
-<!--packageTree/message/message.wxml-->
-<block wx:for='aaaa'>
-  <jh-title title='刚刚有人评论了你的消息'></jh-title>
-  <view class='message-hint jh-fwm5'>要加油哦，我也是高三，我们一起考大学！</view>
-  <jh-chat  bind:callBack='chatBack'></jh-chat>
-</block>  
+<!-- packageTree/message/message.wxml -->
+<wxs src="../../wxs/filters.wxs" module="filters" />
+<view class="header">
+  <view class="capsule">
+    <view class="capsule-left {{atIndex==0?'capsule-pitch':''}}" data-index='0' catch:tap='capsuleClick'>
+      全部
+    </view>
+    <view class="capsule-right {{atIndex==1?'capsule-pitch':''}}" data-index='1' catch:tap='capsuleClick'>
+      未读
+    </view>
+  </view>
+  <view class='clear' catch:tap='handleMessage' wx:if='{{atIndex==0&&messageList.length}}'>消除所有消息</view>
+  <view class='clear' catch:tap='handleMessage' wx:elif='{{messageReadList.length}}'>所有未读标记已读</view>
+</view>
+<view class='message-top' wx:if='{{atIndex==0}}'>
+  <block wx:for='{{messageList}}' wx:key='index'>
+    <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
+      <jh-title title='{{item.title}}'></jh-title>
+      <view class='message-hint jh-fwm5'>{{item.content}}</view>
+      <view class='message-chat'>
+        <view class='message-chat-content'>{{item.content}}</view>
+        <view class='message-chat-createAt'>{{item.createAt}}</view>
+      </view>
+      <!-- <view style="font-size:24rpx;color:#c9c9c9;">{{item.hasRead?'未读':'已读'}}</view> -->
+    </view>
+  </block>
+   <jh-empty loading='{{loading&&!messageList.length}}' hasData='{{!loading&&!messageList.length}}' bottom='{{!loading&&messageList.length}}'></jh-empty>
+</view>
+<view class='message-top' wx:else>
+  <block wx:for='{{messageReadList}}' wx:key='index'>
+    <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
+      <jh-title title='{{item.title}}'></jh-title>
+      <view class='message-hint jh-fwm5'>{{item.content}}</view>
+      <view class='message-chat'>
+        <view class='message-chat-content'>{{item.content}}</view>
+        <view class='message-chat-createAt'>{{item.createAt}}</view>
+      </view>
+      <!-- <view style="font-size:24rpx;color:#c9c9c9;">{{item.hasRead?'未读':'已读'}}</view> -->
+    </view>
+  </block>
+   <jh-empty loading='{{loading&&!messageReadList.length}}' hasData='{{!loading&&!messageReadList.length}}' bottom='{{!loading&&messageReadList.length}}'></jh-empty>
+</view>

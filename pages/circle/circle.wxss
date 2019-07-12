@@ -1,8 +1,8 @@
 
 
-page {
+/* page {
   padding-bottom:  100rpx;
-}
+} */
 .add{
   width: 48rpx;
   height: 48rpx;

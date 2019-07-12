@@ -2,6 +2,8 @@
   "navigationBarTitleText": "成人团建",
   "usingComponents": {
     "jh-navbar":"/component/jh-navbar/index",
-    "jh-win": "/component/jh-win/index"
+    "jh-win": "/component/jh-win/index",
+    "jh-empty": "/component/jh-empty/index"
+
   }
 }

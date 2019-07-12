@@ -1,17 +1,18 @@
 /* component/jh-chat/jh-chat.wxss */
 @import "/wxss/overall.wxss";
+@import "/wxss/topic.wxss";
 .jh-chat {
   position: relative;
   padding-top: 24rpx;
-  border-bottom: 2rpx solid #f9f9f9;
+
   font-size: 24rpx;
 }
 
 .jh-chat-delete {
   position: absolute;
   right: 0px;
-  top: 24rpx;
-  margin: 10rpx;
+  top: 10rpx;
+  padding: 20rpx;
   height: 20rpx;
   width: 20rpx;
 }
@@ -31,7 +32,7 @@
 
 .jh-chat-content {
   margin-top: 8rpx;
-  width: 650rpx;
+  width: 640rpx;
   height: 68rpx;
   font-size: #282828; 
 }

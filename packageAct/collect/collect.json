@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "收藏",
-  "usingComponents": {}
+  "usingComponents": {
+    "jh-empty": "/component/jh-empty/index"
+  }
 }

@@ -11,10 +11,10 @@ page{
   box-shadow:0rpx 0rpx 12rpx 0rpx rgba(0,0,0,0.19);
   border-radius: 20rpx 20rpx 0 0;
 }
-.decorate-header{
+/* .decorate-header{
   -webkit-align-item: flex-start;
   align-items: flex-start;
-}
+} */
 .decorate-header-day{
   font-size: 60rpx;
   color: #282828;
@@ -26,6 +26,7 @@ page{
 
 }
 .handle_back{
+
   position: fixed;
   left: 24rpx;
   bottom: 0;
@@ -58,12 +59,20 @@ page{
 }
 .reply-del{
   position: absolute;
-  bottom: 24rpx;
+  top: 20rpx;
   right: 10rpx;
   margin: 10rpx;
   height: 20rpx;
   width: 20rpx;
 } 
+.reply-report{
+  position: absolute;
+  top: 20rpx;
+  right: 10rpx;
+  margin: 10rpx;
+  height: 20rpx;
+  width: 20rpx;
+}
 .reply-text{
   width: 580rpx;
 }
@@ -71,4 +80,31 @@ page{
   margin-top: 12rpx; 
   font-size: 20rpx;
   color:#DBDBDB;
+}
+.reply-form{
+  width: 100%;
+  background: #FFF;
+  color: #2da25f;
+  padding-bottom: 60rpx; 
+}
+.reply-close{
+  padding: 40rpx 0;
+  width: 80rpx;
+  font-size: 24rpx;
+  text-align: center;
+
+}
+.reply-input{
+  padding: 12rpx;
+  background: #F6F6F6;
+  font-size: 28rpx;
+  color: #436451;
+  width: 500rpx;
+}
+.reply-send{
+  width: 100rpx;
+  font-size: 24rpx;
+  color: #2da25f;
+  background: #fff;
+  text-align: center
 }

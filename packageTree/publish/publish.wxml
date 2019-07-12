@@ -1,42 +1,32 @@
-<!--packageTree/Publish/publish.wxml-->
-<!-- <view class='content'>
-  <input class='content-input' placeholder='#这里输入或选择你的话题#' placeholder-class='content-input_placeholder'></input>
-  <textarea class="136rpx;"></textarea>
-  <view class='content-size'>0/150</view>
-</view>
-<view class='publishbtn' bindtap='publishClick'>发布</view>
-<jh-title title='热门搜索'></jh-title>
-<view>
-  <view  wx:for='abcadsa' wx:key='id' bindtap='acttextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>华容高级中学高三年级百日誓师活动</view>
-</view> -->
-<view class='decorate'>
-  <view class='jh-listnp' style='font-size: 24rpx;color: #8D8D8D;'>
-    <view class='jh-list_item decorate-header-rests'>
-      2019年05月，星期三
+<!-- packageTree/Publish/publish.wxml -->
+<wxs src="../../wxs/filters.wxs" module="filters" />
+<form bindsubmit="publishSubmit">
+  <view class='decorate'>
+    <view class='jh-listnp' style='font-size: 24rpx;color: #8D8D8D;'>
+      <view class='jh-list_item decorate-header-rests'>{{nowDate}}</view>
     </view>
-    <view class=''>阴雨转多云，5～15*</view>
-  </view>
-  <view class='content'>
-    <input class='content-input' placeholder='#这里输入或选择你的话题#' placeholder-class='content-input_placeholder'></input>
-    <textarea class="content-textarea" placeholder='#请在这里输入正文#'></textarea>
-    <!-- <view class='content-size'>0/150</view> -->
-    <!-- <jh-upload></jh-upload> -->
-    <view class='jh-listnp' style='margin-top:24rpx;'>
-      <image class='upload-img' src='/img/hswdome.jpeg'>
-        <image class='upload-img-del' src='/img/deldome.png'></image>
-      </image>
-      <view class='upload-handle'>
-        <image class='upload-handle-add' src='/img/add.png'></image>
+    <view class='content'>
+      <input name='themeType' value="{{themeType}}" hidden />
+      <input name='themeColor' value="{{themeColor}}" hidden />
+      <view class='topic-item-{{themeColor}}' style="height:40rpx;min-height:40rpx; font-size:28rpx;margin-top:24rpx;"   >
+        {{themeType?'#':''}}{{filters.topicType(themeType)}}
       </view>
+      <!-- <view style='margin:12rpx;font-size:28rpx;' catchtap='topic' wx:else>请选择话题</view> -->
+      <textarea name='content' class="content-textarea" placeholder='#请在这里输入正文#'></textarea>
+      <!-- <input name='pictureList' value="{{pictureList}}" hidden /> -->
+      <!-- <view class='jh-listnp' style='margin-top:24rpx;'>
+   
+        <jh-upload bind:callBack='{{uploadSuccess}}'></jh-upload>
+      </view> -->
+    </view>
+    <!-- <view class='jh-listnp publish-list' catchtap='chuantupian'>
+      <view class='jh-list_item'>上传图片</view>
+      <view class='jh-list_ft_arrow'></view>
+    </view> -->
+    <view class='jh-listnp publish-list' catchtap='topic'>
+      <view class='jh-list_item'>选择话题</view>
+      <view class='jh-list_ft_arrow'></view>
     </view>
   </view>
-  <view class='jh-listnp publish-list'>
-    <view class='jh-list_item'>上传图片</view>
-    <view class='jh-list_ft_arrow'></view>
-  </view>
-   <view class='jh-listnp publish-list' catchtap='topic'>
-    <view class='jh-list_item'>选择话题</view>
-    <view class='jh-list_ft_arrow'></view>
-  </view>
-</view>
-<view class='hanle-submit' bindtap='publishClick'>发布</view>
+  <button class='hanle-submit' form-type="submit">发布</button>
+</form>

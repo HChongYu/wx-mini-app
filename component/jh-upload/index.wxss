@@ -1,1 +1,47 @@
 /* component/jh-upload/index.wxss */
+  .upload-img{
+    display: inline-block;
+    position: relative;
+    width: 204rpx;
+    height: 204rpx;
+    border-radius: 8rpx;
+    margin-left: 10rpx;
+    line-height: 204rpx;
+  }
+  .upload-img-show{
+    width: 100%;
+    height: 100%;  
+  }
+  .upload-img-del{
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    width:34rpx;
+    height:34rpx;
+  }
+  .upload-handle{
+    position: relative;
+    display: inline-block;
+    width:204rpx;
+    height:204rpx;
+    background: #F2FAF6;
+    border-radius:8rpx;
+    border:2rpx dashed rgba(212,228,219,1);
+    margin-left: 10rpx; 
+  }
+  .upload-handle-add{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 42rpx;
+    height: 42rpx;
+  }
+  .progress_back{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+  }

@@ -1,0 +1,14 @@
+.topic-item-1 {
+  color: #2da25f;
+  /* background: #f2faf6; */
+}
+
+.topic-item-2 {
+  color: #677ab0;
+  /* background: #f4f6ff; */
+}
+
+.topic-item-3 {
+  color: #ffb22d;
+  /* background: #fff9ed; */
+}

@@ -1,5 +1,5 @@
 /* packageTree/Publish/publish.wxss */
-
+@import "/wxss/topic.wxss";
 page {
   padding: 0 24rpx 0;
 }
@@ -34,6 +34,7 @@ page {
 }
 
 .content-textarea {
+  margin-top: 12rpx; 
   height: 160rpx;
   width: 100%;
   font-size: 26rpx;
@@ -59,38 +60,7 @@ page {
   border-bottom: 2rpx solid #F9F9F9; 
   font-size: 28rpx;
 }
-.upload-img{
-  display: block;
-  position: relative;
-  width:204rpx;
-  height:204rpx;
-  border-radius:8rpx;
-}
-.upload-img-del{
-  position: absolute;
-  right: 20rpx;
-  top: 20rpx;
-  width:34rpx;
-  height:34rpx;
-}
-.upload-handle{
-  position: relative;
-  width:204rpx;
-  height:204rpx;
-  background: #F2FAF6;
-  border-radius:8rpx;
-  border:2rpx dashed rgba(212,228,219,1);
-  margin-left: 10rpx; 
-}
-.upload-handle-add{
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width: 42rpx;
-  height: 42rpx;
-}
+
 .hanle-submit{
   position: fixed;
   left: 26rpx;
@@ -102,8 +72,5 @@ page {
   text-align: center;
   color: #2DA25F;
   border-top: 2rpx solid #F9F9F9;
-
+  background: #fff;
 }
-/* packageTree/treedetails/treedetails.wxss */
-
-

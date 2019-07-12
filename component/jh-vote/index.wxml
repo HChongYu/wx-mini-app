@@ -1,11 +1,11 @@
 <!--pagekagelist/pages/y-phoneup/index.wxml-->
 <view class='jh-vote_back' catchtap='close' catchtouchmove='empty' wx:if='{{voteShow}}'>
   <view class='jh-vote' animation='{{animationData}}' catchtap='empty'>
-    <view class='jh-vote-hint'>请输入投诉内容</view>
+    <view class='jh-vote-hint'>{{voteId=='1'?'举报此条树洞':'举报此条评论'}}</view>
     <view class='jh-vote-header'>
-      <view class='jh-vote-header-title'>#胖小雨长的胖#</view>
-      <view class='jh-vote-header-text '>看过凌晨3点的北京，也看过清晨6点的日出。虽然不知道高中会比初三辛苦成千上万倍，但现在的我有点熬不住了…</view>
+      <view class='jh-vote-header-title'>{{voteTitle}}</view>
+      <view class='jh-vote-header-text '>{{voteText}}</view>
     </view>
-    <view class='jh-vote-item' wx:for='{{voteItem}}' catchtap='voteItem'>{{item.name}}</view>
+    <view class='jh-vote-item' wx:for='{{voteItem}}' wx:key='index'  data-reason='{{item.id}}'  catchtap='voteItem'>{{item.name}}</view>
   </view>
 </view>

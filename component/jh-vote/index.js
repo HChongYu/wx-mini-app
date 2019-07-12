@@ -4,9 +4,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    // phone: {
-    //   type: String
-    // },
+    voteTitle:{
+      type:String
+    },
+    voteId:{
+      type:String
+    },
+    voteText:{
+      type:String
+    },
     voteShow: {
       type: Boolean,
       value: false,
@@ -27,24 +33,20 @@ Component({
    */
   data: {
     voteItem: [{
-        name: '低俗与敏感内容',
+        name: '低俗和敏感内容',
         id: 1
       },
       {
         name: '内容令人不适',
-        id: 1
+        id: 2
       },
       {
         name: '垃圾、广告和欺诈',
-        id: 1
+        id: 3
       },
       {
         name: '人身攻击',
-        id: 1
-      },
-      {
-        name: '我再想想',
-        id: 1
+        id: 4
       }
     ]
   },
@@ -95,7 +97,8 @@ Component({
         animationData: animation.export()
       })
     },
-    voteItem(){
+    voteItem(e){
+      this.triggerEvent('callBack',{'voteId':this.data.voteId,'reason':e.currentTarget.dataset.reason})
       this.close();
     }
   }

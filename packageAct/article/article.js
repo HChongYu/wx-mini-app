@@ -1,5 +1,6 @@
 // packageTree/article/article.js
 const WXAPI = getApp().globalData.WXAPI;
+const UTIL = getApp().globalData.UTIL;
 const WxParse = require('../../wxParse/wxParse.js');
 Page({
 
@@ -26,10 +27,9 @@ Page({
 
   },
   // 初始化数据
+  // 获取文章内容
   getArticleData(articleId) {
     WXAPI.articleDetail(articleId).then(res => {
-      console.log(res)
-      //todo
       if (res.code == 0) {
         let article = res.data.content;
         let that = this;
@@ -38,8 +38,9 @@ Page({
         } catch (err) {
           // yd.util.commonToast(err)
         }
-        this.setData({ articleData: res.data })
+        this.setData({ articleData: res.data})
       } else {
+        res.text? UTIL.commonToast(res.text): UTIL.commonToast("数据错误");
       }
     })
   },
@@ -50,7 +51,9 @@ Page({
     WXAPI.articleStore(articleId).then(res => {
       if (res.code == 0) {
         this.getArticleData(articleId)
+        UTIL.commonToast(`成功收藏${this.data.articleData.title}`);
       } else {
+        res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
       }
     })
   },
@@ -60,10 +63,10 @@ Page({
     WXAPI.articleCancelStore(articleId).then(res => {
       if (res.code == 0) {
         this.getArticleData(articleId)
+        UTIL.commonToast(`成功收藏${this.data.articleData.title}`);
       } else {
+        res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
       }
     })
   },
- 
-
 })

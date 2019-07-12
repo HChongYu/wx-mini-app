@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/circle/circle",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,7 +32,8 @@
         "treedetails/treedetails",
         "treelist/treelist",
         "message/message",
-        "topic/topic"
+        "topic/topic",
+        "dome/dome"
       ]
     }
   ],

@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const WXAPI = getApp().globalData.WXAPI;
-// import { indexIndexDetail } from '/wxapi/main.js';
+const UTIL = getApp().globalData.UTIL;
 Page({
   data: {
     iconBar: [{
@@ -31,10 +31,11 @@ Page({
       }
     ],
     navbarData: [
-      { name: '往期精彩', type: 0 },
-      { name: '即将开始', type: 1 },
+      { name: '即将开始', type: 0 },
+      { name: '往期精彩', type: 1 },
     ],
-    winAtType:0
+    winAtType:0,
+    loading:false
   },
 
   onLoad: function() {
@@ -45,12 +46,13 @@ Page({
   },
   // 初始化函数
   getHomeDetail(){
+    this.setData({loading:true})
     // todo
     WXAPI.indexIndexDetail().then(res => {
       if (res.code==0){
-        this.setData({homeDetail:res.data})
+        this.setData({homeDetail:res.data,loading:false})
       }else{
-
+        res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
       }
     })
   },
@@ -72,6 +74,7 @@ Page({
       url: `/packageAct/actlist/actlist?type=${e.currentTarget.dataset.type}`
     })
   },
+  // 
   articleBarClick(e){
     wx.navigateTo({
       url: `/packageAct/article/article?articleId=${e.currentTarget.dataset.id}`

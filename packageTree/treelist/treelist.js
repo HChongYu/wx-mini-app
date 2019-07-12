@@ -1,14 +1,18 @@
 // packageTree/treelist/treelist.js
+const WXAPI = getApp().globalData.WXAPI;
+const UTIL = getApp().globalData.UTIL;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    true:true,
     navbarData: [
       { name: '我的', index: 0 },
       { name: '我互动过的', index: 1 },
     ],
+    atIndex: 0
   },
 
   /**
@@ -16,59 +20,93 @@ Page({
    */
   onLoad: function (options) {
     wx.hideShareMenu()
-  },
+  }, 
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({loading:false})
+    this.data.atIndex==0? this.getMyTree():this.getMyInteract();
   },
-  // 跳转函数
-  chatBack(e) {
-    wx.navigateTo({
-      url: '/packageTree/treedetails/treedetails'
+  // 初始化函数
+  getMyTree(){
+    WXAPI.shudongMySubjects().then(res=>{
+      if(res.code==0){
+        if(res.data.length){
+          let nowDate =(new Date()).valueOf();
+          res.data.map(item=>{
+            item.createAt = UTIL.beforeTypeDate(item.createAt,nowDate)
+          })
+          this.setData({ myTreeList: res.data, loading:false})
+        }else{
+        }
+      }else{
+        res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
+      }
     })
   },
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  // 我互动过的
+  getMyInteract(){
+    WXAPI.shudongMyReplie().then(res=>{
+      if(res.code==0){
+        if(res.data.length){
+          let nowDate =(new Date()).valueOf();
+          res.data.map(item=>{
+            item.createAt = UTIL.beforeTypeDate(item.createAt,nowDate)
+          })
+          this.setData({ myInteractList: res.data, loading:false})
+        }else{
+        }
+      }else{
+        res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  deleteBack(e){
+    let that = this;
+    wx.showModal({
+      content: `确定删除 #${e.detail.topic}# 这条树洞吗？`,
+      confirmText: "确定",
+      confirmColor: "#2DA25F",
+      cancelText: "取消",
+      cancelColor: "#c5c5c5",
+      success: function(res) {
+        if (res.confirm) {
+          WXAPI.shudongDeleteSubject(e.detail.id).then(res=>{
+            if(res.code==0){
+              UTIL.commonToast(`成功删除${e.detail.topic}这条树洞`)
+              that.getMyTree();
+            }else{
+              res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
+            }
+          })
+        } 
+      },
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  // 交互函数
+  treelistBarBack(e){
+    // console.log(e.detail.index)
+    this.setData({atIndex:e.detail.index,loading:false})
+    if(e.detail.index==0){
+      this.getMyTree();
+    }else{
+      this.getMyInteract();
+    }
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  // 跳转函数
+  // 去树洞详情  
+  goTreeDetails(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: `/packageTree/treedetails/treedetails?subjectId=${e.currentTarget.dataset.id}`
+    })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

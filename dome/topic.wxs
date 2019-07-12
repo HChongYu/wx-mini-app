@@ -1,8 +1,0 @@
-
-var topic = function (index) {
-  var index =index%3;
-  return "sss";
-}
-module.exports = {
-  topic: topic
-};

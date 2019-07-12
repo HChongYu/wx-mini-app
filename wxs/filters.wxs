@@ -1,0 +1,89 @@
+
+// 教官分类
+var teacherType = function (type) {
+  var teacherList = [
+    { val: "1", title: '体验式培训师' },
+    { val: "2", title: '军豪拓展教官' },
+    { val: "3", title: '军豪拓展总教官' }
+  ];
+  var result;
+  for (var i = 0; i < teacherList.length; i++) {
+    if (teacherList[i].val == type) {
+      result = teacherList[i].title
+    }
+  }
+  return result;
+}
+// 话题分类
+var topicType= function (type) {
+  var topiclist = [{ val:'1',title: "我🍋了"},
+  { val: '2',title: "没发出的朋友圈", color:2},
+  { val: '3',title: "长大以后才知道的真相", color:3},
+  { val: '4',title: "先定一个亿的小目标", color:1},
+  { val: '5',title: "夏天的碎片",color:2},
+  { val: '6',title: "生活的奇妙时刻", color:3},
+  { val: '7',title: "最近的欢喜", color:1},
+  { val: '8',title: "夏日冰凉", color:2},
+  { val: '9',title: "为什么要努力", color:3},
+  { val: '10',title: "我的愿望清单"},
+  { val: '11',title: "二次元"},
+  { val: '12',title: "你所不了解的00后"}
+  ]
+  var result;
+  for (var i = 0; i < topiclist.length; i++) {
+    if (topiclist[i].val == type) {
+      result = topiclist[i].title
+    }
+  }
+  return result;
+}
+//消息分类
+var topicType= function (type) {
+  var topiclist = [{ val:'1',title: "我🍋了"},
+  { val: '2',title: "没发出的朋友圈"},
+  { val: '3',title: "长大以后才知道的真相"},
+  { val: '4',title: "先定一个亿的小目标"},
+  { val: '5',title: "夏天的碎片"},
+  { val: '6',title: "生活的奇妙时刻"},
+  { val: '7',title: "最近的欢喜"},
+  { val: '8',title: "夏日冰凉"},
+  { val: '9',title: "为什么要努力"},
+  { val: '10',title: "我的愿望清单"},
+  { val: '11',title: "二次元"},
+  { val: '12',title: "你所不了解的00后"}
+  ]
+  var result;
+  for (var i = 0; i < topiclist.length; i++) {
+    if (topiclist[i].val == type) {
+      result = topiclist[i].title
+    }
+  }
+  return result;
+}
+//消息分类
+var messageType= function (type) {
+  var messagelist = [
+  { val:'1',title: "点赞"},
+  { val: '3',title: "回复"},
+  { val: '2',title: "举报"},
+  ]
+  var result;
+  for (var i = 0; i < messagelist.length; i++) {
+    if (messagelist[i].val == type) {
+      result = messagelist[i].title
+    }
+  }
+  return result;
+}
+var weekType= function (type) {
+  var messagelist = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"]
+  var result=messagelist[type];
+  return result;
+}
+
+module.exports = {
+  teacherType: teacherType,
+  topicType: topicType,
+  messageType: messageType,
+  weekType:weekType
+};

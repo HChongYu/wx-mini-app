@@ -1,5 +1,6 @@
 // packageTree/collect/collect.js
 const WXAPI = getApp().globalData.WXAPI;
+const UTIL = getApp().globalData.UTIL;
 Page({
 
   /**
@@ -16,7 +17,6 @@ Page({
   onLoad: function (options) {
     wx.hideShareMenu()
     this.getCollect();
-    
   },
   /**
    * 生命周期函数--监听页面显示
@@ -31,7 +31,7 @@ Page({
       if (res.code == 0) {
         this.setData({collectList:res.data})
       } else {
-
+        res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
       }
     })
   },

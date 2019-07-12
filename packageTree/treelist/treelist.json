@@ -2,6 +2,7 @@
   "navigationBarTitleText": "树洞管理",
   "usingComponents": {
     "jh-chat": "/component/jh-chat/index",
-    "jh-navbar": "/component/jh-navbar/index"
+    "jh-navbar": "/component/jh-navbar/index",
+    "jh-empty": "/component/jh-empty/index"
   }
 }

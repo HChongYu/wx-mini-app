@@ -1,14 +1,15 @@
 //app.js
 const WXAPI = require('/wxapi/main')
+const UTIL = require('utils/util')
 App({
   onLaunch: function () {
-    WXAPI.jhLogin().then(res=>{
-      wx.setStorageSync('userInfo', res.data)
-      wx.setStorageSync('token', res.data.token)
-    })
+    wx.setStorageSync('yetGoLogin',false)
+  },
+  onShow() {
   },
   globalData: {
     // userInfo: null
-    WXAPI:WXAPI
+    WXAPI: WXAPI,
+    UTIL: UTIL
   }
 })

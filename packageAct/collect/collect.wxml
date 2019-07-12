@@ -7,3 +7,4 @@
     <view class='collect-content-date'>{{item.createTime}}</view>
   </view>
 </view>
+<jh-empty loading='{{loading&&!collectList.length}}' hasData='{{!loading&&!collectList.length}}' bottom='{{!loading&&collectList.length}}'></jh-empty>

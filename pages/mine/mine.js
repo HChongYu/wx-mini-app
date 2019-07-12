@@ -1,4 +1,6 @@
 // pages/mine/mine.js
+const WXAPI = getApp().globalData.WXAPI;
+const UTIL = getApp().globalData.UTIL;
 Page({
 
   /**
@@ -13,12 +15,25 @@ Page({
    */
   onLoad: function (options) {
     wx.hideShareMenu()
+    this.setData({userInfo:wx.getStorageSync('userInfo')})
   },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.getMineTipNum()
 
+
+  },          
+  getMineTipNum(){
+    let that =this;
+    WXAPI.mineTipNum().then(res => {
+      if (res.code == 0) {
+        that.setData({hasMessage:res.data})
+      } else {
+        res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
+      }
+    })
   },
   // 跳转函数
   // 树洞按钮

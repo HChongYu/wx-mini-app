@@ -6,11 +6,15 @@ page{
   box-sizing: border-box;
 }
 
+
+button::after{
+  outline:none;
+  border: transparent;
+}
 .jh-list_icon {
   width:34rpx;
   height: 34rpx;
   min-width:32rpx;
-
   margin-right: 20rpx; 
 }
 .jh-list_bd {
