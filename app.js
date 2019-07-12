@@ -8,7 +8,7 @@ App({
   onShow() {
   },
   globalData: {
-    // userInfo: null
+    // userInfo: null123
     WXAPI: WXAPI,
     UTIL: UTIL
   }
