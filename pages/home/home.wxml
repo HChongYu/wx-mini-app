@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <!-- <view class="header-time">
   18/03/2019
 </view>
@@ -17,22 +17,24 @@
 </view>
 <swiper style='height:112rpx; margin-top: 60rpx;'>
   <block wx:for="{{homeDetail.articles}}" wx:key='articleId'>
-    <swiper-item >
+    <swiper-item>
       <image class='article-bar' src='{{item.coverUrl}}' data-id='{{item.articleId}}' bindtap='articleBarClick'></image>
     </swiper-item>
   </block>
 </swiper>
 <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
 <view wx:if='{{winAtType==0}}'>
-  <view wx:for='{{homeDetail.comingActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
-    <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
-  </view>
-  <jh-empty  loading='{{loading}}' hasData='{{!loading&&!homeDetail.comingActivities.length}}' bottom='{{!loading&&homeDetail.comingActivities.length}}'></jh-empty>
+  <jh-empty length='{{homeDetail.comingActivities.length}}' loading='{{loading}}'>
+    <view wx:for='{{homeDetail.comingActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
+      <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
+    </view>
+  </jh-empty>
 </view>
 <view wx:elif='{{winAtType==1}}'>
-  <view wx:for='{{homeDetail.pastActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
-    <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
-  </view>
-  <jh-empty  loading='{{loading}}' hasData='{{!loading&&!homeDetail.pastActivities.length}}' bottom='{{!loading&&homeDetail.pastActivities.length}}' ></jh-empty>
+  <jh-empty length='{{homeDetail.pastActivities.length}}' loading='{{loading}}'>
+    <view wx:for='{{homeDetail.pastActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
+      <jh-win win-data='{{item}}' bind:callBack='homeWinBack'></jh-win>
+    </view>
+  </jh-empty>
 </view>
 <!-- <view class='jh-bottom_hint'>我是有底线的</view> -->

@@ -9,34 +9,37 @@
       未读
     </view>
   </view>
-  <view class='clear' catch:tap='handleMessage' wx:if='{{atIndex==0&&messageList.length}}'>消除所有消息</view>
+  <view class='clear' catch:tap='handleMessage' wx:if='{{atIndex==0&&messageList.length}}'>
+    消除所有消息
+  </view>
   <view class='clear' catch:tap='handleMessage' wx:elif='{{messageReadList.length}}'>所有未读标记已读</view>
 </view>
 <view class='message-top' wx:if='{{atIndex==0}}'>
-  <block wx:for='{{messageList}}' wx:key='index'>
-    <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
-      <jh-title title='{{item.title}}'></jh-title>
-      <view class='message-hint jh-fwm5'>{{item.content}}</view>
-      <view class='message-chat'>
-        <view class='message-chat-content'>{{item.content}}</view>
-        <view class='message-chat-createAt'>{{item.createAt}}</view>
+  <jh-empty loading='{{loading1}}' hasData='{{hasNextPage1}}'>
+    <block wx:for='{{messageList}}' wx:key='index'>
+      <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
+        <jh-title title='{{item.title}}'></jh-title>
+        <view class='message-hint jh-fwm5'>{{item.content}}</view>
+        <view class='message-chat'>
+          <view class='message-chat-content'>{{item.content}}</view>
+          <view class='message-chat-createAt'>{{item.createAt}}</view>
+        </view>
+        <!-- <view style="font-size:24rpx;color:#c9c9c9;">{{item.hasRead?'未读':'已读'}}</view> -->
       </view>
-      <!-- <view style="font-size:24rpx;color:#c9c9c9;">{{item.hasRead?'未读':'已读'}}</view> -->
-    </view>
-  </block>
-   <jh-empty loading='{{loading&&!messageList.length}}' hasData='{{!loading&&!messageList.length}}' bottom='{{!loading&&messageList.length}}'></jh-empty>
+    </block>
+  </jh-empty>
 </view>
 <view class='message-top' wx:else>
-  <block wx:for='{{messageReadList}}' wx:key='index'>
-    <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
-      <jh-title title='{{item.title}}'></jh-title>
-      <view class='message-hint jh-fwm5'>{{item.content}}</view>
-      <view class='message-chat'>
-        <view class='message-chat-content'>{{item.content}}</view>
-        <view class='message-chat-createAt'>{{item.createAt}}</view>
+  <jh-empty loading='{{loading2}}' hasData='{{hasNextPage2}}'>
+    <block wx:for='{{messageReadList}}' wx:key='index'>
+      <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
+        <jh-title title='{{item.title}}'></jh-title>
+        <view class='message-hint jh-fwm5'>{{item.content}}</view>
+        <view class='message-chat'>
+          <view class='message-chat-content'>{{item.content}}</view>
+          <view class='message-chat-createAt'>{{item.createAt}}</view>
+        </view>
       </view>
-      <!-- <view style="font-size:24rpx;color:#c9c9c9;">{{item.hasRead?'未读':'已读'}}</view> -->
-    </view>
-  </block>
-   <jh-empty loading='{{loading&&!messageReadList.length}}' hasData='{{!loading&&!messageReadList.length}}' bottom='{{!loading&&messageReadList.length}}'></jh-empty>
+    </block>
+  </jh-empty>
 </view>

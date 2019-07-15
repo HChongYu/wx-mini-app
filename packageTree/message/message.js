@@ -22,13 +22,12 @@ Page({
 
   onShow: function () {
     if (this.data.atIndex == 0) {
-      this.setData({ messageList: [], hasNextPage: true, loading: true })
+      this.setData({ messageList: [], hasNextPage1: true, loading1: true,length1:0})
       this.getMessageList()
     } else {
-      this.setData({ messageReadList: [], hasNextPage: true, loading: true })
+      this.setData({ messageReadList: [], hasNextPage2: true, loading2: true,length2:0})
       this.getMessageReadList()
     }
-
   },
   // 初始化函数
   getMessageList() {
@@ -45,9 +44,9 @@ Page({
           res.data.rows.map(item => {
             item.createAt = UTIL.beforeTypeDate(item.createAt, nowDate)
           })
-          this.setData({ [`messageList[${index}]`]: res.data.rows, hasNextPage: hasNextPage, loading: false })
+          this.setData({ [`messageList[${index}]`]: res.data.rows, hasNextPage1: hasNextPage, loading1: false,length1:index+1})
         } else {
-          this.setData({ hasNextPage: false, loading: false })
+          this.setData({ hasNextPage1: false, loading1: false })
         }
       } else {
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
@@ -70,9 +69,9 @@ Page({
           res.data.rows.map(item => {
             item.createAt = UTIL.beforeTypeDate(item.createAt, nowDate)
           })
-          this.setData({ [`messageReadList[${index}]`]: res.data.rows, hasNextPage: hasNextPage, loading: false })
+          this.setData({ [`messageReadList[${index}]`]: res.data.rows, hasNextPage2: hasNextPage, loading2: false,length2:index+1})
         } else {
-          this.setData({ hasNextPage: false, loading: false })
+          this.setData({ hasNextPage2: false, loading2: false })
         }
       } else {
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
@@ -84,10 +83,10 @@ Page({
   capsuleClick(e) {
     if (e.currentTarget.dataset.index != this.data.atIndex) {
       if (e.currentTarget.dataset.index == 0) {
-        this.setData({ atIndex: e.currentTarget.dataset.index, messageList: [],loading: true})
+        this.setData({ atIndex: e.currentTarget.dataset.index, messageList: [],loading1: true,hasNextPage1:true,length1:0})
         this.getMessageList()
       } else {
-        this.setData({ atIndex: e.currentTarget.dataset.index, messageReadList: [],loading:true})
+        this.setData({ atIndex: e.currentTarget.dataset.index, messageReadList: [],loading2:true,hasNextPage2:true,length2:0})
         this.getMessageReadList()
       }
     }
@@ -119,7 +118,7 @@ Page({
     } else {
       WXAPI.mineReadAllTips().then(res => {
         if (res.code == 0) {
-          this.setData({atIndex:0,messageList:[],hasNextPage: true, loading: true})
+          this.setData({atIndex:0,messageList:[],hasNextPage1: true, loading1: true})
           this.getMessageList();
         } else {
         }
@@ -143,9 +142,15 @@ Page({
  * 页面上拉触底事件的处理函数
   */
   onReachBottom: function (e) {
-    if (this.data.hasNextPage && !this.data.loading) {
-   
-      this.data.atIndex == 0 ? this.getMessageList() : this.getMessageReadList();
+    if(this.data.atIndex==0){
+      if (this.data.hasNextPage1 && !this.data.loading1) {
+        this.setData({loading1:true})
+        this.getMessageList();
+      }
+    }else{
+      if (this.data.hasNextPage2&& !this.data.loading2) {
+        this.getMessageList({loading2:true})
+      }
     }
   },
 })

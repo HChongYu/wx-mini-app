@@ -3,7 +3,7 @@ const WXAPI = getApp().globalData.WXAPI;
 const UTIL = getApp().globalData.UTIL;
 Page({
   data: {
-    circleList:[],
+    circleList:'',
     atIndex: 1,
     showNews: false,
     loading: false,
@@ -19,7 +19,8 @@ Page({
   },
   getCircleList() {
     let nowDate =(new Date()).valueOf();
-    let index=this.data.circleList.length;
+    let index=this.data.circleList.length?this.data.circleList.length:0;
+    let that=this;
     let query={    
       "currentPage": `${index+1}`,
       "size": "10"
@@ -31,11 +32,12 @@ Page({
           res.data.rows.map(item=>{
             item.createAt = UTIL.beforeTypeDate(item.createAt,nowDate)
           })
-          this.setData({[`circleList[${index}]`]:res.data.rows,hasNextPage:hasNextPage,loading:false})
+          that.setData({[`circleList[${index}]`]:res.data.rows,hasNextPage:hasNextPage,loading:false,length:index+1}) 
         }else{
-           this.setData({hasNextPage:false,loading:false})
+          that.setData({hasNextPage:false,loading:false})
         }
       } else {
+        that.setData({hasNextPage:false,loading:false})
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
       }
     })
@@ -47,21 +49,20 @@ Page({
     })
   },
   goTreeDetails(e) {
-    console.log(e)
     wx.navigateTo({
       url: `/packageTree/treedetails/treedetails?subjectId=${e.currentTarget.dataset.id}`
     })
   },
   // bar回吊,
   circleBarBack(e) {
-    let backData = e.detail
-    this.setData({ atIndex: e.detail.index })
+    this.setData({atIndex: e.detail.index})
   },
   /**
    * 页面上拉触底事件的处理函数
     */
   onReachBottom: function (e) {
     if(this.data.hasNextPage&&!this.data.loading){
+      this.setData({loading:true})
       this.getCircleList();
     }
   },

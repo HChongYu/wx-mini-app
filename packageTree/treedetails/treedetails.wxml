@@ -20,12 +20,6 @@
   </block>
 </view>
 <view class=' handle_back'>
-  <!-- <form bindsubmit="publishSubmit">
-    
-    <button >
-    </button>
-  </form> -->
-
   <view class="reply-form jh-listnp" wx:if='{{replyFocus}}'>
     <view class="reply-close" catch:tap="choseSendReply">X</view>
     <input class="js-list_item reply-input"  maxlength="140" focus="{{replyFocus}}" confirm-type='send' bindblur='blurReply'  bindconfirm='confirmReply'></input>

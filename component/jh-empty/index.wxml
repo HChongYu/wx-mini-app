@@ -1,12 +1,23 @@
-<!--component/jh-empty/index.wxml-->
-<view >
-    <view  class="jh-empty" wx:if='{{loading}}'>
-        <image class="jh-empty-img" src="/img/page-loading.png"/>
-        <view class="jh-empty-hint">加载中。。。</view>
-    </view>
-    <view  class="jh-empty" wx:elif='{{hasData}}'>
-        <image class="jh-empty-img" src="/img/page-empty.png"/>
-        <view class="jh-empty-hint">暂无数据</view>
-    </view>
-    <view class='jh-empty-bottom' wx:if="{{bottom}}">我是有底线的</view>
+<!-- component/jh-empty/index.wxml -->
+<view>
+    <slot wx:if='{{length}}'></slot>
+    <block wx:else>
+        <view class="jh-empty" wx:if='{{loading}}'>
+            <!-- <image class="jh-empty-img" src="/img/page-loading.png"/> -->
+            <view class="jh-empty-hint">加载中 。。。</view>
+        </view>
+        <view class="jh-empty" wx:elif='{{!hasData}}'>
+            <!-- <image class="jh-empty-img" src="/img/page-empty.png"/> -->
+            <view class="jh-empty-hint">暂无数据</view>
+        </view>
+    </block>
+    <!-- <view wx:else></view> -->
+    <block wx:if='{{length}}'>
+        <view class='jh-empty-bottom' wx:if='{{loading&&hasData}}'>
+            <image class='jh-empty-gif' src='/img/empty-loading.gif' />
+            <text style='vertical-align: super;'>加载中 。。。</text>
+        </view>
+        <view class='jh-empty-bottom' wx:else>我是有底线的</view>
+    </block>
 </view>
+

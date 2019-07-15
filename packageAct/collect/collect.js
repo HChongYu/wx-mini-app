@@ -22,14 +22,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
   },
   //初始化函数
   getCollect(){
+    this.setData({loading:true})
     WXAPI.mineArticles().then(res => {
       console.log(res)
       //todo
       if (res.code == 0) {
-        this.setData({collectList:res.data})
+        this.setData({collectList:res.data,loading:false})
       } else {
         res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
       }

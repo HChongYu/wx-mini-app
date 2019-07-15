@@ -22,7 +22,7 @@ Page({
    */
   onShow: function () {
     this.getMineTipNum()
-
+    this.getDemo()
 
   },          
   getMineTipNum(){
@@ -30,6 +30,25 @@ Page({
     WXAPI.mineTipNum().then(res => {
       if (res.code == 0) {
         that.setData({hasMessage:res.data})
+      } else {
+        res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
+      }
+    })
+  },
+  getDemo(){
+    let that =this;
+    WXAPI.mineValidShuDongStatus().then(res => {
+      if (res.code == 0) {
+        that.setData({disable:res.data.disable})
+      } else {
+        res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
+      }
+    })
+  },
+  switch1Change(){
+    WXAPI.uKaifa1().then(res => {
+      if (res.code == 0) {
+        // that.setData({disable:res.data.disable})
       } else {
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
       }

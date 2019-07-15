@@ -32,11 +32,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({loading:false})
     this.data.atIndex==0? this.getMyTree():this.getMyInteract();
   },
   // 初始化函数
   getMyTree(){
+    this.setData({loading1:true})
     WXAPI.shudongMySubjects().then(res=>{
       if(res.code==0){
         if(res.data.length){
@@ -44,7 +44,7 @@ Page({
           res.data.map(item=>{
             item.createAt = UTIL.beforeTypeDate(item.createAt,nowDate)
           })
-          this.setData({ myTreeList: res.data, loading:false})
+          this.setData({ myTreeList: res.data, loading1:false})
         }else{
         }
       }else{
@@ -54,6 +54,7 @@ Page({
   },
   // 我互动过的
   getMyInteract(){
+    this.setData({loading2:true})
     WXAPI.shudongMyReplie().then(res=>{
       if(res.code==0){
         if(res.data.length){
@@ -61,7 +62,7 @@ Page({
           res.data.map(item=>{
             item.createAt = UTIL.beforeTypeDate(item.createAt,nowDate)
           })
-          this.setData({ myInteractList: res.data, loading:false})
+          this.setData({ myInteractList: res.data, loading2:false})
         }else{
         }
       }else{
@@ -94,10 +95,11 @@ Page({
   // 交互函数
   treelistBarBack(e){
     // console.log(e.detail.index)
-    this.setData({atIndex:e.detail.index,loading:false})
     if(e.detail.index==0){
+      this.setData({atIndex:e.detail.index,myTreeList:[],loading1:true})
       this.getMyTree();
     }else{
+      this.setData({atIndex:e.detail.index,myTreeList:[],loading2:true})
       this.getMyInteract();
     }
   },

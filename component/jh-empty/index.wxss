@@ -9,12 +9,12 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-
     width: 256rpx;
     height: 256rpx;
     /* bottom: ; */
 }
 .jh-empty-hint{
+    margin: 100rpx;
     color:  rgba(0, 0, 0, 0.6);
     padding: 10rpx 0;
     font-size: 24rpx;
@@ -24,4 +24,10 @@
     padding: 40rpx  0;
     font-size: 24rpx;
     text-align: center;
+    vertical-align: center;
+}
+.jh-empty-gif{
+    margin-right: 24rpx; 
+    width:  40rpx;
+    height: 40rpx;
 }
