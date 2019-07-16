@@ -22,8 +22,7 @@ Page({
    */
   onShow: function () {
     this.getMineTipNum()
-    this.getDemo()
-
+    // this.getDemo()
   },          
   getMineTipNum(){
     let that =this;

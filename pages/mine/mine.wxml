@@ -31,4 +31,4 @@
   <view class="jh-list_bd">联系军豪拓展</view>
   <view class="jh-list_ft_arrow"></view>
 </view>
-<switch checked='{{disable}}' bindchange="switch1Change"/>
+<!-- <switch checked='{{disable}}' bindchange="switch1Change"/> -->

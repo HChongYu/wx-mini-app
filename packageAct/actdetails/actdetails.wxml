@@ -23,13 +23,13 @@
       <view class='flow-time'>{{item.slot}}</view>
       <view class='flow-title jh-list_item'>{{item.picName}}</view>
     </view>
-    <image class='flow-img' src="{{item.picUrl}}"></image>
+    <image class='flow-img' src="{{item.picUrl}}" wx:if="{{item.picUrl}}"></image>
     <view class='jh-listnp flow-expand'>{{item.plan}}</view>
   </view>
 </view>
-<jh-title title='精彩瞬间'></jh-title>
+<!-- <jh-title title='精彩瞬间'></jh-title>
 <view class='wonderful_back'>
   <image class='wonderful' src='/img/win1.png' wx:for='abckdede' wx:key='index'></image>
-</view>
+</view> -->
 <view style='height:200rpx;'>
 </view>
