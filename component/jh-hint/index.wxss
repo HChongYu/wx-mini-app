@@ -1,0 +1,19 @@
+/* component/jh-hint/index.wxss */
+.disable-hint{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    height: 100vh;
+    width: 750rpx;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    text-align: center;
+}
+.disable{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400rpx;
+    transform: translate(-50%,-50%);
+}

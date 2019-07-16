@@ -1,0 +1,4 @@
+<!--component/jh-hint/index.wxml-->
+<view class='disable-hint' wx:if='{{disable}}' catch:touchmove="">
+    <view  class='disable'>{{disableHint}}</view>
+</view>

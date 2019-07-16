@@ -1,4 +1,5 @@
 <!-- packageTree/treelist/treelist.wxml -->
+<jh-hint disable='{{disable}}' disableHint='{{disableHint}}'/>
 <jh-navbar style='margin-top:20rpx;' navbar-data='{{navbarData}}' at-index='{{atIndex}}' bind:callBack='treelistBarBack'></jh-navbar>
 <view wx:if='{{atIndex==0}}'>
   <jh-empty length='{{myTreeList.length}}' loading='{{loading1}}'>

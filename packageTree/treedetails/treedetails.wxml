@@ -48,4 +48,5 @@
     </view>
   </view>
 </view>
+<jh-hint disable='{{disable}}' disableHint='{{disableHint}}'/>
 <jh-vote vote-show='{{voteShow}}' vote-id='{{voteId}}' vote-title='# todo #' vote-text='{{treeDetailsData.content}}' bind:callBack='informCall'></jh-vote>

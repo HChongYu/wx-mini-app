@@ -1,18 +1,17 @@
-// component/jh-glide/index.js
+// component/jh-hint/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    loading:{
-      type:Boolean,
-      value:false
-    },
-    hasNextPage:{
-      type:Boolean,
+    disable:{
+      type: Boolean,
       value: false
-    }
-    
+    },
+    disableHint:{
+      type: String,
+      value: '该页面暂时不能使用'
+    },
   },
 
   /**

@@ -36,7 +36,9 @@ Page({
         }else{
           that.setData({hasNextPage:false,loading:false})
         }
-      } else {
+      } else if (res.code == 31000){
+        that.setData({disable: true, disableHint:res.text,loading:false,hasNextPage:false})
+      }else{
         that.setData({hasNextPage:false,loading:false})
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
       }

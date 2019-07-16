@@ -1,5 +1,6 @@
 <!-- packageTree/message/message.wxml -->
 <wxs src="../../wxs/filters.wxs" module="filters" />
+<jh-hint disable='{{disable}}' disableHint='{{disableHint}}'/>
 <view class="header">
   <view class="capsule">
     <view class="capsule-left {{atIndex==0?'capsule-pitch':''}}" data-index='0' catch:tap='capsuleClick'>

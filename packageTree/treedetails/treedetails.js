@@ -50,6 +50,8 @@ Page({
         treeDetailsData.parseWeek=createAt.getDay();
         console.log(treeDetailsData)
         this.setData({ treeDetailsData: treeDetailsData })
+      }else if (res.code == 31000){
+        that.setData({disable: true, disableHint:res.text,loading1:false})
       } else {
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
       }
@@ -72,7 +74,6 @@ Page({
           })
           this.setData({ [`treeReplyList[${index}]`]: res.data.rows, hasNextPage: hasNextPage, loading: false })
         } else {
-          
           this.setData({ hasNextPage: false, loading: false })
         }
       } else {

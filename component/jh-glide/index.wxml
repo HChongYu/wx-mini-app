@@ -1,6 +1,0 @@
-<!--component/jh-glide/index.wxml-->
-<view >
-    <slot ></slot>
-    <view class="jh-gilde-loading" wx:if='{{loading}}'><image  src="/img/gilde-loading.gif" />加载中。。。</view>
-    <view class="jh-gilde-has" wx:elif='{{!hasNextPage}}'>我是有底线的</view>
-</view>

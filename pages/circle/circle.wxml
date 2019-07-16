@@ -1,4 +1,5 @@
 <!-- logs.wxml -->
+<jh-hint disable='{{disable}}' disableHint='{{disableHint}}'/>
 <view class='jh-listnp'>
   <view class='jh-list_item jh-fmw5'>小世界</view>
   <image class='add' src='/img/add.png' bindtap='publishClick'></image>

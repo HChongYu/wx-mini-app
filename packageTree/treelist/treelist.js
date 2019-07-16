@@ -45,7 +45,10 @@ Page({
             item.createAt = UTIL.beforeTypeDate(item.createAt,nowDate)
           })
           this.setData({ myTreeList: res.data, loading1:false})
+        }else if (res.code == 31000){
+          that.setData({disable: true, disableHint:res.text,loading1:false})
         }else{
+          this.setData({ myTreeList: res.data, loading1:false})
         }
       }else{
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
@@ -63,7 +66,10 @@ Page({
             item.createAt = UTIL.beforeTypeDate(item.createAt,nowDate)
           })
           this.setData({ myInteractList: res.data, loading2:false})
+        }else if (res.code == 31000){
+          that.setData({disable: true, disableHint:res.text,loading2:false})
         }else{
+          this.setData({myInteractList: res.data, loading2:false})
         }
       }else{
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");

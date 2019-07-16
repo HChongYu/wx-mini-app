@@ -45,6 +45,8 @@ Page({
             item.createAt = UTIL.beforeTypeDate(item.createAt, nowDate)
           })
           this.setData({ [`messageList[${index}]`]: res.data.rows, hasNextPage1: hasNextPage, loading1: false,length1:index+1})
+        }else if (res.code == 31000){
+          that.setData({disable: true,disableHint: res.text,loading1:false})
         } else {
           this.setData({ hasNextPage1: false, loading1: false })
         }
@@ -70,7 +72,9 @@ Page({
             item.createAt = UTIL.beforeTypeDate(item.createAt, nowDate)
           })
           this.setData({ [`messageReadList[${index}]`]: res.data.rows, hasNextPage2: hasNextPage, loading2: false,length2:index+1})
-        } else {
+        } else if (res.code == 31000){
+          that.setData({disable: true,disableHint: res.text,loading2:false})
+        }else {
           this.setData({ hasNextPage2: false, loading2: false })
         }
       } else {

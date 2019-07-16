@@ -3,6 +3,7 @@
   "usingComponents": {
     "jh-navbar":"/component/jh-navbar/index",
     "jh-chat": "/component/jh-chat/index",
-    "jh-empty": "/component/jh-empty/index"
+    "jh-empty": "/component/jh-empty/index",
+    "jh-hint": "/component/jh-hint/index"
   }
 }
