@@ -40,3 +40,8 @@ view {
   -webkit-flex: 1;
   flex: 1;
 }
+/* ::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+} */

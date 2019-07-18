@@ -3,7 +3,7 @@
 <view class='jh-chat'>
   <image class='jh-chat-delete' src='/img/close.png' wx:if='{{showDelete}}' data-topic='{{filters.topicType(chatData.themeType)}}' data-id='{{chatData.subjectId}}' da catch:tap='deleteClick'></image>
   <!-- 颜色 themeColor，subjectId -->
-  <view class='jh-chat-title topic-item-{{chatData.themeType}}'>#{{filters.topicType(chatData.themeType)}}#</view>
+  <view class='jh-chat-title_{{type}} topic-item-{{chatData.themeColor}}'>#{{filters.topicType(chatData.themeType)}}#</view>
   <view class='jh-chat-content'>{{chatData.content}}</view>
   <view style='margin-top:24rpx;'>
     <image class='jh-chat-picture' wx:for='{{chatData.pictureList}}' wx:key='index' src='{{item}}'></image>
@@ -11,11 +11,11 @@
   <view class='jh-chat-list jh-listnp' wx:if='{{type=="list"}}'>
     <view class='jh-chat-time jh-list_item'>{{chatData.createAt}}</view>
     <view class='jh-chat-btn jh-listnp'>
-      <image class='jh-chat-btn-icon' src='/img/tree-praise-s.png'></image>
-      <view>{{chatData.likeNum}}</view>
+      <image class='jh-chat-btn-icon' src='{{chatData.likeNum>0?"/img/tree-praise-s.png":"/img/tree-praise-d.png"}}'></image>
+      <view style='min-width: 28rpx;'>{{chatData.likeNum}}</view>
     </view>
     <view class='jh-chat-btn jh-listnp'>
-      <image class='jh-chat-btn-icon' src='/img/tree-comment-s.png'></image>
+      <image class='jh-chat-btn-icon' style='position:relative;top: 2rpx;' src='{{chatData.likeNum>0?"/img/tree-comment-s.png":"/img/tree-comment-d.png"}}'></image>
       <view>{{chatData.replyNum}}</view>
     </view>
   </view>

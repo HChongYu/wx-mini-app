@@ -10,19 +10,21 @@
   </view>
   <jh-chat chat-data='{{treeDetailsData}}' type='details'></jh-chat>
   <jh-title title='评论 ({{treeDetailsData.replyNum}})'></jh-title>
-  <block wx:for='{{treeReplyList}}' wx:key='index'>
-    <view class='reply' wx:for='{{item}}' wx:key='replyId'>
-      <image class='reply-del' src='/img/close.png' wx:if='{{treeDetailsData.mine||item.mine}}' data-id='{{item.replyId}}' catch:tap='repliesDelete'></image>
-      <image class='reply-report' src='/img/hanle-report.png' wx:else data-id='{{item.replyId}}' catch:tap='repliesReport'></image>
-      <view class='reply-text '>{{item.content}}</view>
-      <view class='reply-time'>{{item.createAt}}</view>
-    </view>
-  </block>
+  <view class='tree-reply-list'>
+    <block wx:for='{{treeReplyList}}' wx:key='index'>
+      <view class='reply' wx:for='{{item}}' wx:key='replyId'>
+        <image class='reply-del' src='/img/close.png' wx:if='{{treeDetailsData.mine||item.mine}}' data-id='{{item.replyId}}' catch:tap='repliesDelete'></image>
+        <image class='reply-report' src='/img/item-report.png' wx:else data-id='{{item.replyId}}' catch:tap='repliesReport'></image>
+        <view class='reply-text '>{{item.content}}</view>
+        <view class='reply-time'>{{item.createAt}}</view>
+      </view>
+    </block>
+  </view>
 </view>
 <view class=' handle_back'>
   <view class="reply-form jh-listnp" wx:if='{{replyFocus}}'>
     <view class="reply-close" catch:tap="choseSendReply">X</view>
-    <input class="js-list_item reply-input"  maxlength="140" focus="{{replyFocus}}" confirm-type='send' bindblur='blurReply'  bindconfirm='confirmReply'></input>
+    <input class="js-list_item reply-input" maxlength="140" focus="{{replyFocus}}" confirm-type='send' bindblur='blurReply' bindconfirm='confirmReply'></input>
     <view class="reply-send" catch:tap="sendReply">发送</view>
   </view>
   <view class="jh-listnp" wx:else>
@@ -48,5 +50,5 @@
     </view>
   </view>
 </view>
-<jh-hint disable='{{disable}}' disableHint='{{disableHint}}'/>
+<jh-hint disable='{{disable}}' disableHint='{{disableHint}}' />
 <jh-vote vote-show='{{voteShow}}' vote-id='{{voteId}}' vote-title='# todo #' vote-text='{{treeDetailsData.content}}' bind:callBack='informCall'></jh-vote>

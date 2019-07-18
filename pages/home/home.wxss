@@ -18,7 +18,6 @@ page {
   margin: 12rpx 24rpx 12rpx 0;
   height: 32rpx;
   width: 32rpx;
-  border-radius: 50%;
 }
 
 .selbar {

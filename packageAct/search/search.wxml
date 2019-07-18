@@ -5,8 +5,8 @@
 </view>
 <jh-title title='{{atText? "搜索结果":"热门搜索"}}'></jh-title>
 <view wx:if='{{atText}}'>
-  <view wx:for='{{searchData}}' wx:key='activityId' data-id='{{item.activityId}}' bindtap='actTextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>{{item.activityTitle}}</view>
+  <view wx:for='{{searchData}}' wx:key='activityId' data-id='{{item.activityId}}' bindtap='actTextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>{{item.title}}</view>
 </view>
 <view wx:else>
-  <view wx:for='{{hotList}}' wx:key='activityId' data-id='{{item.activityId}}' bindtap='actTextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>{{item.activityTitle}}</view>
+  <view wx:for='{{hotList}}' wx:key='activityId' data-id='{{item.activityId}}' bindtap='actTextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>{{item.title}}</view>
 </view>

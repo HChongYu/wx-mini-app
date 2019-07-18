@@ -45,7 +45,6 @@ Page({
   // 交互函数
   // 收拉框
   foldBack(e){
-    console.log(e)
     this.setData({ openStatus: e.detail})
   },
   // 

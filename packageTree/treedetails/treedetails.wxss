@@ -11,14 +11,14 @@ page{
   box-shadow:0rpx 0rpx 12rpx 0rpx rgba(0,0,0,0.19);
   border-radius: 20rpx 20rpx 0 0;
 }
-/* .decorate-header{
-  -webkit-align-item: flex-start;
-  align-items: flex-start;
-} */
+.decorate-header{
+  -webkit-align-item: flex-end;
+  align-items: flex-end;
+}
 .decorate-header-day{
   font-size: 60rpx;
   color: #282828;
-  margin-top: -10rpx; 
+  margin-bottom: -12rpx; 
 }
 .decorate-header-rests{
   font-size: 24rpx;
@@ -61,15 +61,15 @@ page{
   position: absolute;
   top: 20rpx;
   right: 10rpx;
-  margin: 10rpx;
+  padding: 10rpx;
   height: 20rpx;
   width: 20rpx;
 } 
 .reply-report{
   position: absolute;
-  top: 20rpx;
+  bottom: 20rpx;
   right: 10rpx;
-  margin: 10rpx;
+  padding: 10rpx;
   height: 20rpx;
   width: 20rpx;
 }
@@ -107,4 +107,8 @@ page{
   color: #2da25f;
   background: #fff;
   text-align: center
+}
+.tree-reply-list{
+  min-height: 500rpx;
+  padding-bottom: 200rpx;
 }

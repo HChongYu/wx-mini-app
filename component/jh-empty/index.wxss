@@ -20,7 +20,7 @@
     font-size: 24rpx;
 }
 .jh-empty-bottom{
-    color:  rgba(0, 0, 0, 0.6);
+    color:  #C9C9C9BD;
     padding: 40rpx  0;
     font-size: 24rpx;
     text-align: center;

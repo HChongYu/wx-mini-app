@@ -27,10 +27,10 @@ Page({
     WXAPI.indexSearchActivitiesByTitle(title).then(res => {
       //todo
       if (res.code == 0) {
-        if (title){
+        if (title!=''){
           this.setData({ searchData: res.data.searchList })
         }else{
-          this.setData({ hotList: res.data.hotList })
+          this.setData({hotList: res.data.hotList})
         }
       } else {
         res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");

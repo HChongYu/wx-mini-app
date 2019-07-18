@@ -14,7 +14,7 @@ Page({
   },
   onShow: function () {
     // this.data.circleList=[];
-    this.setData({circleList:[],hasNextPage:true,loading:true})
+    this.setData({ circleList: [], hasNextPage: true, loading: true, length:0})
     this.getCircleList()
   },
   getCircleList() {

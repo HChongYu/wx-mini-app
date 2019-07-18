@@ -13,12 +13,11 @@
   margin: 12rpx 24rpx 12rpx 0;
   height: 32rpx;
   width: 32rpx;
-  border-radius: 50%;
 }
 .search{
-  color: #9F9F9F;
-}
+  color: #333;
 
+}
 .acttext{
   padding: 24rpx 24rpx 24rpx 0;
   font-size: 24rpx;

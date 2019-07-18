@@ -5,20 +5,23 @@
     <image class='swiper-img' src='{{item}}'></image>
   </swiper-item>
 </swiper>
-<view class='jh-fmw5' style='margin-top:40rpx;'>{{actDetailData.title}}</view>
+<view class='jh-fmw5' style='margin-top:40rpx;font-size:48rpx;'>{{actDetailData.title}}</view>
 <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{actDetailData.introduction}}</view>
 <jh-title title='活动时间'></jh-title>
-<view class='jh-fmw5' style='margin:32rpx 0 0 32rpx;font-size: 24rpx;'>{{actDetailData.startTime}}～{{actDetailData.endTime}}</view>
+<view class='jh-fmw5' style='margin:32rpx 0 0 32rpx;color:#686868;font-size: 24rpx;'>{{actDetailData.startTime}}～{{actDetailData.endTime}}</view>
 <jh-title title='本期金牌教官'></jh-title>
-<jh-fold bind:callBack='foldBack' open-status='{{openStatus}}'>
-  <view class='coach_back'>
+<jh-fold bind:callBack='foldBack' open-status='{{openStatus}}' show-btn='{{actDetailData.teacherList>4}}'>
+  <view class='coach_back' wx:if='{{openStatus}}'>
     <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 25%;' bind:callBack='coachItemClick'></jh-portrait>
+  </view>
+  <view class='coach_back' wx:else>
+    <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 25%;' bind:callBack='coachItemClick' wx:if='{{index<4}}'></jh-portrait>
   </view>
 </jh-fold>
 <jh-title title='活动流程'></jh-title>
 <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='actBarBasck'></jh-navbar>
 <view class='flow' wx:for='{{actDetailData.contentList[atIndex]}}' wx:key='index'>
-  <view >
+  <view>
     <view class='jh-listnp flow-list'>
       <view class='flow-time'>{{item.slot}}</view>
       <view class='flow-title jh-list_item'>{{item.picName}}</view>

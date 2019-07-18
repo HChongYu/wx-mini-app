@@ -7,8 +7,12 @@ Component({
     openStatus:{
       type: Boolean,
       value: false
+    },
+    showBtn: {
+      type: Boolean,
+      value: false
     }
-  },
+  }, 
 
   /**
    * 组件的初始数据

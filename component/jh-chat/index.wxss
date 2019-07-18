@@ -16,9 +16,13 @@
   height: 20rpx;
   width: 20rpx;
 }
-
-.jh-chat-title {
-  color: #2DA25F;
+.jh-chat-title_list{
+  font-size: 28rpx;
+}
+.jh-chat-title_details{
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
 }
 
 .jh-chat-picture{
@@ -31,10 +35,11 @@
 }
 
 .jh-chat-content {
-  margin-top: 8rpx;
+  margin-top: 16rpx;
   width: 640rpx;
-  height: 68rpx;
-  font-size: #282828; 
+  min-height: 68rpx;
+  color: #282828;
+  font-size: 28rpx;
 }
 
 .jh-chat-time {
@@ -42,12 +47,14 @@
 }
 
 .jh-chat-btn-icon {
+
   width: 32rpx;
   height: 28rpx;
   margin-right: 10rpx;
 }
 
 .jh-chat-btn {
+  
   padding: 24rpx 0 24rpx 24rpx;
   font-size: 20rpx;
   color: #282828;

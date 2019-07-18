@@ -1,5 +1,5 @@
 <!--component/jh-fold/jh-fold.wxml-->
 <view>
     <slot></slot>
-    <view class='jh-fold-more' bindtap='foldClick'> {{openStatus? "收起":"查看更多"}}</view>
+    <view class='jh-fold-more' bindtap='foldClick' wx:if='{{showBtn}}'> {{openStatus? "收起":"查看更多"}}</view>
 </view>

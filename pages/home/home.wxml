@@ -7,7 +7,7 @@
 </view> -->
 <view class="jh-listnp search-back" bindtap='searchClick'>
   <image class="search-icon" src='/img/search.png'></image>
-  <view class="jh-list_item search">下陆中学7天研学旅行</view>
+  <view class="jh-list_item search">搜一搜有趣的活动欧</view>
 </view>
 <view class="jh-listnp selbar">
   <view class="selbar-item" wx:for="{{iconBar}}" wx:key='type' data-type='{{item.type}}' bindtap="iconClik">

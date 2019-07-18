@@ -16,7 +16,7 @@
   <view class='clear' catch:tap='handleMessage' wx:elif='{{messageReadList.length}}'>所有未读标记已读</view>
 </view>
 <view class='message-top' wx:if='{{atIndex==0}}'>
-  <jh-empty loading='{{loading1}}' hasData='{{hasNextPage1}}'>
+  <jh-empty length='{{length1}}' loading='{{loading1}}' hasData='{{hasNextPage1}}'>
     <block wx:for='{{messageList}}' wx:key='index'>
       <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
         <jh-title title='{{item.title}}'></jh-title>
@@ -31,7 +31,7 @@
   </jh-empty>
 </view>
 <view class='message-top' wx:else>
-  <jh-empty loading='{{loading2}}' hasData='{{hasNextPage2}}'>
+  <jh-empty length='{{length2}}' loading='{{loading2}}' hasData='{{hasNextPage2}}'>
     <block wx:for='{{messageReadList}}' wx:key='index'>
       <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
         <jh-title title='{{item.title}}'></jh-title>
