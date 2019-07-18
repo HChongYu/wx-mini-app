@@ -119,7 +119,7 @@ Page({
   confirmReply(e){
     let that =this;
     if(!e.detail.value){
-      UTIL.commonToast("请输入品论")
+      UTIL.commonToast("请输入评论")
       return
     }
     WXAPI.shudongAddReply(this.data.treeDetailsData.subjectId, `${e.detail.value}`).then(res => {
@@ -137,7 +137,7 @@ Page({
   sendReply(e){
     let that =this;
     if(!this.data.reply){
-      UTIL.commonToast("请输入品论")
+      UTIL.commonToast("请输入评论")
       return
     }
     WXAPI.shudongAddReply(this.data.treeDetailsData.subjectId, `${this.data.reply}`).then(res => {
