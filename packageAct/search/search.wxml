@@ -1,7 +1,7 @@
 <!--packageAct/search/search.wxml-->
 <view class="jh-listnp search-back">
   <image class="search-icon" src='/img/search.png'></image>
-  <input class='jh-list_item search' placeholder='快来搜一搜～' placeholder-style='color:#9F9F9F;' value='{{atText}}' bindblur='inputSearch'></input>
+  <input class='jh-list_item search' placeholder='快来搜一搜～' placeholder-style='color:#9F9F9F;' value='{{atText}}' confirm-type='search' bindblur='inputSearch'></input>
 </view>
 <jh-title title='{{atText? "搜索结果":"热门搜索"}}'></jh-title>
 <view wx:if='{{atText}}'>
