@@ -34,7 +34,7 @@
 .jh-vote-header-title {
   margin-top: 4rpx;
   font-size: 28rpx;
-  color: #2da25f;
+  color: #4FC981;
 }
 
 .jh-vote-header-text {

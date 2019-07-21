@@ -1,38 +1,67 @@
-<!--packageAct/actdetails/actdetails.wxml-->
-
-<swiper indicator-dots='true' indicator-active-color='#5A7F5B' indicator-color='#FAFAFA' circular='true' autoplay='true'>
-  <swiper-item wx:for='{{actDetailData.moments}}' wx:key='index'>
-    <image class='swiper-img' src='{{item}}'></image>
-  </swiper-item>
-</swiper>
-<view class='jh-fmw5' style='margin-top:40rpx;font-size:48rpx;'>{{actDetailData.title}}</view>
-<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{actDetailData.introduction}}</view>
-<jh-title title='活动时间'></jh-title>
-<view class='jh-fmw5' style='margin:32rpx 0 0 32rpx;color:#686868;font-size: 24rpx;'>{{actDetailData.startTime}}～{{actDetailData.endTime}}</view>
-<jh-title title='本期金牌教官'></jh-title>
-<jh-fold bind:callBack='foldBack' open-status='{{openStatus}}' show-btn='{{actDetailData.teacherList>4}}'>
+<!-- packageAct/actdetails/actdetails.wxml -->
+<jh-occupy diy-style='width:750rpx;height:500rpx;background:rgba(248,253,250,1);' slot-data='{{actDetailData.moments}}'>
+  <swiper indicator-dots='true' indicator-active-color='#5A7F5B' indicator-color='#FAFAFA' circular='true' autoplay='true'>
+    <swiper-item wx:for='{{actDetailData.moments}}' wx:key='index'>
+      <image class='swiper-img' src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+</jh-occupy>
+<block wx:if='{{actDetailData.title}}'>
+  <view class='jh-fmw5' style='margin-top:40rpx;font-size:48rpx;'>{{actDetailData.title}}</view>
+  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;min-height: 120rpx'>
+    {{actDetailData.introduction}}
+  </view>
+  <view class='act-border'></view>
+</block>
+<block wx:if='{{actDetailData.startTime}}'>
+  <jh-title title='活动时间'></jh-title>
+  <view class='jh-fmw5 jh-border' style='margin:32rpx 0 0 32rpx;color:#686868;font-size: 24rpx;'>
+    {{actDetailData.startTime}}～{{actDetailData.endTime}}
+  </view>
+  <view class='act-border'></view>
+</block>
+<block wx:if='{{actDetailData.teacherList.length}}'>
+  <jh-title title='本期教官' slot-show='{{actDetailData.teacherList>4}}'>
+    <view class='jh-listnp' style='font-size: 24rpx;color: #B8B8B8;' catch:tap='foldBack'>
+      <block wx:if='{{openStatus}}'>
+        收起
+        <image class='teacher-arr2' src='/img/arr.png' />
+      </block>
+      <block>
+        展开全部的
+        <image class='teacher-arr1' src='/img/arr.png' />
+      </block>
+    </view>
+  </jh-title>
   <view class='coach_back' wx:if='{{openStatus}}'>
-    <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 25%;' bind:callBack='coachItemClick'></jh-portrait>
+    <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick'></jh-portrait>
   </view>
   <view class='coach_back' wx:else>
-    <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 25%;' bind:callBack='coachItemClick' wx:if='{{index<4}}'></jh-portrait>
+    <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick' wx:if='{{index<4}}'></jh-portrait>
   </view>
-</jh-fold>
-<jh-title title='活动流程'></jh-title>
+  <view class='act-border'></view>
+</block>
+<jh-title title='活动流程' wx:if='{{navbarData.length}}'></jh-title>
 <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='actBarBasck'></jh-navbar>
-<view class='flow' wx:for='{{actDetailData.contentList[atIndex]}}' wx:key='index'>
+<view class='jh-listnp flow flow-list' wx:for='{{actDetailData.contentList[atIndex]}}' wx:key='index'>
+  <view class='flow-circle'></view>
   <view>
-    <view class='jh-listnp flow-list'>
+    <view class='flow-time'>{{item.slot}}</view>
+    <view class='jh-listnp flow-list' style='padding-top: 18rpx;'>
+      <image class='flow-img' src="{{item.picUrl}}" wx:if="{{item.picUrl}}"></image>
+      <view>
+        <view class='flow-title'>{{item.picName}}</view>
+        <view class='flow-expand'>{{item.plan}}</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <!-- <view class='jh-listnp flow-list'>
       <view class='flow-time'>{{item.slot}}</view>
-      <view class='flow-title jh-list_item'>{{item.picName}}</view>
+      <view >{{item.picName}}</view>
     </view>
     <image class='flow-img' src="{{item.picUrl}}" wx:if="{{item.picUrl}}"></image>
-    <view class='jh-listnp flow-expand'>{{item.plan}}</view>
+    <view class='jh-listnp flow-expand'>{{item.plan}}</view> -->
   </view>
 </view>
-<!-- <jh-title title='精彩瞬间'></jh-title>
-<view class='wonderful_back'>
-  <image class='wonderful' src='/img/win1.png' wx:for='abckdede' wx:key='index'></image>
-</view> -->
-<view style='height:200rpx;'>
-</view>
+<view style='height:200rpx;'></view>

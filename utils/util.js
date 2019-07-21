@@ -37,8 +37,7 @@ const dateTypeDate = function (number, format) {
 }
 // 时间按照 几天前返回
 const beforeTypeDate = function (createDate, nowDate) {
-  var countDate = ( nowDate - createDate) / 1000 //不计算毫秒
-  console.log(countDate)
+  var countDate = ( nowDate - createDate) /1000  
   var result;
   switch (true) {
     case countDate > 2592000:

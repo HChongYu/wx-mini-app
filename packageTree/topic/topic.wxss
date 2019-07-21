@@ -8,7 +8,7 @@
   font-size: 28rpx;
 }
 .topic-item-1 {
-  color: #2da25f;
+  color: #4FC981;
   background: #f2faf6;
 }
 

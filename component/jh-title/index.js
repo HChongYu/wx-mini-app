@@ -15,6 +15,10 @@ Component({
     type:{
       type: String,
       value: "default"
+    },
+    slotShow:{
+      type: Boolean,
+      value: false
     }
   },
 

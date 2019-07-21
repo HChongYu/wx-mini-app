@@ -16,7 +16,7 @@ page {
 }
 
 .collect-content {
-  margin-left: 20rpx;
+  margin-left: 28rpx;
 }
 
 .collect-content-title {

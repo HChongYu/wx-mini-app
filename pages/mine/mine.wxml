@@ -1,33 +1,36 @@
-<!--pages/mine/mine.wxml-->
-
+<!-- pages/mine/mine.wxml -->
 <view class="header jh-listnp">
   <view class="photo-posback">
-    <!-- <open-data  type="useravatarurl" class='photo'></open-data> -->
     <image class="photo" src="{{userInfo.avatarUrl}}"></image>
+    <view class="header-username jh-slh">{{userInfo.nickName}}</view>
   </view>
-  <view class="header-username jh-list_item jh-slh">{{userInfo.nickName}}</view>
-  <view class='jh-listnp' bindtap='messageClick'>
-    <image style='position: relative;height: 42rpx;width: 42rpx;min-height: 42rpx;min-width: 42rpx;' src="/img/mine-message.png"><view class="hasMessage" wx:if='{{hasMessage}}' ></view></image>
+
+  <!-- <view class='jh-listnp' bindtap='messageClick'>
+    <image style='height: 42rpx;width: 42rpx;min-height: 42rpx;min-width: 42rpx;' src="/img/mine-message.png">
+      <view class="hasMessage" wx:if='{{hasMessage}}'></view>
+    </image>
     <view style='color:#474747;font-size: 24rpx;padding-left:8rpx;'>消息</view>
-  </view>
+  </view> -->
+</view>
+<view class="jh-list" bindtap='messageClick'>
+  <image class="jh-list_icon" style='position: relative;height:34rpx;' src="/img/mine-message.png">
+     <view class="hasMessage" wx:if='{{hasMessage}}'></view>
+  </image>
+  <view class="jh-list_bd">我得消息</view>
+  <view class="jh-list_ft jh-list_ft_arrow"></view>
 </view>
 <view class="jh-list" bindtap='treeClick'>
-  <image class="jh-list_icon" style='height:30rpx;' src="/img/mine-manage.png"></image>
+  <image class="jh-list_icon" style='width:34rpx; height:34rpx;'  src="/img/mine-manage.png"></image>
   <view class="jh-list_bd">树洞管理</view>
   <view class="jh-list_ft jh-list_ft_arrow"></view>
 </view>
-<!-- <view class="jh-list" bindtap='collectClick'>
-  <image class="jh-list_icon" src='width:32rpx;height:28rpx'src="/img/mine-history.png"></image>
-  <view class="jh-list_bd">浏览历史</view>
-  <view class="jh-list_ft_arrow"></view>
-</view> -->
 <view class="jh-list" bindtap='collectClick'>
-  <image class="jh-list_icon" src='width:32rpx;height:30rpx'src="/img/mine-collect.png"></image>
+  <image class="jh-list_icon" style='width:34rpx;height:34rpx' src="/img/mine-collect.png"></image>
   <view class="jh-list_bd">收藏文章</view>
   <view class="jh-list_ft_arrow"></view>
 </view>
 <view class="jh-list">
-  <image class="jh-list_icon" style='height:28rpx;'src="/img/mine-service.png"></image>
+  <image class="jh-list_icon" style='width:34rpx; height:34rpx;' src="/img/mine-service.png"></image>
   <view class="jh-list_bd">联系军豪拓展</view>
   <view class="jh-list_ft_arrow"></view>
 </view>

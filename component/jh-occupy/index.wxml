@@ -1,0 +1,5 @@
+<!--component/jh-occupy/index.wxml-->
+<view >
+    <slot wx:if='{{slotData}}'></slot>
+    <view  style='{{diyStyle}}' wx:else></view>
+</view>

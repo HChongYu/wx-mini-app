@@ -1,7 +1,14 @@
-<!--component/jh-head/index.wxml-->
-<wxs src="../../wxs/filters.wxs" module="filters"/>
+<!-- component/jh-head/index.wxml -->
+<wxs src="../../wxs/filters.wxs" module="filters" />
 <view class='jh-portrait jh-portrait_{{size}}' catchtap='portraitClick'>
-  <image style='display: block;border-radius: 50%;border: 1rpx solid #ababab;' class='jh-portrait-photo' mode='aspectFill'  src='{{portraitData.headPicUrl}}'></image>
+  <image style='display: block;border-radius: 50%;border: 1rpx solid #ababab;' class='jh-portrait-photo' mode='aspectFill' src='{{portraitData.headPicUrl}}'>
+
+  </image>
+  <view class='jh-portrait-label jh-slh' wx:if='{{size=="small"}}'>
+    {{filters.teacherType(portraitData.labelList[0])}}
+  </view>
   <view class='jh-portrait-name'>{{portraitData.name}}</view>
-  <view style='color: #2da25f;' class='jh-portrait-label jh-slh'>{{filters.teacherType(portraitData.labelList[0])}}</view>
+  <view style='color: #4FC981;' class='jh-portrait-label jh-slh' wx:if='{{size!="small"}}'>
+    {{filters.teacherType(portraitData.labelList[0])}}
+  </view>
 </view>

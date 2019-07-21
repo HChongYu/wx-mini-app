@@ -84,7 +84,7 @@ page{
 .reply-form{
   width: 100%;
   background: #FFF;
-  color: #2da25f;
+  color: #4FC981;
   padding-bottom: 60rpx; 
 }
 .reply-close{
@@ -104,7 +104,7 @@ page{
 .reply-send{
   width: 100rpx;
   font-size: 24rpx;
-  color: #2da25f;
+  color: #4FC981;
   background: #fff;
   text-align: center
 }

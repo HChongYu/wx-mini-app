@@ -6,30 +6,17 @@
   padding-right: 24rpx;
   width: 750rpx;  
 }
-.header-username{
-  font-size: 36rpx;
-  margin-left: 80rpx; 
-
-}
-.header-h2{
-
-  font-size: 36rpx;
-
-}
 .photo-posback{
   position: relative;
-
-
-  height: 160rpx;
-  width: 178rpx;
-  background-color: #F2FAF6;
+  background-color: #F9FCFA;
   z-index: 1001;
   overflow: visible;
+  border-radius: 0 80rpx 80rpx 0; 
 }
 .photo{
   position: absolute;
   top: 0;
-  right: -64rpx;
+  left: 40rpx;
   width: 152rpx;
   height: 152rpx;
   min-width: 152rpx;
@@ -38,6 +25,13 @@
   border: 4rpx solid #fff;
   z-index: 1002;
 }
+.header-username{
+  margin-left: 232rpx;
+  padding: 58rpx 82rpx 52rpx 0;
+  font-size: 36rpx;
+  max-width: 266rpx;
+}
+
 .hasMessage{
   position: absolute;
   right: 2rpx;

@@ -102,7 +102,7 @@ Page({
       wx.showModal({
         content: `确定清空所有消息？`,
         confirmText: "确定",
-        confirmColor: "#2DA25F",
+        confirmColor: "#4FC981",
         cancelText: "取消",
         cancelColor: "#c5c5c5",
         success: function (res) {

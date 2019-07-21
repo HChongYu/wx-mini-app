@@ -22,8 +22,11 @@
 }
 
 .jh-portrait_small .jh-portrait-name {
-  margin-top: 16rpx;
+  margin-top: 10rpx;
+  color: #282828;
   font-size: 24rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
 }
 
 .jh-portrait_large .jh-portrait-name {
@@ -32,10 +35,20 @@
 }
 
 .jh-portrait_small .jh-portrait-label {
-  margin-top: 8rpx;
+  position: relative;
+  top: -12rpx;
+  width:64rpx;
+  height:24rpx;
+  line-height:24rpx;
+  background:rgba(79,201,129,1);
+  border-radius:12px;
+  font-size: 16rpx;
+  color: #fff;
+  text-align: center;
+  
+  /* margin-top: 8rpx;
   max-width: 160rpx;
-
-  font-size: 20rpx;
+  font-size: 20rpx; */
   /* background:rgba(90,127,91,.15); *//* border-radius: 14rpx */
 }
 .jh-portrait_large .jh-portrait-label {

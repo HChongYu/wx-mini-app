@@ -1,7 +1,7 @@
 
 const CONFIG = require('./config.js')
-const API_BASE_URL = 'https://wx.junhaotuozhan.com/api/'
-// const API_BASE_URL = 'http://47.105.135.127:8090/'
+// const API_BASE_URL = 'https://wx.junhaotuozhan.com/api/'
+const API_BASE_URL = 'http://47.105.135.127:8090/'
 const request = (url, method, data = {}) => {
   let _url = API_BASE_URL + url
   return new Promise((resolve, reject) => {
@@ -140,7 +140,7 @@ module.exports = {
   shudongReportReply: (replyId, reason) => {
     return request(`shudong/reportReply?reason=${reason}&replyId=${replyId}`, 'POST')
   },
-  // 删除某条品论
+  // 删除某条评论
   shudongDeleteReply: (replyId) => {
     return request(`shudong/deleteReply?replyId=${replyId}`, 'POST')
   },

@@ -16,7 +16,7 @@ Page({
       },
       {
         icon: "/img/dome5.png",
-        name: "研修旅行",
+        name: "研学旅行",
         type: 2
       },
       {

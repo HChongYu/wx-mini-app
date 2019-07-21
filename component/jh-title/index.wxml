@@ -1,9 +1,10 @@
 <!--component/jh-title/index.wxml-->
-<view class="jh-listnp titlebar" style="{{style}}">
+<view class="jh-listnp titlebar" style="{{style}}" wx:if="{{type=='default'}}">
+  <view class="titlebar-fill"></view>
+  <view class="titlebar-main jh-list_item">{{title}}</view>
+  <slot wx:if='{{slotShow}}'></slot>
+</view>
+<view class="titlebar_{{type}}" style="{{style}}" wx:else>
   <view class="titlebar-fill"></view>
   <view class="titlebar-main">{{title}}</view>
 </view>
-<!-- <view class="jh-listnp titlebar-{{}}">
-  <view class="titlebar-main">{{title}}</view>
-  <view class="titlebar-fill"></view>
-</view> -->

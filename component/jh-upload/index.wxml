@@ -9,7 +9,7 @@
                 <image class='upload-img-del' src='/img/deldome.png' data-index='{{index}}' catch:tap='itemDelete'></image>
             </image>
             <view class='progress_back' wx:else>
-                <progress percent='{{item.progress? item.progress:0}}' color='#2DA25F'/>
+                <progress percent='{{item.progress? item.progress:0}}' color='#4FC981'/>
             </view>
         </blcok>
     </view>

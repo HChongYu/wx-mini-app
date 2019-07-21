@@ -28,7 +28,7 @@ button::after{
 }
 
 .jh-list_ft {
-  color: #2DA25F;
+  color: #4FC981;
   padding-right: 4rpx;
   font-size: 28rpx;
 }
@@ -64,6 +64,4 @@ button::after{
 .jh-isiphonex_p {
   padding-bottom: 100rpx !important;
 }
-
-
 

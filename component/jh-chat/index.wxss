@@ -54,7 +54,6 @@
 }
 
 .jh-chat-btn {
-  
   padding: 24rpx 0 24rpx 24rpx;
   font-size: 20rpx;
   color: #282828;

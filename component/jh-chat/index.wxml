@@ -15,7 +15,7 @@
       <view style='min-width: 28rpx;'>{{chatData.likeNum}}</view>
     </view>
     <view class='jh-chat-btn jh-listnp'>
-      <image class='jh-chat-btn-icon' style='position:relative;top: 2rpx;' src='{{chatData.likeNum>0?"/img/tree-comment-s.png":"/img/tree-comment-d.png"}}'></image>
+      <image class='jh-chat-btn-icon' style='position:relative;top: 2rpx;' src='/img/hanle-cooment.png'></image>
       <view>{{chatData.replyNum}}</view>
     </view>
   </view>

@@ -17,3 +17,24 @@
   font-family: PingFangSC-Medium;
   font-weight: 500;
 }
+
+.titlebar_shadow{
+  position: relative;
+  color: #282828;
+  width:160rpx;
+  height: 56rpx;
+}
+.titlebar_shadow .titlebar-main{
+  position: absolute;
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}
+.titlebar_shadow .titlebar-fill{
+  position: absolute;
+  left: 0;
+  bottom: 4rpx;
+  background: rgba(79,201,129,.9);
+  height: 12rpx;
+  width: 100%;
+}

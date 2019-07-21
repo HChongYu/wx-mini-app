@@ -28,7 +28,7 @@ Page({
       //todo
       if (res.code == 0) {
         if (title!=''){
-          this.setData({ searchData: res.data.searchList })
+          this.setData({ searchList: res.data.searchList })
         }else{
           this.setData({hotList: res.data.hotList})
         }

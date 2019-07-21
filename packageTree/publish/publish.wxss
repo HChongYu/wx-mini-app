@@ -70,7 +70,7 @@ page {
   line-height: 120rpx;
   font-size: 36rpx;
   text-align: center;
-  color: #2DA25F;
+  color: #4FC981;
   border-top: 2rpx solid #F9F9F9;
   background: #fff;
 }

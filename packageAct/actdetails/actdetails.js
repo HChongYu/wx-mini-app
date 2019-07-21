@@ -9,7 +9,8 @@ Page({
     navbarData: [
       // { name: 'DAY1', index: 0 },
     ],
-    atIndex:0
+    atIndex: 0,
+    openStatus: false
   },
   /**
    * 生命周期函数--监听页面加载
@@ -44,10 +45,10 @@ Page({
   },
   // 交互函数
   // 收拉框
-  foldBack(e){
-    this.setData({ openStatus: e.detail})
+  foldBack(){
+    this.setData({ openStatus: !this.data.openStatus})
   },
-  // 
+  // 第几天选择
   actBarBasck(e){
     this.setData({atIndex: e.detail.index})
   },
