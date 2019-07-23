@@ -1,4 +1,5 @@
 /* packageTree/treedetails/treedetails.wxss */
+@import "/wxss/occupy.wxss";
 page{
   padding: 0 24rpx 0;
 }
@@ -88,11 +89,17 @@ page{
   padding-bottom: 60rpx; 
 }
 .reply-close{
-  padding: 40rpx 0;
+  padding: 38rpx 0;
   width: 80rpx;
   font-size: 24rpx;
   text-align: center;
-
+}
+.reply-close-son{
+  margin: 0 auto; 
+  width: 16rpx;
+  height: 16rpx;
+  background: #4FC981;
+  vertical-align: sub;
 }
 .reply-input{
   padding: 12rpx;
@@ -102,11 +109,31 @@ page{
   width: 500rpx;
 }
 .reply-send{
-  width: 100rpx;
-  font-size: 24rpx;
-  color: #4FC981;
+  position: relative;
+  width: 72rpx;
+  height: 72rrpx;
+  min-width: 72rpx;
+  min-height: 72rpx;
+  padding: 0;
   background: #fff;
-  text-align: center
+}
+.button-hover{
+  background: #fff;
+  outline: transparent;
+}
+
+button::before{
+  outline:none;
+  border: transparent;
+}
+.reply-send-img{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 72rpx;
+  height: 72rpx;
+  min-width: 72rpx;
+  min-height: 72rpx;
 }
 .tree-reply-list{
   min-height: 500rpx;

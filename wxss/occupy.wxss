@@ -1,0 +1,23 @@
+
+.occupy1{
+    position: relative;
+    left: -40rpx;
+    width:750px;
+    height:500rpx;
+    background:rgba(248,253,250,1);
+  }
+  .occupy2{
+    margin-top: 36rpx;
+    width: 466rpx;
+    height: 58rpx;
+    background: rgba(246,246,246,1);
+    border-radius: 6rpx;
+    
+  }
+  .occupy3{
+    margin-top: 36rpx;
+    width: 642rpx;
+    height: 36rpx;
+    background: rgba(250,250,250,1);
+    border-radius: 6rpx;
+  }

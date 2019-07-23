@@ -1,24 +1,32 @@
 <import src="/wxParse/wxParse.wxml" />
-<view style=''>
-  <view class='jh-fwm5' style='margin-top: 22rpx;'>{{articleData.title}}</view>
-  <view class='jh-listnp' style='margin-top: 22rpx;font-size:24rpx;'>
-    <view class='jh-list_item' style='color:#D0D0D0;'>2019-3-13</view>
-    <view class='jh-listnp' style='color:#999999;'>
-      <image style='width:28rpx;height:20rpx;' src='/img/article-eye.png'></image>
-      <view style='margin-left:20rpx; min-width:50rpx;pading-right: 10rpx;'>{{articleData.viewNum}}</view>
-      <image style='width:16rpx;height:20rpx;' src='/img/article-collect.png'></image>
-      <view style='margin-left:20rpx;'>{{articleData.storeNum}}</view>
+<block wx:if='{{articleData.title}}'>
+  <view>
+    <view class='jh-fwm5' style='margin-top: 22rpx;'>{{articleData.title}}</view>
+    <view class='jh-listnp' style='margin-top: 22rpx;font-size:24rpx;'>
+      <view class='jh-list_item' style='color:#D0D0D0;'>{{articleData.createTime}}</view>
+      <view class='jh-listnp' style='color:#999999;'>
+        <image style='width:28rpx;height:20rpx;' src='/img/article-eye.png'></image>
+        <view style='margin-left:20rpx; min-width:50rpx;pading-right: 10rpx;'>
+          {{articleData.viewNum}}
+        </view>
+        <image style='width:16rpx;height:20rpx;' src='/img/article-collect.png'></image>
+        <view style='margin-left:20rpx;'>{{articleData.storeNum}}</view>
+      </view>
+    </view>
+    <view style='margin-top: 22rpx;min-height:400rpx;'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
     </view>
   </view>
-  <view style='margin-top: 22rpx;min-height:400rpx;'>
-    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  <view style='padding:40rpx 0 200rpx;'>
+    <view class='collect-btn_already' wx:if='{{articleData.hasStore}}' bindtap='cancelCollectClick'>
+      已收藏
+    </view>
+    <view class='collect-btn_not' wx:else bindtap='collectClick'>收藏本篇文章</view>
   </view>
-</view>
-<view style='padding:40rpx 0 200rpx;'>
-  <view class='collect-btn_already' wx:if='{{articleData.hasStore}}' bindtap='cancelCollectClick'>
-    已收藏
-  </view>
-  <view class='collect-btn_not' wx:else bindtap='collectClick'>
-    收藏本篇文章
-  </view>
-</view>
+</block>
+<block wx:else>
+  <view class='occupy1'></view>
+  <view class='occupy2'></view>
+  <view class='occupy3'></view>
+  <view class='occupy3'></view>
+</block>

@@ -34,7 +34,6 @@ Page({
         // wx.setStorageSync('token', '004bf35819db4a30bded498e25afbf1f')
         // wx.navigateBack();
         WXAPI.uLogin(res.code).then(res => {
-          console.log('lbs接口结果', res)
           wx.hideLoading({
           })
           console.log(res)
@@ -44,7 +43,7 @@ Page({
             } else if (res.data.token) {
               wx.setStorageSync('token', res.data.token)
               wx.setStorageSync('userInfo', res.data)
-              UTIL.commonToast("成功登陆")
+              // UTIL.commonToast("成功登陆")
               wx.navigateBack();
             }
           } else {
@@ -72,7 +71,7 @@ Page({
     }
     WXAPI.uSignIn(dto).then(res => {
       if (res.code == 0) {
-        UTIL.commonToast("登记成功")
+        // UTIL.commonToast("登记成功")
         wx.setStorageSync('token', res.data.token)
         wx.setStorageSync('userInfo', res.data)
         wx.navigateBack();

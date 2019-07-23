@@ -1,6 +1,7 @@
 /* packageTree/collect/collect.wxss */
 
 page {
+  padding-top: 40rpx; 
   padding-bottom: 100rpx;
 }
 

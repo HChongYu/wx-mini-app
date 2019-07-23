@@ -1,18 +1,25 @@
-<!--packageAct/coachdetails/coachdetails.wxml-->
-<view style='padding: 20rpx 0;border-bottom: 2rpx solid #F9F9F9;'>
-
-  <jh-portrait size='large' portrait-data='{{portraitData}}'></jh-portrait>
-</view>
-<jh-title title='履历'></jh-title>
-<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.shortWord}}</view>
-<jh-title title='参加活动'></jh-title>
-<jh-fold bind:callBack='foldBack' open-status='{{openStatus}}'>
-  <view class="actList">
-    <!-- todo -->
-    <view wx:for='{{coachDetails.activities}}' wx:key="activityId" class="actList-item" >
-      <jh-win winData='{{item}}' size='small' bind:callBack='coachWinBack'></jh-win>
-    </view>
+<!-- packageAct/coachdetails/coachdetails.wxml -->
+<block wx:if='{{portraitData}}'>
+  <view style='padding: 20rpx 0;border-bottom: 2rpx solid #F9F9F9;'>
+    <jh-portrait size='large' portrait-data='{{portraitData}}'></jh-portrait>
   </view>
-</jh-fold>
-<jh-title title='教官评语'></jh-title>
-<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.remark}}</view>
+  <jh-title title='履历'></jh-title>
+  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.shortWord}}</view>
+  <jh-title title='参加活动'></jh-title>
+  <jh-fold bind:callBack='foldBack' open-status='{{openStatus}}'>
+    <view class="actList">
+      <!-- todo -->
+      <view wx:for='{{coachDetails.activities}}' wx:key="activityId" class="actList-item">
+        <jh-win winData='{{item}}' size='small' bind:callBack='coachWinBack'></jh-win>
+      </view>
+    </view>
+  </jh-fold>
+  <jh-title title='教官评语'></jh-title>
+  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.remark}}</view>
+</block>
+<block wx:else>
+  <view class='occupy1'></view>
+  <view class='occupy2'></view>
+  <view class='occupy3'></view>
+  <view class='occupy3'></view>
+</block>

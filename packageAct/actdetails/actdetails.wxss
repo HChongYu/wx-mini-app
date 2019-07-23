@@ -1,4 +1,5 @@
 /* packageAct/actdetails/actdetails.wxss */
+@import "/wxss/occupy.wxss";
 Page{
   padding: 0 40rpx 100rpx 40rpx;
 }
@@ -102,4 +103,26 @@ swiper{
 .act-border{
   margin-top: 40rpx;
   border: 2rpx solid #f9f9f9;
+}
+.actdetails-occupy1{
+  position: relative;
+  left: -40rpx;
+  width:750px;
+  height:500rpx;
+  background:rgba(248,253,250,1);
+}
+.actdetails-occupy2{
+  margin-top: 36rpx;
+  width: 466rpx;
+  height: 58rpx;
+  background: rgba(246,246,246,1);
+  border-radius: 6rpx;
+  
+}
+.actdetails-occupy3{
+  margin-top: 36rpx;
+  width: 642rpx;
+  height: 36rpx;
+  background: rgba(250,250,250,1);
+  border-radius: 6rpx;
 }

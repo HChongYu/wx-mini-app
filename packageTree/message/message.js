@@ -111,7 +111,11 @@ Page({
               if (res.code == 0) {
                 this.setData({ messageReadList: [], messageList: [] })
                 UTIL.commonToast("成功清空所有消息")
-                wx.navigateBack()
+                setTimeout(function(){
+                  wx.navigateBack({
+                    delta: 1
+                  })
+                }, 1500)
               } else {
                 res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
               }

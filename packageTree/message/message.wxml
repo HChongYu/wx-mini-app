@@ -19,7 +19,7 @@
   <jh-empty length='{{length1}}' loading='{{loading1}}' hasData='{{hasNextPage1}}'>
     <block wx:for='{{messageList}}' wx:key='index'>
       <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
-        <jh-title title='{{item.title}}'></jh-title>
+        <view class=''></view>
         <view class='message-hint jh-fwm5'>{{item.content}}</view>
         <view class='message-chat'>
           <view class='message-chat-content'>{{item.content}}</view>

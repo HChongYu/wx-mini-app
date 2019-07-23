@@ -87,7 +87,7 @@ Page({
     value=JSON.stringify(value)
     WXAPI.shudongAddSubject(value).then(res=>{
       if (res.code === 0) {
-        UTIL.commonToast('发布话题成功')
+        // UTIL.commonToast('发布话题成功')
         wx.navigateBack({
           delta: 1,
         })

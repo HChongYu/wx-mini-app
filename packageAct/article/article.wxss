@@ -1,4 +1,5 @@
 /* packageTree/article/article.wxss */
+@import "/wxss/occupy.wxss";
 @import "/wxParse/wxParse.wxss";
 
 .collect-btn_already {

@@ -58,3 +58,6 @@
   font-size: 20rpx;
   color: #282828;
 }
+.topic-item{
+  color: #4FC981;
+}

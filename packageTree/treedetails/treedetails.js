@@ -113,9 +113,7 @@ Page({
   choseSendReply(){
     this.setData({replyFocus:false})
   },
-  blurReply(e){
-    this.data.reply=e.detail.value
-  },
+  // 虚拟键盘按钮
   confirmReply(e){
     let that =this;
     if(!e.detail.value){
@@ -134,13 +132,14 @@ Page({
       }
     })
   },
-  sendReply(e){
+  // 实际键盘按钮
+  formSubmit(e){
     let that =this;
-    if(!this.data.reply){
+    if(!e.detail.value.reply){
       UTIL.commonToast("请输入评论")
       return
     }
-    WXAPI.shudongAddReply(this.data.treeDetailsData.subjectId, `${this.data.reply}`).then(res => {
+    WXAPI.shudongAddReply(this.data.treeDetailsData.subjectId, `${e.detail.value.reply}`).then(res => {
       if (res.code === 0) {
         that.choseSendReply();
         UTIL.commonToast('成功发出了您的评论')
@@ -181,9 +180,11 @@ Page({
       WXAPI.shudongReportSubjec(this.data.treeDetailsData.subjectId, e.detail.reason).then(res => {
         if (res.code === 0) {
           UTIL.commonToast('成功举报当前树洞')
-          wx.navigateBack({
-            delta: 1
-          })
+          // setTimeout(function(){
+          //   wx.navigateBack({
+          //     delta: 1
+          //   })
+          // }, 1500)
         } else {
           res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
         }
@@ -192,9 +193,6 @@ Page({
       WXAPI.shudongReportReply(e.detail.voteId,e.detail.reason).then(res => {
         if (res.code === 0) {
           UTIL.commonToast('成功举报当前评论')
-          wx.navigateBack({
-            delta: 1
-          })
         } else {
           res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
         }
@@ -207,9 +205,11 @@ Page({
     WXAPI.shudongDeleteSubject(this.data.treeDetailsData.subjectId).then(res => {
       if (res.code === 0) {
         UTIL.commonToast('成功删除当前树洞')
-        wx.navigateBack({
-          delta: 1
-        })
+        setTimeout(function(){
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 1500)
       } else {
         res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
       }

@@ -28,5 +28,5 @@
       <view class='jh-list_ft_arrow'></view>
     </view>
   </view>
-  <button class='hanle-submit' form-type="submit">发布</button>
+  <button class='handle-submit' form-type="submit">发布</button>
 </form>

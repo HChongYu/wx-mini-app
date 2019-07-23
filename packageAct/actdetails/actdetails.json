@@ -3,7 +3,9 @@
   "usingComponents": {
     "jh-title": "/component/jh-title/index",
     "jh-navbar": "/component/jh-navbar/index",
+    "jh-fold": "/component/jh-fold/index",
     "jh-portrait": "/component/jh-portrait/index",
     "jh-occupy": "/component/jh-occupy/index"
+   
   }
 }

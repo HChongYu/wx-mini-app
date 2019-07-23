@@ -3,7 +3,7 @@
 <view class='jh-chat'>
   <image class='jh-chat-delete' src='/img/close.png' wx:if='{{showDelete}}' data-topic='{{filters.topicType(chatData.themeType)}}' data-id='{{chatData.subjectId}}' da catch:tap='deleteClick'></image>
   <!-- 颜色 themeColor，subjectId -->
-  <view class='jh-chat-title_{{type}} topic-item-{{chatData.themeColor}}'>#{{filters.topicType(chatData.themeType)}}#</view>
+  <view class='jh-chat-title_{{type}} topic-item'>#{{filters.topicType(chatData.themeType)}}#</view>
   <view class='jh-chat-content'>{{chatData.content}}</view>
   <view style='margin-top:24rpx;'>
     <image class='jh-chat-picture' wx:for='{{chatData.pictureList}}' wx:key='index' src='{{item}}'></image>
@@ -15,7 +15,7 @@
       <view style='min-width: 28rpx;'>{{chatData.likeNum}}</view>
     </view>
     <view class='jh-chat-btn jh-listnp'>
-      <image class='jh-chat-btn-icon' style='position:relative;top: 2rpx;' src='/img/hanle-cooment.png'></image>
+      <image class='jh-chat-btn-icon' style='position:relative;top: 2rpx;' src='/img/handle-cooment.png'></image>
       <view>{{chatData.replyNum}}</view>
     </view>
   </view>

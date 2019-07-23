@@ -1,4 +1,5 @@
 /* packageAct/coachdetails/coachdetails.wxss */
+@import "/wxss/occupy.wxss";
 page{
   padding-bottom: 100rpx; 
 }
