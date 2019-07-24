@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.2",
-	"appid": "wxed9a5aebd61db809",
+	"appid": "wx3fbeba8a5e48be71",
 	"projectname": "%E6%8E%88%E6%9D%83dome",
 	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {

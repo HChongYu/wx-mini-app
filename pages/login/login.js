@@ -34,23 +34,23 @@ Page({
         console.log(res)
         // wx.setStorageSync('token', '004bf35819db4a30bded498e25afbf1f')
         // wx.navigateBack();
-        // WXAPI.uLogin(res.code).then(res => {
-        //   wx.hideLoading({
-        //   })
-        //   console.log(res)
-        //   if (res.code == 0) {
-        //     if (res.data.signInToken) {
-        //       that.data.signInToken=res.data.signInToken;
-        //     } else if (res.data.token) {
-        //       wx.setStorageSync('token', res.data.token)
-        //       wx.setStorageSync('userInfo', res.data)
-        //       // UTIL.commonToast("成功登陆")
-        //       wx.navigateBack();
-        //     }
-        //   } else {
-        //     res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
-        //   }
-        // })
+        WXAPI.uLogin(res.code).then(res => {
+          wx.hideLoading({
+          })
+          console.log(res)
+          if (res.code == 0) {
+            if (res.data.signInToken) {
+              that.data.signInToken=res.data.signInToken;
+            } else if (res.data.token) {
+              wx.setStorageSync('token', res.data.token)
+              wx.setStorageSync('userInfo', res.data)
+              // UTIL.commonToast("成功登陆")
+              wx.navigateBack();
+            }
+          } else {
+            res.text ? UTIL.commonToast(res.text) : UTIL.commonToast("数据错误");
+          }
+        })
       },
       fail(){
         wx.hideLoading({
