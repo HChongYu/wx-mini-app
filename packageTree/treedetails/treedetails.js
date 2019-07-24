@@ -151,6 +151,9 @@ Page({
       }
     })
   },
+  bindkeyboardheightchange(e){
+    console.log(e)
+  },
   // 删除某条评论
   repliesDelete(e) {
     let that = this;

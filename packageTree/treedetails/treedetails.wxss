@@ -27,10 +27,9 @@ page{
 
 }
 .handle_back{
-
   position: fixed;
   left: 24rpx;
-  bottom: 0;
+  bottom: 20rpx;
   padding-bottom: 24rpx; 
   width: 702rpx;
   border-left: 1rpx solid #F9F9F9;
@@ -83,10 +82,12 @@ page{
   color:#DBDBDB;
 }
 .reply-form{
+  position: relative;
+  bottom: 20rpx; 
   width: 100%;
   background: #FFF;
   color: #4FC981;
-  padding-bottom: 60rpx; 
+  margin-bottom: 60rpx; 
 }
 .reply-close{
   padding: 38rpx 0;

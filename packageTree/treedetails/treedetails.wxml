@@ -28,7 +28,7 @@
         <view class="reply-close" catch:tap="choseSendReply">
           <view class='reply-close-son'></view>
         </view>
-        <input class="js-list_item reply-input" maxlength="140" name='reply' focus="{{replyFocus}}"  confirm-type='send' bindconfirm='confirmReply'></input>
+        <input class="js-list_item reply-input" maxlength="140" name='reply' focus="{{replyFocus}}"  confirm-type='send' bindconfirm='confirmReply' bindkeyboardheightchange='bindkeyboardheightchange'></input>
         <button  form-type='submit' class="reply-send" >
           <image class='reply-send-img'  src='/img/plane.png'/>
         </button>

@@ -1,7 +1,7 @@
 <import src="/wxParse/wxParse.wxml" />
 <block wx:if='{{articleData.title}}'>
   <view>
-    <view class='jh-fwm5' style='margin-top: 22rpx;'>{{articleData.title}}</view>
+    <view class='jh-fmw5' style='margin-top: 22rpx;'>{{articleData.title}}</view>
     <view class='jh-listnp' style='margin-top: 22rpx;font-size:24rpx;'>
       <view class='jh-list_item' style='color:#D0D0D0;'>{{articleData.createTime}}</view>
       <view class='jh-listnp' style='color:#999999;'>

@@ -1,6 +1,7 @@
 /* component/jh-head/index.wxss */
 @import "/wxss/overall.wxss";
 .jh-portrait {
+  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -22,7 +23,7 @@
 }
 
 .jh-portrait_small .jh-portrait-name {
-  margin-top: 10rpx;
+  margin-top: 20rpx;
   color: #282828;
   font-size: 24rpx;
   font-family: PingFangSC-Medium;
@@ -35,8 +36,8 @@
 }
 
 .jh-portrait_small .jh-portrait-label {
-  position: relative;
-  top: -12rpx;
+  position: absolute;
+  top: 70rpx;
   width:64rpx;
   height:24rpx;
   line-height:24rpx;
@@ -53,7 +54,6 @@
 }
 .jh-portrait_large .jh-portrait-label {
   margin-top: 16rpx;
-  max-width: 160rpx;
   font-size: 28rpx;
   /* background:rgba(90,127,91,.15); *//* border-radius: 14rpx */
 }

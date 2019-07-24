@@ -1,6 +1,6 @@
 <!-- packageTree/message/message.wxml -->
 <wxs src="../../wxs/filters.wxs" module="filters" />
-<jh-hint disable='{{disable}}' disableHint='{{disableHint}}'/>
+<jh-hint disable='{{disable}}' disableHint='{{disableHint}}' />
 <view class="header">
   <view class="capsule">
     <view class="capsule-left {{atIndex==0?'capsule-pitch':''}}" data-index='0' catch:tap='capsuleClick'>
@@ -18,13 +18,18 @@
 <view class='message-top' wx:if='{{atIndex==0}}'>
   <jh-empty length='{{length1}}' loading='{{loading1}}' hasData='{{hasNextPage1}}'>
     <block wx:for='{{messageList}}' wx:key='index'>
-      <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
-        <view class=''></view>
-        <view class='message-hint jh-fwm5'>{{item.content}}</view>
-        <view class='message-chat'>
-          <view class='message-chat-content'>{{item.content}}</view>
-          <view class='message-chat-createAt'>{{item.createAt}}</view>
+      <view class='message' wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
+        <view class='jh-listnp'>
+          <image class='message-icon ' src='/img/message-icon{{item.type}}.png'></image>
+          <view class='message-hint jh-fmw5 jh-list_item'>
+            <block wx:if='{{item.type==1}}'>有人点赞你的树洞</block>
+            <block wx:elif='{{item.type==2}}'>有人评论你的树洞</block>
+            <block wx:elif='{{item.type==3}}'>有人举报你的树洞</block>
+          </view>
+          <!-- <view class='message-chat' ></view> -->
+          <view class='message-createAt'>{{item.createAt}}</view>
         </view>
+        <view class='message-content'>{{item.content}}</view>
       </view>
     </block>
   </jh-empty>
@@ -32,13 +37,18 @@
 <view class='message-top' wx:else>
   <jh-empty length='{{length2}}' loading='{{loading2}}' hasData='{{hasNextPage2}}'>
     <block wx:for='{{messageReadList}}' wx:key='index'>
-      <view wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
-        <jh-title title='{{item.title}}'></jh-title>
-        <view class='message-hint jh-fwm5'>{{item.content}}</view>
-        <view class='message-chat'>
-          <view class='message-chat-content'>{{item.content}}</view>
-          <view class='message-chat-createAt'>{{item.createAt}}</view>
+      <view class='message' wx:for='{{item}}' wx:key='tipId' data-viewid='{{item.viewId}}' data-tipid='{{item.tipId}}' data-hasread='{{item.hasRead}}' catch:tap="goTree">
+        <view class='jh-listnp'>
+          <image class='message-icon ' src='/img/message-icon{{item.type}}.png'></image>
+          <view class='message-hint jh-fmw5 jh-list_item'>
+            <block wx:if='{{item.type==1}}'>有人点赞你的树洞</block>
+            <block wx:elif='{{item.type==2}}'>有人评论你的树洞</block>
+            <block wx:elif='{{item.type==3}}'>有人举报你的树洞</block>
+          </view>
+          <!-- <view class='message-chat' ></view> -->
+          <view class='message-createAt'>{{item.createAt}}</view>
         </view>
+        <view class='message-content'>{{item.content}}</view>
       </view>
     </block>
   </jh-empty>

@@ -79,7 +79,7 @@ Page({
   deleteBack(e){
     let that = this;
     wx.showModal({
-      content: `确定删除 #${e.detail.topic}# 这条树洞吗？`,
+      content: `确定删除这条树洞吗？`,
       confirmText: "确定",
       confirmColor: "#4FC981",
       cancelText: "取消",

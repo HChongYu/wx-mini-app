@@ -1,4 +1,4 @@
 <!--packageTree/topic/topic.wxml-->
-<view  wx:for='{{dome1}}' wx:key='type' style='{{index==0?"":"margin-top:24rpx;"}}'  class='topic-item jh-slh jh-fwm5 topic-item-{{item.color}}'  data-type='{{item.type}}' data-color='{{item.color}}' bindtap='typeClick'>
+<view  wx:for='{{dome1}}' wx:key='type' style='{{index==0?"":"margin-top:24rpx;"}}'  class='topic-item jh-slh jh-fmw5 topic-item-{{item.color}}'  data-type='{{item.type}}' data-color='{{item.color}}' bindtap='typeClick'>
   # {{item.name}}
 </view>

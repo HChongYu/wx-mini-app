@@ -1,57 +1,65 @@
 <!-- packageAct/actdetails/actdetails.wxml -->
 <block wx:if='{{actDetailData.title}}'>
-<swiper indicator-dots='true' indicator-active-color='#5A7F5B' indicator-color='#FAFAFA' circular='true' autoplay='true'>
-  <swiper-item wx:for='{{actDetailData.moments}}' wx:key='index'>
-    <image class='swiper-img' src='{{item}}'></image>
-  </swiper-item>
-</swiper>
-<view class='jh-fmw5' style='margin-top:40rpx;font-size:48rpx;'>{{actDetailData.title}}</view>
-<view style='margin-top:40rpx; color:#808080; font-size: 28rpx;min-height: 120rpx'>
-  {{actDetailData.introduction}}
-</view>
-<view class='act-border'></view>
-<jh-title title='活动时间'></jh-title>
-<view class='jh-fmw5 jh-border' style='margin:32rpx 0 0 32rpx;color:#686868;font-size: 24rpx;'>
-  {{actDetailData.startTime}}～{{actDetailData.endTime}}
-</view>
-<view class='act-border'></view>
-<jh-title title='本期教官' slot-show='{{actDetailData.teacherList>4}}'>
-  <view class='jh-listnp' style='font-size: 24rpx;color: #B8B8B8;' catch:tap='foldBack'>
-    <block wx:if='{{openStatus}}'>
-      收起
-      <image class='teacher-arr2' src='/img/arr.png' />
-    </block>
-    <block>
-      展开全部的
-      <image class='teacher-arr1' src='/img/arr.png' />
-    </block>
+  <swiper indicator-dots='true' indicator-active-color='#5A7F5B' indicator-color='#FAFAFA' circular='true' autoplay='true'>
+    <swiper-item wx:for='{{actDetailData.moments}}' wx:key='index'>
+      <image class='swiper-img' src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+  <view class='jh-fmw5' style='margin-top:40rpx;font-size:48rpx;'>{{actDetailData.title}}</view>
+  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;min-height: 120rpx'>
+    {{actDetailData.introduction}}
   </view>
-</jh-title>
-<view class='coach_back' wx:if='{{openStatus}}'>
-  <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick'></jh-portrait>
-</view>
-<view class='coach_back' wx:else>
-  <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick' wx:if='{{index<4}}'></jh-portrait>
-</view>
-<view class='act-border'></view>
-<jh-title title='活动流程' ></jh-title>
-<jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='actBarBasck'></jh-navbar>
-<view class='jh-listnp flow flow-list' wx:for='{{actDetailData.contentList[atIndex]}}' wx:key='index'>
-  <view class='flow-circle'></view>
-  <view>
-    <view class='flow-time'>{{item.slot}}</view>
-    <view class='jh-listnp flow-list' style='padding-top: 18rpx;'>
-      <image class='flow-img' src="{{item.picUrl}}" wx:if="{{item.picUrl}}"></image>
-      <view>
-        <view class='flow-title'>{{item.picName}}</view>
-        <view class='flow-expand'>{{item.plan}}</view>
+  <view class='act-border'></view>
+  <jh-title title='活动时间'></jh-title>
+  <view class='jh-fmw5 jh-border' style='margin:32rpx 0 0 32rpx;color:#686868;font-size: 24rpx;'>
+    {{actDetailData.startTime}}～{{actDetailData.endTime}}
+  </view>
+  <view class='act-border'></view>
+  <jh-title title='本期教官' slot-show='{{actDetailData.teacherList.length>5}}'>
+    <view class='jh-listnp' style='font-size: 24rpx;color: #B8B8B8;' catch:tap='foldBack'>
+      <block wx:if='{{openStatus}}'>
+        收起
+        <image class='teacher-arr2' src='/img/arr.png' />
+      </block>
+      <block>
+        展开全部的
+        <image class='teacher-arr1' src='/img/arr.png' />
+      </block>
+    </view>
+  </jh-title>
+  <view class='jh-listnp' style='align-items: flex-start;'>
+    <view class='coach-leader'>
+      <jh-portrait portrait-data='{{actDetailData.leaderTeacher}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick'></jh-portrait>
+    </view>
+    <view class='coach-leader-before'></view>
+    <view class='jh-list_item'>
+      <view class='coach_back' wx:if='{{openStatus}}'>
+        <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick'></jh-portrait>
+      </view>
+      <view class='coach_back' wx:else>
+        <jh-portrait wx:for='{{actDetailData.teacherList}}' wx:key='teacherId' portrait-data='{{item}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick' wx:if='{{index<5}}'></jh-portrait>
       </view>
     </view>
   </view>
-  <view>
+  <view class='act-border'></view>
+  <jh-title title='活动流程'></jh-title>
+  <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='actBarBasck'></jh-navbar>
+  <view class='jh-listnp flow flow-list' wx:for='{{actDetailData.contentList[atIndex]}}' wx:key='index'>
+    <view class='flow-circle'></view>
+    <view>
+      <view class='flow-time'>{{item.slot}}</view>
+      <view class='jh-listnp flow-list' style='padding-top: 18rpx;'>
+        <image class='flow-img' src="{{item.picUrl}}" wx:if="{{item.picUrl}}"></image>
+        <view>
+          <view class='flow-title'>{{item.picName}}</view>
+          <view class='flow-expand'>{{item.plan}}</view>
+        </view>
+      </view>
+    </view>
+    <view>
+    </view>
   </view>
-</view>
-<view style='height:200rpx;'></view>
+  <view style='height:200rpx;'></view>
 </block>
 <block wx:else>
   <view class='occupy1'></view>
