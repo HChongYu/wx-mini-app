@@ -16,7 +16,7 @@
   <image class="jh-list_icon" style='position: relative;height:34rpx;' src="/img/mine-message.png">
      <view class="hasMessage" wx:if='{{hasMessage}}'></view>
   </image>
-  <view class="jh-list_bd">我得消息</view>
+  <view class="jh-list_bd">我的消息</view>
   <view class="jh-list_ft jh-list_ft_arrow"></view>
 </view>
 <view class="jh-list" bindtap='treeClick'>

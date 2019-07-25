@@ -50,6 +50,9 @@ Page({
     // todo
     WXAPI.indexIndexDetail().then(res => {
       if (res.code==0){
+        if(!res.data.comingActivities.length){
+          this.setData({winAtType:1})
+        }
         this.setData({homeDetail:res.data,loading:false})
       }else{
         res.text? UTIL.commonToast(res.text):UTIL.commonToast("数据错误");
