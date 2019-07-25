@@ -22,7 +22,7 @@
     </swiper-item>
   </block>
 </swiper>
-<jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
+<jh-navbar in-style='margin-top:60rpx;' at-index='{{winAtType}}' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
 <view wx:if='{{winAtType==0}}'>
   <jh-empty length='{{homeDetail.comingActivities.length}}' loading='{{loading}}'>
     <view wx:for='{{homeDetail.comingActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>
