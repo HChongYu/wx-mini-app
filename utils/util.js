@@ -64,8 +64,20 @@ const commonToast = (title = '', icon = 'none', duration = 1500) => {
     duration
   })
 }
+const capacityNavigateTo = (url, param)=>{
+  let pages = getCurrentPages();
+  wx.navigateTo({
+    url: `/${url}?{param}`,
+    success(res) {
+      let page = getCurrentPages();
+      console.log(res, page, "hsw")
+      
+    }
+  })
+}
 module.exports = {
   commonToast: commonToast,
   dateTypeDate: dateTypeDate,
-  beforeTypeDate: beforeTypeDate
+  beforeTypeDate: beforeTypeDate,
+  capacityNavigateTo: capacityNavigateTo
 }

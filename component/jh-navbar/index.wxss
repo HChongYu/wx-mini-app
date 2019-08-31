@@ -32,7 +32,7 @@
   left: 0;
   bottom: 4rpx;
   width: 100%;
-  min-height: 12rpx;
+  min-height: 16rpx;
   border-radius: 4rpx; 
   background: rgba(79, 201, 129, 0.8);
 }
@@ -42,4 +42,7 @@
   font-size: 40rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
+}
+.scroll-x{
+  vertical-align: center;
 }

@@ -4,11 +4,11 @@
   <image style='display: block;border-radius: 50%;border: 1rpx solid #ababab;' class='jh-portrait-photo' mode='aspectFill' src='{{portraitData.headPicUrl}}'>
 
   </image>
-  <view class='jh-portrait-label jh-slh' wx:if='{{size=="small"}}' hidden='{{portraitData.labelList[0]!=3}}'>
-    总教官
+  <view class='jh-portrait-label jh-slh' wx:if='{{size=="small"}}' hidden='{{type!=1}}'>
+     总教官
   </view>
   <view class='jh-portrait-name'>{{portraitData.name}}</view>
-  <view style='color: #4FC981;' class='jh-portrait-label' wx:if='{{size!="small"}}'>
-    {{filters.teacherType(portraitData.labelList[0])}}
-  </view>
+  <!-- <view style='color: #4FC981;' class='jh-portrait-label' wx:if='{{size!="small"&&}}'>
+ 
+  </view> -->
 </view>

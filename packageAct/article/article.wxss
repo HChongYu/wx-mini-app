@@ -17,9 +17,9 @@
 .collect-btn_not {
   width:218rpx;
   height:60rpx;
-  line-height: 60rpx;
+  line-height: 56rpx;
   border-radius:48rpx;
-  border:1px solid #4FC981;
+  border:2rpx solid #4FC981;
   font-size: 24rpx;
   text-align: center;
   color:#4FC981;

@@ -7,6 +7,10 @@ Component({
     portraitData:{
       type:Object
     },
+    type: {
+      type: Number,
+      
+    },
     size:{
       type: String,
       value: "small"

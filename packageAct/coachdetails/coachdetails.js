@@ -55,9 +55,11 @@ Page({
   },
   // 跳转函数
   coachWinBack(e) {
-    console.log(e)
-    wx.redirectTo({
-      url: `/packageAct/actdetails/actdetails?activityId=${e.detail.id}`
+    let pages = getCurrentPages();
+    let lastPages = pages[pages.length - 2]
+    lastPages.setData({activityId:e.detail.id});
+    wx.navigateBack({
+      delta: 1
     })
   },
 })

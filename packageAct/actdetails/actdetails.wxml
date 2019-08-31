@@ -11,7 +11,7 @@
   </view>
   <view class='act-border'></view>
   <jh-title title='活动时间'></jh-title>
-  <view class='jh-fmw5 jh-border' style='margin:16rpx 0 0 32rpx;color:#686868;font-size: 32rpx;'>
+  <view class='jh-border' style='margin:16rpx 0 0 32rpx;color:#686868;font-size: 32rpx;'>
     {{actDetailData.startTime}}～{{actDetailData.endTime}}
   </view>
   <view class='act-border'></view>
@@ -29,7 +29,7 @@
   </jh-title>
   <view class='jh-listnp' style='align-items: flex-start;'>
     <view class='coach-leader'>
-      <jh-portrait portrait-data='{{actDetailData.leaderTeacher}}' style='margin-top: 40rpx;width: 100rpx;' bind:callBack='coachItemClick'></jh-portrait>
+      <jh-portrait portrait-data='{{actDetailData.leaderTeacher}}' style='margin-top: 40rpx;width: 100rpx;' type='1' bind:callBack='coachItemClick'></jh-portrait>
     </view>
     <view class='coach-leader-before'></view>
     <view class='jh-list_item'>

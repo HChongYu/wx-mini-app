@@ -10,7 +10,6 @@ Page({
     navbarData: [
       // { name: 'DAY1', index: 0 },
     ],
-    
     atIndex: 0,
     openStatus: false
   },
@@ -19,20 +18,21 @@ Page({
    */
   onLoad: function(options) {
     wx.hideShareMenu()
-    if (options.activityId){
-      this.getActDetail(options.activityId)
+    if (options.activityId) {
+      this.data.activityId=options.activityId
     }
   },
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
+    this.getActDetail(this.data.activityId)
+   
   },
   // 初始化函数
   getActDetail(activityId){
     WXAPI.activityDetail(activityId).then(res=>{
-
       let activityDetail = res;
       console.log(activityDetail)
       if (typeof (activityDetail)=='string'){
@@ -64,8 +64,8 @@ Page({
   },
   //跳转函数 
   coachItemClick(e) {
-    wx.redirectTo({
-      url: `/packageAct/coachdetails/coachdetails?teacherId=${e.detail}`
+    wx.navigateTo({
+      url: `/packageAct/coachdetails/coachdetails?teacherId=${e.detail}`,
     })
   },
 

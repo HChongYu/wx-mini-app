@@ -15,8 +15,8 @@
     <view>{{item.name}}</view>
   </view>
 </view>
-<swiper style='height:160rpx; margin-top: 60rpx;' indicator-dots='{{true}}'autoplay='{{true}}'interval='3000' >
-  <block wx:for="{{homeDetail.articles}}" wx:key='articleId'>
+<swiper style='height:160rpx; margin-top: 60rpx;' indicator-dots='{{true}}'autoplay='{{true}}'interval='3000' indicator-color='#DBDBDB' indicator-active-color='#5A7F5B'>
+  <block wx:for="{{homeDetail.articles}}" wx:key='{{articleId}}' wx:if="{{index<3}}">
     <swiper-item style='height:160rpx;'>
       <image class='article-bar'  src='{{item.coverUrl}}' data-id='{{item.articleId}}' bindtap='articleBarClick'></image>
     </swiper-item>
