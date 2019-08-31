@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -60,14 +60,14 @@
 					"id": 2,
 					"name": "拓展详情",
 					"pathName": "packageAct/actdetails/actdetails",
-					"query": "activityId=1293178128191012864",
+					"query": "activityId=1299465237436645376",
 					"scene": null
 				},
 				{
 					"id": 3,
 					"name": "教官信息",
 					"pathName": "packageAct/coachdetails/coachdetails",
-					"query": "teacherId=1286828174889451520",
+					"query": "teacherId=1290174569335750656",
 					"scene": null
 				},
 				{

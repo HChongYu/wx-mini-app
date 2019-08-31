@@ -4,6 +4,7 @@
     "jh-title": "/component/jh-title/index",
     "jh-win": "/component/jh-win/index",
     "jh-portrait": "/component/jh-portrait/index",
-    "jh-fold": "/component/jh-fold/index"
+    "jh-fold": "/component/jh-fold/index",
+    "jh-navbar2": "/component/jh-navbar2/index"
   }
 }

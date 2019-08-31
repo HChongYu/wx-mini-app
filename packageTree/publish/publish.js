@@ -70,6 +70,7 @@ Page({
   // 跳转函数
   publishSubmit(e) {
     let value=e.detail.value;
+    console.log(value.content)
     if(!value.content){
       UTIL.commonToast('请您输入内容');
       return

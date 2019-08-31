@@ -2,7 +2,7 @@
   "navigationBarTitleText": "拓展详情",
   "usingComponents": {
     "jh-title": "/component/jh-title/index",
-    "jh-navbar": "/component/jh-navbar/index",
+    "jh-navbar2": "/component/jh-navbar2/index",
     "jh-fold": "/component/jh-fold/index",
     "jh-portrait": "/component/jh-portrait/index",
     "jh-occupy": "/component/jh-occupy/index"

@@ -1,21 +1,39 @@
 <!-- packageAct/coachdetails/coachdetails.wxml -->
-<block wx:if='{{portraitData}}'>
-  <view style='padding: 20rpx 0;border-bottom: 2rpx solid #F9F9F9;'>
-    <jh-portrait size='large' portrait-data='{{portraitData}}'></jh-portrait>
-  </view>
-  <jh-title title='履历'></jh-title>
-  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.shortWord}}</view>
-  <jh-title title='参加活动'></jh-title>
-  <jh-fold bind:callBack='foldBack' open-status='{{openStatus}}'>
-    <view class="actList">
-      <!-- todo -->
-      <view wx:for='{{coachDetails.activities}}' wx:key="activityId" class="actList-item">
-        <jh-win winData='{{item}}' size='small' bind:callBack='coachWinBack'></jh-win>
-      </view>
+<block wx:if='{{coachDetails}}'>
+  <view class='coach'>
+    <image src="{{coachDetails.headPicUrl}}" class="coach-photo"></image>
+    <view class="coach-left">
+      <view class="coach-name">{{coachDetails.name}}</view>
+      <view class="coach-short jh-slh2">“{{coachDetails.shortWord}}”</view>
     </view>
-  </jh-fold>
-  <jh-title title='教官评语'></jh-title>
-  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;'>{{coachDetails.remark}}</view>
+  </view>
+  <jh-title title='优秀履历'></jh-title>
+  <view>
+    <blcok wx:for='{{coachDetails.remarkList}}' wx:key='{{index}}'>
+      <view class='remark-time jh-listnp'>
+        <view class='remark-time-before'></view>
+        <view class='remark-time-main'>{{item.createAt}}</view>
+      </view>
+      <view class='remark-content'>
+        <view class='remark-content-title jh-slh'>{{item.remark}}</view>
+        <view class="remark-content-main jh-slh2">{{item.detail}}</view>
+      </view>
+    </blcok>
+  </view>
+  <!-- <view >{{coachDetails.shortWord}}</view> -->
+
+  <jh-title title='参加活动' style='margin-top: 40rpx;'></jh-title>
+  <view style="margin-left:28rpx;">
+    <jh-navbar2 in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' is-scroll='{{navbarData.length>3}}' bind:callBack='coachBarBasck'></jh-navbar2>
+  </view>
+  <view class="actList">
+    <!-- todo -->
+    <view wx:for='{{newActivities[atIndex]}}' wx:key="activityId" class="actList-item">
+      <jh-win winData='{{item}}' size='small' bind:callBack='coachWinBack'></jh-win>
+    </view>
+  </view>
+  <!-- <jh-title title='教官评语'></jh-title>
+  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;padding-left: 28rpx;'>{{coachDetails.remark}}</view> -->
 </block>
 <block wx:else>
   <view class='occupy1'></view>

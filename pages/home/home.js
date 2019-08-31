@@ -35,7 +35,8 @@ Page({
       { name: '往期精彩', type: 1 },
     ],
     winAtType:0,
-    loading:false
+    loading:false,
+    true:true
   },
 
   onLoad: function() {

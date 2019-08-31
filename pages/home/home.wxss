@@ -39,9 +39,10 @@ page {
 
 .article-bar{
   display: block;
-
+  margin-bottom: 12rpx;
   width: 100%; 
   height:112rpx;
+  
   border-radius: 56rpx;
  
 }

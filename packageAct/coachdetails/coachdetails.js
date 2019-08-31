@@ -7,19 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      dome2: [{
-          id: 1,
-          name: "下陆中学7天研学之旅",
-          title: "下陆中学7天研学之旅下陆中学7天研学之旅",
-          date: "2019-3-11",
-          img: "/img/win1.png"
-      }, {
-          id: 2,
-          name: "下陆中学7天研学之旅",
-          title: "下陆中学7天研学之旅下陆中学7天研学之旅",
-          date: "2019-3-11",
-          img: "/img/win1.png"
-      }]
+    atIndex:0
   },
 
   /**
@@ -41,17 +29,29 @@ Page({
       console.log(res)
       //todo
       if (res.code == 0) {
-        let portraitData=new Object();
-        portraitData={
-          headPicUrl:res.data.headPicUrl,
-          name: res.data.name,
-          labelList: res.data.labelList
+        let navbarData1=[];
+        let navbarData2=[];
+        let newActivities=[];
+        let activities =res.data.activities;
+        for (let key in activities){
+          console.log(key);
+          navbarData1.push(key);
+          newActivities.push(activities[key]);
         }
-        this.setData({ coachDetails: res.data,portraitData: portraitData})
+        for (let i = 0; i < navbarData1.length;i++){
+          navbarData2.push({ name: navbarData1[i],index:i})
+        }
+
+        this.setData({ coachDetails: res.data,newActivities: newActivities, navbarData: navbarData2})
+        console.log(navbarData2)
       } else {
         res.text? UTIL.commonToast(res.text): UTIL.commonToast("数据错误");
       }
     })
+  },
+  // 交互函数
+  coachBarBasck(e){
+    this.setData({atIndex: e.detail.index})
   },
   // 跳转函数
   coachWinBack(e) {

@@ -1,7 +1,7 @@
 /* component/jh-navbar/indedx.wxss */
 @import "/wxss/overall.wxss";
 
-.navbar {
+/* .navbar {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -9,20 +9,37 @@
   -webkit-align-items: center;
   align-items: center;
   margin-top: 20rpx;
-}
+} */
 
 .navbar-item {
   display: inline-block;
-  margin-left: 14rpx;
-  margin-right: 14rpx;
+  /* position: relative; */
+  margin-right: 20rpx;
   font-size: 28rpx;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #282828;
 }
 
 .navbar-item_at {
-  padding: 4rpx;
-  border-bottom: 4rpx solid #4FC981;
-  color: #4FC981;
-  font-size: 36rpx;
+  position: relative;
+  margin-right: 20rpx;
+  height: 56rpx;
+}
+/* style="width: {{item.name.lenght*24}}rpx;" */
+.navbar-item_at .navbarData-fill {
+  position: absolute;
+  left: 0;
+  bottom: 4rpx;
+  width: 100%;
+  min-height: 12rpx;
+  border-radius: 4rpx; 
+  background: rgba(79, 201, 129, 0.8);
+}
+
+.navbar-item_at .navbarData-main {
+  position: absolute;
+  font-size: 40rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
 }

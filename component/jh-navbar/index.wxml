@@ -1,12 +1,14 @@
 <!--component/jh-navbar/indedx.wxml-->
 
-<scroll-view scroll-x style=" height:78rpx; white-space: nowrap;{{inStyle}}" class='-webkit-scrollbar'  wx:if='{{isScroll}}' scroll-into-view="ID{{idIndex}}">
-  <view wx:for="{{navbarData}}" wx:key="index" class="navbar-item {{index==atIndex? 'navbar-item_at':''}}" id='ID{{index}}' data-index="{{index}}" catchtap="click">
-    {{item.name}}
+<scroll-view scroll-x style=" height:78rpx; white-space: nowrap;{{inStyle}}" class='-webkit-scrollbar' wx:if='{{isScroll}}' scroll-into-view="ID{{idIndex}}">
+  <view wx:for="{{navbarData}}" wx:key="index" class="navbar-item {{index==atIndex? 'navbar-item_at':''}}" style="width: {{index==atIndex? item.name.length*40:item.name.length*28}}rpx;}}" id='ID{{index}}' data-index="{{index}}" catchtap="click">
+    <view class="navbarData-fill" wx:if='{{index==atIndex}}'></view>
+    <view class="navbarData-main"> {{item.name}}</view>
   </view>
 </scroll-view>
-<view class="jh-listnp" style='{{inStyle}}' wx:else >
-  <view wx:for="{{navbarData}}" wx:key="index" class="navbar-item {{index==atIndex? 'navbar-item_at':''}}" data-index="{{index}}" catchtap="click">
-    {{item.name}}
+<view class="jh-listnp" style='{{inStyle}}' wx:else>
+  <view wx:for="{{navbarData}}" wx:key="index" class="navbar-item {{index==atIndex? 'navbar-item_at':''}}" style="width: {{index==atIndex? item.name.length*40:item.name.length*28}}rpx;}}" data-index="{{index}}" catchtap="click">
+    <view class="navbarData-fill"  wx:if='{{index==atIndex}}'></view>
+    <view class="navbarData-main"> {{item.name}}</view>
   </view>
 </view>

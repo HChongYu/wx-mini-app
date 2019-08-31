@@ -9,12 +9,12 @@
   width: 12rpx;
   height: 12rpx;
   background: #4FC981;
-  margin-right: 20rpx;
+  margin-right: 16rpx;
 }
 
 .titlebar-main {
   font-size: 32rpx;
-  font-family: PingFangSC-Medium;
+  font-family:PingFangSC;
   font-weight: 500;
 }
 

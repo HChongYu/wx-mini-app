@@ -7,7 +7,7 @@
 </view> -->
 <view class="jh-listnp search-back" bindtap='searchClick'>
   <image class="search-icon" src='/img/search.png'></image>
-  <view class="jh-list_item search">搜一搜有趣的活动欧</view>
+  <view class="jh-list_item search">请输入学校名称吧</view>
 </view>
 <view class="jh-listnp selbar">
   <view class="selbar-item" wx:for="{{iconBar}}" wx:key='type' data-type='{{item.type}}' bindtap="iconClik">
@@ -15,14 +15,14 @@
     <view>{{item.name}}</view>
   </view>
 </view>
-<swiper style='height:112rpx; margin-top: 60rpx;'>
+<swiper style='height:160rpx; margin-top: 60rpx;' indicator-dots='{{true}}'autoplay='{{true}}'interval='3000' >
   <block wx:for="{{homeDetail.articles}}" wx:key='articleId'>
-    <swiper-item>
-      <image class='article-bar' src='{{item.coverUrl}}' data-id='{{item.articleId}}' bindtap='articleBarClick'></image>
+    <swiper-item style='height:160rpx;'>
+      <image class='article-bar'  src='{{item.coverUrl}}' data-id='{{item.articleId}}' bindtap='articleBarClick'></image>
     </swiper-item>
   </block>
 </swiper>
-<jh-navbar in-style='margin-top:60rpx;' at-index='{{winAtType}}' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
+<jh-navbar in-style='margin-top:40rpx;' at-index='{{winAtType}}' navbar-data='{{navbarData}}' bind:callBack='homeBarBack'></jh-navbar>
 <view wx:if='{{winAtType==0}}'>
   <jh-empty length='{{homeDetail.comingActivities.length}}' loading='{{loading}}'>
     <view wx:for='{{homeDetail.comingActivities}}' wx:key="activityId" style='padding-top: 40rpx;{{index==0? "":"  border-top: 2rpx solid #F9F9F9;"}}'>

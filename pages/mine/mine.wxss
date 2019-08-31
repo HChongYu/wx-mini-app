@@ -1,4 +1,7 @@
 /* pages/mine/mine.wxss */
+page{
+  padding: 0 20rpx;
+}
 .header{
   position: relative;
   left: -40rpx;
@@ -27,9 +30,9 @@
 }
 .header-username{
   margin-left: 232rpx;
-  padding: 58rpx 82rpx 52rpx 0;
+  padding: 58rpx 30rpx 52rpx 0;
   font-size: 36rpx;
-  max-width: 266rpx;
+  width: 266rpx;
 }
 
 .hasMessage{

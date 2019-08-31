@@ -18,6 +18,8 @@
 }
 .jh-chat-title_list{
   font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
 }
 .jh-chat-title_details{
   font-size: 32rpx;

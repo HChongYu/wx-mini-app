@@ -1,6 +1,7 @@
 // packageAct/actdetails/actdetails.js
 const WXAPI = getApp().globalData.WXAPI;
 const UTIL = getApp().globalData.UTIL;
+let dayData= ['一', '二', '三', '四', '五', '六', '七', '八', '九'];
 Page({
   /**
    * 页面的初始数据
@@ -9,6 +10,7 @@ Page({
     navbarData: [
       // { name: 'DAY1', index: 0 },
     ],
+    
     atIndex: 0,
     openStatus: false
   },
@@ -30,16 +32,24 @@ Page({
   // 初始化函数
   getActDetail(activityId){
     WXAPI.activityDetail(activityId).then(res=>{
-      if (res.code == 0) {
-        let navbarData=new Array;
-        if (res.data.contentList.length>0){
-          for (let i=0; i <res.data.contentList.length;i++){
-            navbarData[i]={name:`DAY${i+1}`, index:i}
+
+      let activityDetail = res;
+      console.log(activityDetail)
+      if (typeof (activityDetail)=='string'){
+        activityDetail = JSON.parse(activityDetail)
+      }
+      console.log(typeof (activityDetail));
+      if (activityDetail.code==0){
+        console.log("res.code:", activityDetail.code);
+        let navbarData = new Array;
+        if (activityDetail.data.contentList.length > 0) {
+          for (let i = 0; i < activityDetail.data.contentList.length; i++) {
+            navbarData[i] = { name: `第${dayData[i]}天`, index: i };
           }
         }
-        this.setData({ actDetailData:res.data,navbarData: navbarData})
-      } else {
-        res.text? UTIL.commonToast(res.text): UTIL.commonToast("数据错误");
+        this.setData({ actDetailData: activityDetail.data, navbarData: navbarData });
+      }else{
+        activityDetail.text ? UTIL.commonToast(activityDetail.text): UTIL.commonToast("数据错误");
       } 
     })
   },

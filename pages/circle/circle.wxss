@@ -4,8 +4,9 @@
   padding-bottom:  100rpx;
 } */
 .add{
-  width: 48rpx;
-  height: 48rpx;
+  width: 36rpx;
+  height: 36rpx;
+  padding: 10rpx;
 }
 .noopen {
   font-size: 28rpx;

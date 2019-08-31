@@ -29,7 +29,7 @@
   width: 100%;
 }
 .win_small .win-content {
-  padding-left: 10rpx;
+  padding-left: 24rpx;
 }
 /* win_large .win-content-title 暂时没有*/
 .win_small .win-content-title {

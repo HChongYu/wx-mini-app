@@ -1,63 +1,95 @@
 /* packageAct/coachdetails/coachdetails.wxss */
 @import "/wxss/occupy.wxss";
-page{
-  padding-bottom: 100rpx; 
+
+page {
+  padding-bottom: 100rpx;
 }
+
+.coach {
+  position: relative;
+  width: 750rpx;
+  height: 764rpx;
+  left: -40rpx;
+  padding: 20rpx 0;
+  /* border-bottom: 2rpx solid #f9f9f9; */
+  overflow: hidden;
+}
+
 .coach-photo {
-  width: 306rpx;
-  min-width: 306rpx;
-  height: 366rpx;
-  border-radius: 16rpx;
-  border: 1rpx solid #979797;
-  margin-right: 40rpx;
+  position: absolute;
+  right: -78rpx;
+  top: 20rpx;
+  width: 648rpx;
+  height: 648rpx;
+  border-radius: 50%;
 }
 
 .coach-left {
-  display: flex;
-  flex-flow: column;
-  height: 366rpx;
+  position: absolute;
+  left: 68rpx;
+  bottom: 30rpx;
 }
 
 .coach-name {
-  font-size: 32rpx;
-  margin-top: 16rpx;
+  font-size:52rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color: #282828;
+  max-width: 200rpx;
 }
 
-.coach-type {
-  display: flex;
+.coach-short {
+  margin-top: 12rpx; 
+  max-width: 320rpx;
+  color: #606064;
+  font-size: 30rpx;
+  font-family: PingFangSC;
+  font-weight: 400;
+  height: 88rpx; 
 }
 
-.coach-type {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.remark-time{
+  margin-top:60rpx;
+  margin-left: 24rpx; 
 }
-
-.coach-types {
-  height: 28rpx;
-  max-width: 342rpx;
-  font-size: 20rpx;
-  color: #5a7f5b;
-  background: rgba(90, 127, 91, 0.15);
-  margin-top: 24rpx;
-  margin-right: 24rpx;
-  padding: 0 10rpx;
-  border-radius: 14rpx;
+.remark-time-before{
+  width: 20rpx;
+  height: 20rpx;
+  min-width: 20rpx;
+  min-height: 20rpx;
+  background:rgba(184,183,191,.2);
+  border-radius: 50%; 
 }
-
-.coach-motto {
-  margin-top: 40rpx;
-  width: 334rpx;
-  height: 110rpx;
-  max-width: 334rpx;
-  max-height: 110rpx;
-  font-size: 24rpx;
+.remark-time-main{
+  padding-left: 10rpx;
+  color: #6D6C72;
+  font-size: 28rpx; 
 }
-
-.actList{
-  padding: 28rpx；
+.remark-content{
+  margin:60rpx 0 30rpx 34rpx;
+  padding: 40rpx;
+  width:584rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 2rpx 42rpx 0rpx rgba(238,236,246,1);
+  border-radius:24rpx;
+  font-size: 30rpx;
+}
+.remark-content-title{
+  max-width: 568rpx;
+  color: #333;
+  font-family:PingFangSC;
+  font-weight:500;
+}
+.remark-content-main{
+  margin-top: 8rpx; 
+  max-width: 568rpx;
+  max-height: 88rpx;
+  color: #B8B7BF;
+}
+.actList {
+  padding: 28rpx；;
 }
 
 .actList-item {
-  padding:  40rpx 28rpx 0 0;
+  padding: 40rpx 28rpx 0 28rpx;
 }

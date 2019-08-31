@@ -1,17 +1,17 @@
 <!-- packageAct/actdetails/actdetails.wxml -->
 <block wx:if='{{actDetailData.title}}'>
-  <swiper indicator-dots='true' indicator-active-color='#5A7F5B' indicator-color='#FAFAFA' circular='true' autoplay='true'>
-    <swiper-item wx:for='{{actDetailData.moments}}' wx:key='index'>
+  <swiper class="d-swiper" indicator-dots='true' indicator-active-color='#5A7F5B' indicator-color='#FAFAFA' circular='true' autoplay='true' >
+    <swiper-item wx:for='{{actDetailData.moments}}' wx:key='index' wx:if='{{index<6}}'>
       <image class='swiper-img' src='{{item}}'></image>
     </swiper-item>
   </swiper>
-  <view class='jh-fmw5' style='margin-top:40rpx;font-size:48rpx;'>{{actDetailData.title}}</view>
-  <view style='margin-top:40rpx; color:#808080; font-size: 28rpx;min-height: 120rpx'>
+  <view style='margin-top:40rpx;color: #282828;font-size:48rpx;font-family:PingFangSC;font-weight:500;'>{{actDetailData.title}}</view>
+  <view style='margin-top:12rpx; color:#686868; font-size: 32rpx;'>
     {{actDetailData.introduction}}
   </view>
   <view class='act-border'></view>
   <jh-title title='活动时间'></jh-title>
-  <view class='jh-fmw5 jh-border' style='margin:32rpx 0 0 32rpx;color:#686868;font-size: 24rpx;'>
+  <view class='jh-fmw5 jh-border' style='margin:16rpx 0 0 32rpx;color:#686868;font-size: 32rpx;'>
     {{actDetailData.startTime}}～{{actDetailData.endTime}}
   </view>
   <view class='act-border'></view>
@@ -41,9 +41,9 @@
       </view>
     </view>
   </view>
-  <view class='act-border'></view>
+  <view class='act-border' style='margin-top:12rpx;'></view>
   <jh-title title='活动流程'></jh-title>
-  <jh-navbar in-style='margin-top:60rpx;' navbar-data='{{navbarData}}' bind:callBack='actBarBasck'></jh-navbar>
+  <jh-navbar2 in-style='margin-top:60rpx;'  navbar-data='{{navbarData}}' is-scroll='{{navbarData.length>4}}' bind:callBack='actBarBasck'></jh-navbar2>
   <view class='jh-listnp flow flow-list' wx:for='{{actDetailData.contentList[atIndex]}}' wx:key='index'>
     <view class='flow-circle'></view>
     <view>

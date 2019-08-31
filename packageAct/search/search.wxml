@@ -11,12 +11,19 @@
     </view>
   </block>
   <view style='text-align: center;' wx:else>
-    <image style='width:452rpx;height:242rpx;margin-top:120rpx;' src='/img/empty-back2.png'/>
-    <view style='margin-top:40rpx;color:#C5C5C5;font-size:24rpx;'>未搜索到 <text style='color:#333333;'>{{atText}}</text> 的相关活动哦～</view>
+    <image style='width:452rpx;height:242rpx;margin-top:120rpx;' src='/img/empty-back2.png' />
+    <view style='margin-top:40rpx;color:#C5C5C5;font-size:24rpx;'>未搜索到
+      <text style='color:#333333;'>{{atText}}</text> 的相关活动哦～</view>
   </view>
 </view>
 <view wx:else>
-  <view wx:for='{{hotList}}' wx:key='activityId' data-id='{{item.activityId}}' bindtap='actTextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>
-    {{item.title}}
+  <block wx:if='{{hotList.length}}'>
+    <view wx:for='{{hotList}}' wx:key='activityId' data-id='{{item.activityId}}' bindtap='actTextClick' class='acttext jh-fmw5 jh-slh' style='{{index==0?"padding-top:48rpx;":"border-top:1rpx solid #F9F9F9;"}}'>
+      {{item.title}}
+    </view>
+  </block>
+  <view style='text-align: center;' wx:else>
+    <image style='width:452rpx;height:242rpx;margin-top:120rpx;' src='/img/empty-back2.png' />
+    <view style='margin-top:40rpx;color:#C5C5C5;font-size:24rpx;'>暂时没有热门搜索</view>
   </view>
 </view>
