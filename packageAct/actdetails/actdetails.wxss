@@ -131,9 +131,23 @@ Page {
 
 .act-border {
   margin-top: 40rpx;
-  border: 2rpx solid #f9f9f9;
+  border-bottom: 2rpx solid #f9f9f9;
 }
-
+.splendid{
+  margin-top: 60rpx;
+  position: relative;
+  left: -40rpx;
+  width: 750rpx;
+  padding-left: 40rpx; 
+}
+.splendid-item{
+  display: block;
+  float: left;
+  width:216rpx;
+  height:220rpx;
+  margin: 0 10rpx 10rpx 0;
+  border-radius: 6rpx; 
+}
 .actdetails-occupy1 {
   position: relative;
   left: -40rpx;

@@ -45,7 +45,8 @@ page {
   font-size: 30rpx;
   font-family: PingFangSC;
   font-weight: 400;
-  height: 88rpx; 
+  height: 86rpx; 
+  max-height: 86rpx; 
 }
 
 .remark-time{

@@ -19,6 +19,7 @@
   font-family: PingFangSC;
   font-weight: 400;
   color: #282828;
+  overflow: hidden;
 }
 
 .navbar-item_at {

@@ -59,6 +59,10 @@
     <view>
     </view>
   </view>
+  <jh-title title='精彩瞬间'></jh-title>
+  <view class="splendid">
+    <image class="splendid-item" wx:for='{{actDetailData.moments}}' wx:key='{{index}}' src="{{item}}" wx:if='{{index<9}}'></image>
+  </view>
   <view style='height:200rpx;'></view>
 </block>
 <block wx:else>
